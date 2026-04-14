@@ -39,9 +39,17 @@ Submits the tweet to Grok with a pre-built fact-checking prompt.
 - Send mode defaults to manual (you review before submitting), configurable to auto-send in Settings.
 - Selecting 🔒 Private Mode redirects to a separate private Grok session, so the query does not appear in your Grok history.
 
+---
+
+## Why Grok?
+
 Why Grok? Because it is natively connected to X's real-time data stream, Grok has immediate context on trending topics, public figures, and platform-specific events that other AI tools would need to retrieve indirectly. For social media content in particular, that native awareness makes a practical difference.
+
 This script is intended for casual users who occasionally encounter an unfamiliar post and want a quick, structured way to get context — without opening a new tab, pasting text manually, or writing a prompt from scratch.
+
 While this provides a fast way to gather context, AI-generated verification should not be treated as fully authoritative. Users are encouraged to review the source links provided by Grok, compare them with other references if needed, and form their own judgment. AI-assisted summaries are meant to serve as a starting point for understanding, not as a final source of truth.
+
+---
 
 ### 📊 Deep Analysis Mode
 
