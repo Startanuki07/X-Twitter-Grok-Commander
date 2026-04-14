@@ -9,6 +9,11 @@
 > 💡 **Overview**
 > After installation, each tweet's Grok button becomes a dropdown menu offering three built-in analysis modes and two fully customizable slots. Results can appear in Grok's sidebar or in a private tab that leaves no browsing history. An optional notification module lets you forward AI results to Discord or Telegram, and all five prompt templates are editable per language.
 
+<details open>
+  <summary><small style="color: #666;">Hide image</small></summary>
+  <img src="https://greasyfork.s3.us-east-2.amazonaws.com/w5ox18f8uvogt8rvybjf43vk04tu" alt="Image">
+</details>
+
 ---
 
 ## 🎛 Getting Started
