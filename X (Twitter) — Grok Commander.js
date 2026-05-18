@@ -7,9 +7,9 @@
 // @name:es      X (Twitter) — Grok Comandante
 // @name:pt-BR   X (Twitter) — Grok Comandante
 // @name:fr      X (Twitter) — Grok Commandant
-// @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07?locale_override=1
-// @namespace    https://github.com/Startanuki07
-// @version      1.2.1
+// @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
+// @homepageURL  https://github.com/Startanuki07
+// @version      1.2.1.4
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -722,20 +722,26 @@
     },
   };
 
+  let _configCache = null;
+
   function loadConfig() {
+    if (_configCache) return _configCache;
     const saved = GM_getValue("grok_user_config", null);
     if (saved) {
       try {
-        return JSON.parse(saved);
+        _configCache = JSON.parse(saved);
+        return _configCache;
       } catch (e) {
         console.warn("[Commander] Config corrupted, resetting.", e);
         GM_setValue("grok_user_config", null);
       }
     }
-    return { lang: "auto", autoSend: false, customTemplates: null };
+    _configCache = { lang: "auto", autoSend: false, customTemplates: null };
+    return _configCache;
   }
 
   function saveConfig(config) {
+    _configCache = config;
     GM_setValue("grok_user_config", JSON.stringify(config));
   }
 
@@ -861,7 +867,6 @@
         }
         .grok-push-btn:hover { background: rgba(29,155,240,0.2); color: #1D9BF0; border-color: #1D9BF0; }
 
-        
         #grok-push-confirm-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.55); z-index: 2147483640;
@@ -879,7 +884,6 @@
         .grok-push-confirm-check input { cursor: pointer; }
         .grok-push-confirm-btns   { display: flex; gap: 10px; justify-content: flex-end; }
 
-        
         #grok-settings-overlay {
             all: initial !important;
             position: fixed !important;
@@ -945,7 +949,6 @@
             background: #0d1117 !important;
         }
 
-        
         .grok-section-card {
             border: 1px solid #1e2532;
             border-radius: 12px;
@@ -966,7 +969,6 @@
             display: flex; flex-direction: column; gap: 12px;
         }
 
-        
         .grok-form-row { display: flex; flex-direction: column; gap: 5px; }
         .grok-form-label { font-size: 12px; font-weight: 600; color: #8899A6; }
         .grok-form-hint  { font-size: 11px; color: #3d4a55; margin-top: 2px; line-height: 1.5; }
@@ -989,7 +991,6 @@
         }
         .grok-input-textarea:focus { border-color: #1d9bf060; }
 
-        
         .grok-btn {
             padding: 8px 16px; border-radius: 20px; border: none;
             cursor: pointer; font-weight: 700; font-size: 13px;
@@ -1000,13 +1001,11 @@
         .grok-btn-secondary { background: transparent; color: #EFF3F4; border: 1px solid #536471; }
         .grok-btn-danger    { background: transparent; color: #F4212E; border: 1px solid #F4212E; margin-right: auto; }
 
-        
         .grok-push-toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; }
         .grok-push-toggle input { cursor: pointer; width: 14px; height: 14px; flex-shrink: 0; }
         .grok-push-fields { display: flex; flex-direction: column; gap: 6px; padding-left: 22px; }
         .grok-push-section { display: flex; flex-direction: column; gap: 6px; }
 
-        
         .grok-push-entry { display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; background: #0d1117; border: 1px solid #2f3336; border-radius: 8px; position: relative; }
         .grok-push-entry-header { display: flex; align-items: center; gap: 6px; }
         .grok-push-entry-label { flex: 1; background: #16181C; border: 1px solid #2f3336; color: #E7E9EA; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
@@ -1015,7 +1014,6 @@
         .grok-push-add-btn { align-self: flex-start; padding: 4px 12px; border-radius: 12px; border: 1px dashed #536471; background: transparent; color: #536471; font-size: 12px; cursor: pointer; transition: all 0.15s; margin-top: 2px; }
         .grok-push-add-btn:hover { border-color: #1D9BF0; color: #1D9BF0; }
 
-        
         #grok-push-select-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: 2147483641; display: flex; justify-content: center; align-items: center; }
         #grok-push-select-box { background: #16181C; border: 1px solid #2f3336; border-radius: 16px; padding: 20px; width: 340px; max-width: 92%; font-family: sans-serif; color: #E7E9EA; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
         #grok-push-select-box h3 { margin: 0 0 6px; font-size: 15px; }
@@ -1036,13 +1034,11 @@
         .grok-test-btn:hover:not(:disabled) { border-color: #1D9BF0; color: #1D9BF0; background: rgba(29,155,240,0.1); }
         .grok-test-btn:disabled { opacity: 0.5; cursor: default; }
 
-        
         .grok-tmpl-item { border: 1px solid #2f3336; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
         .grok-tmpl-title { font-size: 12px; font-weight: bold; color: #8899A6; margin-bottom: 2px; }
         .grok-tmpl-row   { display: flex; gap: 8px; align-items: center; }
         .grok-tmpl-row span { font-size: 11px; color: #536471; white-space: nowrap; }
 
-        
         .grok-toast {
             position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
             background: rgba(21,32,43,0.95); border: 1px solid #2f3336;
@@ -1058,7 +1054,6 @@
         }
         .grok-toast.fade-out { opacity: 0; transition: opacity 0.3s ease-out; }
 
-        
         .grok-toast-warn {
             position: fixed; bottom: 20px; right: 88px;
             background: rgba(15,20,28,0.97); border: 1.5px solid #f0b429;
@@ -1076,7 +1071,6 @@
 
         .my-commander-btn-active { color: #FF1493 !important; transition: color 0.2s ease; }
 
-        
         #grok-custom-lang-panel {
             background: rgba(29,155,240,0.06); border: 1px solid #1d9bf030;
             border-radius: 10px; padding: 12px; margin-top: 10px;
@@ -1103,7 +1097,6 @@
             font-family: monospace; color: #71767B; font-size: 10px;
         }
 
-        
         #grok-custom-lang-inline {
             font-size: 11px; color: #536471;
         }
@@ -1122,7 +1115,6 @@
         }
         .gcl-manage-btn:hover { background: rgba(29,155,240,0.2); }
 
-        
         .grok-modal-body::-webkit-scrollbar { width: 5px; }
         .grok-modal-body::-webkit-scrollbar-track { background: transparent; }
         .grok-modal-body::-webkit-scrollbar-thumb {
@@ -1190,7 +1182,6 @@
 
   function openSettings() {
     document.getElementById("grok-commander-menu")?.remove();
-    window._gcT = t;
     const config = loadConfig();
     const currentLang = config.lang;
     const templatesToEdit = getCurrentTemplates();
@@ -1333,12 +1324,12 @@
         div.innerHTML = `
           <div class="grok-tmpl-title">${escapeHtml(tmpl.icon)} ${escapeHtml(tmpl.label)}</div>
           <div class="grok-tmpl-row">
-            <span>${window._gcT("label_label")}</span>
+            <span>${t("label_label")}</span>
             <input type="text" class="grok-input-select" style="height:28px;padding:3px 8px;font-size:12px;flex:1;"
                    data-label-key="${key}" value="${escapeHtml(tmpl.label)}" maxlength="20">
           </div>
           <div class="grok-form-row">
-            <label class="grok-form-label">${window._gcT("prompt_label")}</label>
+            <label class="grok-form-label">${t("prompt_label")}</label>
             <textarea class="grok-input-textarea" data-key="${key}">${escapeHtml(tmpl.prompt)}</textarea>
           </div>
         `;
@@ -1640,7 +1631,7 @@
       document.getElementById("gcl-import-btn").onclick = (e) => {
         e.stopPropagation();
         importLangTemplate((newPack) => {
-          showToast(`✅ Loaded: ${escapeHtml(newPack.langName)}`);
+          showToast(`✅ Loaded: ${newPack.langName}`);
           overlay.remove();
           onPackChanged(newPack);
         });
@@ -1685,7 +1676,7 @@
               try {
                 const restored = JSON.parse(bak);
                 onPackChanged(restored);
-                showToast(`✅ Restored: ${escapeHtml(restored.langName)}`);
+                showToast(`✅ Restored: ${restored.langName}`);
               } catch(e) {
                 showToast("⚠️ Restore failed.");
               }
@@ -1866,16 +1857,6 @@
     GM_setValue("grok_push_config", JSON.stringify(cfg));
   }
 
-  const URL_CONVERTER_DOMAINS = [
-    "vxtwitter.com",
-    "fixupx.com",
-    "fxtwitter.com",
-    "cunnyx.com",
-    "fixvx.com",
-    "twitter.com",
-    "x.com",
-  ];
-
   function convertTweetUrl(url, targetDomain) {
     if (!targetDomain || targetDomain === "x.com") return url;
     try {
@@ -1961,7 +1942,7 @@
     const itemsHtml = allTargets.map((target, i) => `
       <label class="grok-push-select-item">
         <input type="checkbox" data-idx="${i}" checked>
-        <span style="flex:1">${target.label}</span>
+        <span style="flex:1">${escapeHtml(target.label)}</span><!-- [XSS-L0] 頻道名稱來自使用者輸入 -->
         <span class="grok-push-select-badge ${target.type}">${target.type === "discord" ? "Discord" : "Telegram"}</span>
       </label>
     `).join("");
@@ -2045,12 +2026,12 @@
     "製作",
     "照片",
     "图片",
-    "生成",
     "画像",
-    "生成",
     "이미지",
     "생성",
   ];
+
+  const MAX_INJECTION_ATTEMPTS = 80;
 
   let activeInterval = null;
   let pendingTask = null;
@@ -2195,7 +2176,7 @@
       const mainPart = document.createElement("span");
       mainPart.style.cssText =
         "display:flex;align-items:center;gap:10px;flex:1;";
-      mainPart.innerHTML = `<span style="font-size:16px">${escapeHtml(tmpl.icon)}</span><span class="grok-menu-item-label">${escapeHtml(tmpl.label)}</span>`;
+      mainPart.innerHTML = `<span style="font-size:16px">${tmpl.icon}</span><span class="grok-menu-item-label">${tmpl.label}</span>`;
       mainPart.onclick = (e) => {
         e.stopPropagation();
         overlay.remove();
@@ -2213,7 +2194,7 @@
         overlay.remove();
         menu.remove();
         resetGlobalState();
-        executePrivateCommand(tmpl.prompt, tweetData);
+        executeCommand(tmpl.prompt, tweetData, true);
       };
 
       item.appendChild(mainPart);
@@ -2380,10 +2361,6 @@
     }
   }
 
-  function executePrivateCommand(prompt, tweetData) {
-    executeCommand(prompt, tweetData, true);
-  }
-
   function executeCommand(prompt, tweetData, withPrivacy = false) {
     const fullContent = `${prompt}\n\n[Tweet URL]: ${tweetData.url}\n[Tweet Content]: ${tweetData.text}`;
     const autoSend = loadConfig().autoSend === true;
@@ -2392,7 +2369,6 @@
       autoSend,
       withPrivacy,
       textFilled: false,
-      injectCount: 0,
     };
 
     const existingTextarea = (() => {
@@ -2403,7 +2379,6 @@
     })();
 
     if (existingTextarea) {
-      console.log("[Commander] 側邊欄已開啟 -> 直接填入（繞過全域按鈕）");
       pendingTask.targetInput = existingTextarea;
 
       const drawerObs = new MutationObserver(() => {
@@ -2423,7 +2398,6 @@
       const globalBtn = findGlobalGrokButton();
       if (globalBtn) {
         GM_setValue("grok_drawer_opened", true);
-        console.log("[Commander] 首次自動開啟側邊欄...");
         triggerClick(globalBtn);
 
         const waitForTextarea = new MutationObserver(() => {
@@ -2459,7 +2433,7 @@
 
     activeInterval = setInterval(() => {
       attempts++;
-      if (attempts > 80 || !pendingTask) {
+      if (attempts > MAX_INJECTION_ATTEMPTS || !pendingTask) {
         resetGlobalState();
         return;
       }
@@ -2533,7 +2507,7 @@
 
     activeInterval = setInterval(() => {
       attempts++;
-      if (attempts > 80 || !pendingTask) {
+      if (attempts > MAX_INJECTION_ATTEMPTS || !pendingTask) {
         resetGlobalState();
         return;
       }
@@ -2547,16 +2521,16 @@
         return;
       }
 
-      const textarea_check = (() => {
+      const textarea = (() => {
         for (const ta of document.querySelectorAll("textarea")) {
           if (ta.offsetParent !== null) return ta;
         }
         return null;
       })();
 
-      if (textarea_check) textareaEverSeen = true;
+      if (textarea) textareaEverSeen = true;
 
-      if (textareaEverSeen && !textarea_check) {
+      if (textareaEverSeen && !textarea) {
         resetGlobalState();
         showWarnToast(t("need_reopen"));
         return;
@@ -2586,7 +2560,7 @@
         if (attempts > 12) privateModeClicked = true;
       }
 
-      const targetInput = textarea_check;
+      const targetInput = textarea;
 
       if (pendingTask.textFilled && !targetInput) {
         resetGlobalState();
@@ -2608,7 +2582,6 @@
 
       if (pendingTask.textFilled && pendingTask.autoSend) {
         if (pendingTask.targetInput) {
-          console.log("[Commander] 模擬 Enter 發送...");
           simulateEnterKey(pendingTask.targetInput);
         }
 
@@ -2645,13 +2618,11 @@
           !targetBtn.disabled &&
           targetBtn.getAttribute("aria-disabled") !== "true"
         ) {
-          console.log("[Commander] 鎖定發送按鈕 -> 點擊！");
           triggerClick(targetBtn);
 
           setTimeout(() => {
             if (pendingTask && pendingTask.targetInput) {
               setReactValue(pendingTask.targetInput, "");
-              console.log("[Commander] 輸入框已強制清空");
             }
             resetGlobalState();
           }, 500);
@@ -2681,5 +2652,5 @@
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("X Grok Commander V24 (URL Converter for Push) Loaded");
+  console.log("[Commander] Grok Commander v1.2.1.4 loaded.");
 })();
