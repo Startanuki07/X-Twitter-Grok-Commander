@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.2.1.4
+// @version      1.2.1.6
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -1257,10 +1257,6 @@
               </div>
               <div id="grok-push-discord-list"></div>
               <div id="grok-push-tg-list"></div>
-              <label class="grok-push-toggle" style="color:#536471;font-size:12px;margin-top:4px;">
-                <input type="checkbox" id="grok-push-skip-restore" ${!pc.skipConfirm?"checked":""}>
-                <span>${t("push_restore_confirm")}</span>
-              </label>
             </div>
           </div>
 
@@ -1795,7 +1791,6 @@
       savePushConfig({
         discord:      draftDiscord,
         telegram:     draftTelegram,
-        skipConfirm:  !document.getElementById("grok-push-skip-restore").checked,
         urlConverter: document.getElementById("grok-url-converter-select").value,
       });
 
@@ -1849,7 +1844,7 @@
       if (!raw.urlConverter) raw.urlConverter = "x.com";
       return raw;
     } catch (e) {
-      return { discord: [], telegram: [], skipConfirm: false };
+      return { discord: [], telegram: [] };
     }
   }
 
@@ -1933,8 +1928,6 @@
 
     if (!allTargets.length) { showToast(t("push_not_configured")); return; }
 
-    if (cfg.skipConfirm && allTargets.length === 1) { onConfirm(allTargets); return; }
-
     document.getElementById("grok-push-select-overlay")?.remove();
     const overlay = document.createElement("div");
     overlay.id = "grok-push-select-overlay";
@@ -1952,9 +1945,6 @@
         <h3>${t("push_select_title")}</h3>
         <p>${t("push_select_hint")}<br><span style="color:#1D9BF0;word-break:break-all">${escapeHtml(convertedUrl)}</span></p>
         <div class="grok-push-select-list">${itemsHtml}</div>
-        <label class="grok-push-confirm-check" style="margin-bottom:14px;">
-          <input type="checkbox" id="grok-push-skip-check"> ${t("push_confirm_check")}
-        </label>
         <div class="grok-push-confirm-btns">
           <button id="grok-push-cancel" class="grok-btn grok-btn-secondary">${t("push_confirm_cancel")}</button>
           <button id="grok-push-ok"     class="grok-btn grok-btn-primary">${t("push_confirm_ok")}</button>
@@ -1968,9 +1958,6 @@
       const selected = [...overlay.querySelectorAll("input[data-idx]:checked")]
         .map(el => allTargets[parseInt(el.dataset.idx)]);
       if (!selected.length) { showToast(t("push_select_none")); return; }
-      if (document.getElementById("grok-push-skip-check").checked) {
-        const c = loadPushConfig(); c.skipConfirm = true; savePushConfig(c);
-      }
       overlay.remove();
       onConfirm(selected);
     };
@@ -2652,5 +2639,5 @@
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.2.1.4 loaded.");
+  console.log("[Commander] Grok Commander v1.2.1.6 loaded.");
 })();
