@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.2.1.6
+// @version      1.2.2.9
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -24,10 +24,10 @@
 // @connect      api.telegram.org
 // @run-at       document-end
 // @description      Replaces the Grok button on every tweet with an AI command menu offering 3 built-in modes (Fact Check, Deep Analysis, Translate) and 2 fully customizable slots. Each mode can be sent to Grok's sidebar drawer or privately via x.com/i/grok. Supports manual or auto-send, multi-language auto-detection, and per-language customizable prompt templates. Ideal for casual users who want quick AI-powered context on trending topics without diving deep.
-// @description:zh-TW 將每則推文旁的 Grok 按鈕替換為 AI 指令選單，提供 3 種內建模式（事實查核、深度分析、梗文翻譯）與 2 個完全可自訂的備用槽位。每種模式可發送至側邊欄，或透過 🔒 私人模式跳轉至 x.com/i/grok 保護隱私。支援手動或自動送出、多語言自動偵測與各語言獨立模板自訂。適合偶爾想快速理解時事話題脈絡的一般用戶。
-// @description:zh-CN 将每条推文旁的 Grok 按钮替换为 AI 指令菜单，提供 3 种内置模式（事实核查、深度分析、翻译解释）与 2 个完全可自定义的备用槽位。每种模式可发送至侧边栏，或通过 🔒 私密模式跳转至 x.com/i/grok 保护隐私。支持手动或自动发送、多语言自动检测与各语言独立模板自定义。适合偶尔想快速了解热点话题背景的普通用户。
-// @description:ja    各ツイートのGrokボタンをAIコマンドメニューに置き換え、3つの内蔵モード（ファクトチェック・詳細分析・翻訳と解説）と2つのカスタムスロットを提供。サイドバーへの送信、または 🔒 プライベートモードで x.com/i/grok へ転送することもできます。手動・自動送信、多言語自動検出、言語別テンプレートカスタマイズに対応。トレンドの話題を気軽に把握したいカジュアルユーザーに最適。
-// @description:ko    모든 트윗의 Grok 버튼을 AI 명령 메뉴로 교체하여 3가지 내장 모드（팩트 체크・심층 분석・번역 및 설명）와 2개의 커스텀 슬롯을 제공합니다. 사이드바로 전송하거나 🔒 비공개 모드로 x.com/i/grok 에서 처리할 수 있습니다. 수동/자동 전송, 다국어 자동 감지, 언어별 템플릿 커스터마이즈 지원. 트렌드 주제를 가볍게 파악하고 싶은 일반 사용자에게 적합합니다.
+// @description:zh-TW 將每則推文旁的 Grok 按鈕替換為 AI 指令選單，提供 3 種內建模式（事實查核、深度分析、重點摘要）與 2 個完全可自訂的備用槽位（反駁視角、翻譯/自訂）。每種模式可發送至側邊欄，或透過 🔒 私人模式跳轉至 x.com/i/grok 保護隱私。支援手動或自動送出、多語言自動偵測與各語言獨立模板自訂。適合偶爾想快速理解時事話題脈絡的一般用戶。
+// @description:zh-CN 将每条推文旁的 Grok 按钮替换为 AI 指令菜单，提供 3 种内置模式（事实核查、深度分析、重点摘要）与 2 个完全可自定义的备用槽位（反驳视角、翻译/自定义）。每种模式可发送至侧边栏，或通过 🔒 私密模式跳转至 x.com/i/grok 保护隐私。支持手动或自动发送、多语言自动检测与各语言独立模板自定义。适合偶尔想快速了解热点话题背景的普通用户。
+// @description:ja    各ツイートのGrokボタンをAIコマンドメニューに置き換え、3つの内蔵モード（ファクトチェック・詳細分析・要点まとめ）と2つのカスタムスロット（反論視点・翻訳/カスタム）を提供。サイドバーへの送信、または 🔒 プライベートモードで x.com/i/grok へ転送することもできます。手動・自動送信、多言語自動検出、言語別テンプレートカスタマイズに対応。トレンドの話題を気軽に把握したいカジュアルユーザーに最適。
+// @description:ko    모든 트윗의 Grok 버튼을 AI 명령 메뉴로 교체하여 3가지 내장 모드（팩트 체크・심층 분석・핵심 요약）와 2개의 커스텀 슬롯（반론 시각・번역/커스텀）을 제공합니다. 사이드바로 전송하거나 🔒 비공개 모드로 x.com/i/grok 에서 처리할 수 있습니다. 수동/자동 전송, 다국어 자동 감지, 언어별 템플릿 커스터마이즈 지원. 트렌드 주제를 가볍게 파악하고 싶은 일반 사용자에게 적합합니다.
 // @description:es    Reemplaza el botón de Grok en cada tweet con un menú de comandos de IA que ofrece 3 modos integrados (Verificación de datos, Análisis profundo, Traducción) y 2 espacios completamente personalizables. Cada modo puede enviarse al panel lateral de Grok o de forma privada mediante x.com/i/grok. Soporta envío manual o automático, detección automática de idioma y plantillas personalizables por idioma.
 // @description:pt-BR Substitui o botão do Grok em cada tweet por um menu de comandos de IA com 3 modos integrados (Verificação de fatos, Análise profunda, Tradução) e 2 slots totalmente personalizáveis. Cada modo pode ser enviado ao painel lateral do Grok ou de forma privada via x.com/i/grok. Suporta envio manual ou automático, detecção automática de idioma e modelos personalizáveis por idioma.
 // @description:fr    Remplace le bouton Grok sur chaque tweet par un menu de commandes IA proposant 3 modes intégrés (Vérification des faits, Analyse approfondie, Traduction) et 2 emplacements entièrement personnalisables. Chaque mode peut être envoyé au panneau latéral Grok ou en mode privé via x.com/i/grok. Prise en charge de l'envoi manuel ou automatique, de la détection automatique de la langue et de modèles personnalisables par langue.
@@ -62,6 +62,9 @@
         commander_btn_title: "AI 指揮官（已啟用）",
         need_reopen: "請先點擊右下角的 Grok 按鈕開啟側邊欄，再使用指令選單",
         push_section_label: "📨 推送設定 (Push Notifications)",
+        push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
+        tmpl_section_label: "✏️ 提示詞模板 (Prompt Templates)",
+        tmpl_section_hint: "點選選單中的模式時，對應的提示詞會自動附加到貼文內容後方。",
         push_enable_discord: "啟用 Discord 推送",
         push_enable_telegram: "啟用 Telegram 推送",
         push_discord_url: "Discord Webhook URL",
@@ -114,6 +117,9 @@
         commander_btn_title: "AI 指挥官（已启用）",
         need_reopen: "请先点击右下角的 Grok 按钮打开侧边栏，再使用指令菜单",
         push_section_label: "📨 推送设置 (Push Notifications)",
+        push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
+        tmpl_section_label: "✏️ 提示词模板 (Prompt Templates)",
+        tmpl_section_hint: "点选菜单中的模式时，对应的提示词会自动附加到贴文内容后方。",
         push_enable_discord: "启用 Discord 推送",
         push_enable_telegram: "启用 Telegram 推送",
         push_discord_url: "Discord Webhook URL",
@@ -168,6 +174,9 @@
         commander_btn_title: "AI Commander (Active)",
         need_reopen: "Please click the Grok button (bottom-right) to open the sidebar first, then use the command menu",
         push_section_label: "📨 Push Notifications",
+        push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
+        tmpl_section_label: "✏️ Prompt Templates",
+        tmpl_section_hint: "When you select a mode from the menu, its prompt is automatically appended to the post content.",
         push_enable_discord: "Enable Discord Push",
         push_enable_telegram: "Enable Telegram Push",
         push_discord_url: "Discord Webhook URL",
@@ -222,6 +231,9 @@
         commander_btn_title: "AI コマンダー（有効）",
         need_reopen: "右下のGrokボタンをクリックしてサイドバーを開いてから、コマンドメニューをご利用ください",
         push_section_label: "📨 プッシュ通知設定",
+        push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
+        tmpl_section_label: "✏️ プロンプトテンプレート",
+        tmpl_section_hint: "メニューからモードを選択すると、対応するプロンプトが投稿内容の後に自動追加されます。",
         push_enable_discord: "Discord プッシュを有効化",
         push_enable_telegram: "Telegram プッシュを有効化",
         push_discord_url: "Discord Webhook URL",
@@ -276,6 +288,9 @@
         commander_btn_title: "AI 커맨더（활성화）",
         need_reopen: "오른쪽 하단의 Grok 버튼을 클릭하여 사이드바를 먼저 열고 명령 메뉴를 사용하세요",
         push_section_label: "📨 푸시 알림 설정",
+        push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
+        tmpl_section_label: "✏️ 프롬프트 템플릿",
+        tmpl_section_hint: "메뉴에서 모드를 선택하면 해당 프롬프트가 게시물 내용 뒤에 자동으로 추가됩니다.",
         push_enable_discord: "Discord 푸시 활성화",
         push_enable_telegram: "Telegram 푸시 활성화",
         push_discord_url: "Discord Webhook URL",
@@ -328,6 +343,9 @@
         commander_btn_title: "Comandante IA (Activo)",
         need_reopen: "Haz clic en el botón de Grok (abajo a la derecha) para abrir el panel lateral primero y luego usa el menú de comandos",
         push_section_label: "📨 Notificaciones push",
+        push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
+        tmpl_section_label: "✏️ Plantillas de prompts",
+        tmpl_section_hint: "Al seleccionar un modo del menú, el prompt correspondiente se añade automáticamente al contenido del post.",
         push_enable_discord: "Activar push de Discord",
         push_enable_telegram: "Activar push de Telegram",
         push_discord_url: "URL de Discord Webhook",
@@ -380,6 +398,9 @@
         commander_btn_title: "Comandante IA (Ativo)",
         need_reopen: "Clique no botão do Grok (canto inferior direito) para abrir o painel lateral primeiro e depois use o menu de comandos",
         push_section_label: "📨 Notificações push",
+        push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
+        tmpl_section_label: "✏️ Templates de prompts",
+        tmpl_section_hint: "Ao selecionar um modo no menu, o prompt correspondente é adicionado automaticamente ao conteúdo do post.",
         push_enable_discord: "Ativar push do Discord",
         push_enable_telegram: "Ativar push do Telegram",
         push_discord_url: "URL do Discord Webhook",
@@ -432,6 +453,9 @@
         commander_btn_title: "Commandant IA (Actif)",
         need_reopen: "Cliquez sur le bouton Grok (en bas à droite) pour ouvrir le panneau latéral d'abord, puis utilisez le menu de commandes",
         push_section_label: "📨 Notifications push",
+        push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
+        tmpl_section_label: "✏️ Modèles de prompts",
+        tmpl_section_hint: "Lorsque vous sélectionnez un mode dans le menu, le prompt correspondant est automatiquement ajouté au contenu du post.",
         push_enable_discord: "Activer les push Discord",
         push_enable_telegram: "Activer les push Telegram",
         push_discord_url: "URL du Webhook Discord",
@@ -468,31 +492,31 @@
           label: "事實查核",
           icon: "🕵️",
           prompt:
-            "【指令：請進行事實查核】\n請詳細分析以下這則貼文的真實性，指出可能的錯誤、誤導資訊或缺乏證據的地方，並提供正確的背景脈絡：\n\n",
+            "請查核以下貼文的真實性。依序輸出：\n✅/❌ 整體判定（一句話）\n根據：列出支持或推翻的具體依據\n背景：補充必要的正確脈絡\n\n",
         },
         analysis: {
           label: "深度分析",
           icon: "📊",
           prompt:
-            "【指令：深度分析】\n請擔任資深的社群觀察家，解析這則推文。請分析其潛在的語氣、情緒導向、目標受眾，以及發文者可能隱含的動機或立場：\n\n",
+            "請分析以下貼文：\n語氣與情緒傾向：作者用了什麼措辭？帶有哪種情緒？\n可能動機：發文者想達到什麼目的或強化什麼立場？\n潛在偏頗：有哪些資訊被刻意強調或省略？\n\n",
         },
         translate: {
-          label: "梗文翻譯",
+          label: "翻譯",
           icon: "🌐",
           prompt:
-            "【指令：翻譯與解釋】\n請將這則推文翻譯成通順、道地的台灣繁體中文（口語化）。如果內容包含網路流行語、迷因（Meme）或文化梗，請務必補充解釋其背景含義：\n\n",
+            "（可自訂的槽位，請在設定中填入你的提示詞）\n\n",
         },
         tree: {
-          label: "自訂模式 1",
-          icon: "✏️",
+          label: "重點摘要",
+          icon: "📌",
           prompt:
-            "（這是可自訂的模式，請在設定中修改標題和提示詞）\n\n請用一段話簡單說明這則推文在討論什麼，以及為什麼值得關注：\n\n",
+            "TL;DR（一句話）：\n關鍵點 1：\n關鍵點 2：\n關鍵點 3：\n\n貼文內容：\n\n",
         },
         solution: {
-          label: "自訂模式 2",
-          icon: "✏️",
+          label: "反駁視角",
+          icon: "⚖️",
           prompt:
-            "（這是可自訂的模式，請在設定中修改標題和提示詞）\n\n請針對這則推文，提出你認為最有趣或值得深入探討的問題：\n\n",
+            "針對以下貼文，提出最有力的反駁或另一種詮釋角度。要求：直接給出論點，不需要複述原文。\n\n",
         },
       },
       "zh-CN": {
@@ -500,31 +524,31 @@
           label: "事实核查",
           icon: "🕵️",
           prompt:
-            "【指令：请进行事实核查】\n请详细分析以下这则帖子的真实性，指出可能的错误、误导信息或缺乏证据的地方，并提供正确的背景脉络：\n\n",
+            "请核查以下帖子的真实性。依次输出：\n✅/❌ 整体判定（一句话）\n依据：列出支持或推翻的具体证据\n背景：补充必要的正确脉络\n\n",
         },
         analysis: {
           label: "深度分析",
           icon: "📊",
           prompt:
-            "【指令：深度分析】\n请担任资深的社群观察家，解析这则推文。请分析其潜在的语气、情绪导向、目标受众，以及发文者可能隐含的动机或立场：\n\n",
+            "请分析以下帖子：\n语气与情绪倾向：作者用了什么措辞？带有哪种情绪？\n可能动机：发帖者想达到什么目的或强化什么立场？\n潜在偏颇：有哪些信息被刻意强调或省略？\n\n",
         },
         translate: {
-          label: "推文翻译",
+          label: "翻译",
           icon: "🌐",
           prompt:
-            "【指令：翻译与解释】\n请将这则推文翻译成通顺、地道的简体中文。如果内容包含网络流行语、迷因（Meme）或文化梗，请务必补充解释其背景含义：\n\n",
+            "（可自定义的槽位，请在设置中填入你的提示词）\n\n",
         },
         tree: {
-          label: "自定模式 1",
-          icon: "✏️",
+          label: "重点摘要",
+          icon: "📌",
           prompt:
-            "（这是可自定义的模式，请在设置中修改标题和提示词）\n\n请用一段话简单说明这则帖子在讨论什么，以及为什么值得关注：\n\n",
+            "TL;DR（一句话）：\n关键点 1：\n关键点 2：\n关键点 3：\n\n帖子内容：\n\n",
         },
         solution: {
-          label: "自定模式 2",
-          icon: "✏️",
+          label: "反驳视角",
+          icon: "⚖️",
           prompt:
-            "（这是可自定义的模式，请在设置中修改标题和提示词）\n\n请针对这则帖子，提出你认为最有趣或值得深入探讨的问题：\n\n",
+            "针对以下帖子，提出最有力的反驳或另一种诠释角度。要求：直接给出论点，不需要复述原文。\n\n",
         },
       },
       en: {
@@ -532,31 +556,31 @@
           label: "Fact Check",
           icon: "🕵️",
           prompt:
-            "[Instruction: Fact Check]\nPlease conduct a detailed fact-check on the following tweet. Point out potential errors, misleading information, or lack of evidence, and provide the correct context:\n\n",
+            "Fact-check the following post. Output in order:\n✅/❌ Verdict (one sentence)\nEvidence: specific facts that support or refute the claim\nContext: any necessary background\n\n",
         },
         analysis: {
           label: "Deep Analysis",
           icon: "📊",
           prompt:
-            "[Instruction: Deep Analysis]\nAct as a social media observer. Analyze this tweet for its tone, emotional direction, target audience, and any implied motives or stances of the author:\n\n",
+            "Analyze the following post:\nTone & emotion: What language choices does the author make? What emotion does it carry?\nLikely intent: What is the poster trying to achieve or reinforce?\nPotential bias: What is being emphasized or left out?\n\n",
         },
         translate: {
           label: "Translate",
           icon: "🌐",
           prompt:
-            "[Instruction: Translate]\nPlease translate this tweet into fluent English. If it contains internet slang, memes, or cultural references, please explain their background meaning:\n\n",
+            "(Customizable slot — edit the prompt in Settings.)\n\n",
         },
         tree: {
-          label: "Custom 1",
-          icon: "✏️",
+          label: "Key Takeaways",
+          icon: "📌",
           prompt:
-            "(This is a customizable mode. Edit the label and prompt in Settings.)\n\nIn one paragraph, briefly explain what this tweet is discussing and why it matters:\n\n",
+            "TL;DR (one sentence):\nKey point 1:\nKey point 2:\nKey point 3:\n\nPost content:\n\n",
         },
         solution: {
-          label: "Custom 2",
-          icon: "✏️",
+          label: "Counter View",
+          icon: "⚖️",
           prompt:
-            "(This is a customizable mode. Edit the label and prompt in Settings.)\n\nWhat is the most interesting or thought-provoking question raised by this tweet?\n\n",
+            "Give the strongest counterargument or alternative interpretation of the following post. Be direct — no need to restate the original.\n\n",
         },
       },
       ja: {
@@ -564,31 +588,31 @@
           label: "ファクトチェック",
           icon: "🕵️",
           prompt:
-            "【指令：ファクトチェック】\n以下の投稿の真偽を詳細に分析し、誤りや誤解を招く情報、証拠不足の点を指摘し、正しい背景情報を提供してください：\n\n",
+            "以下の投稿をファクトチェックしてください。次の順で出力：\n✅/❌ 判定（一文）\n根拠：主張を支持または否定する具体的な事実\n背景：必要な正確な文脈\n\n",
         },
         analysis: {
           label: "詳細分析",
           icon: "📊",
           prompt:
-            "【指令：詳細分析】\nソーシャルメディアの観察者として、このツイートを分析してください。潜在的なトーン、感情の方向性、ターゲット層、そして投稿者の隠された動機や立場を解析してください：\n\n",
+            "以下の投稿を分析してください：\nトーン・感情：どのような言葉を使っているか？どんな感情が込められているか？\n意図：投稿者は何を達成・強調しようとしているか？\n偏り：意図的に強調または省略されている情報は何か？\n\n",
         },
         translate: {
-          label: "翻訳と解説",
+          label: "翻訳",
           icon: "🌐",
           prompt:
-            "【指令：翻訳と解説】\nこのツイートを自然で流暢な日本語に翻訳してください。ネットスラング、ミーム（Meme）、または文化的背景が含まれている場合は、その意味や背景も必ず補足説明してください：\n\n",
+            "（カスタマイズ可能なスロット — 設定でプロンプトを編集してください）\n\n",
         },
         tree: {
-          label: "カスタム 1",
-          icon: "✏️",
+          label: "要点まとめ",
+          icon: "📌",
           prompt:
-            "（カスタマイズ可能なモードです。設定でタイトルとプロンプトを変更してください）\n\nこのツイートが何を議論しているか、なぜ注目すべきかを一段落で簡単に説明してください：\n\n",
+            "TL;DR（一文）：\n要点 1：\n要点 2：\n要点 3：\n\n投稿内容：\n\n",
         },
         solution: {
-          label: "カスタム 2",
-          icon: "✏️",
+          label: "反論視点",
+          icon: "⚖️",
           prompt:
-            "（カスタマイズ可能なモードです。設定でタイトルとプロンプトを変更してください）\n\nこのツイートで最も興味深い、または深く考えさせられる点は何ですか？\n\n",
+            "以下の投稿に対して、最も説得力のある反論または別の解釈を示してください。原文の繰り返しは不要です。\n\n",
         },
       },
       ko: {
@@ -596,31 +620,31 @@
           label: "팩트 체크",
           icon: "🕵️",
           prompt:
-            "【명령: 팩트 체크】\n다음 트윗의 진위 여부를 자세히 분석하고, 오류, 오해의 소지가 있는 정보 또는 증거 부족 부분을 지적하며 올바른 배경 정보를 제공하십시오:\n\n",
+            "다음 게시물을 팩트체크하세요. 순서대로 출력:\n✅/❌ 판정 (한 문장)\n근거: 주장을 지지하거나 반박하는 구체적 사실\n배경: 필요한 정확한 맥락\n\n",
         },
         analysis: {
           label: "심층 분석",
           icon: "📊",
           prompt:
-            "【명령: 심층 분석】\n소셜 미디어 관찰자로서 이 트윗을 분석하십시오. 잠재적인 어조, 감정 방향, 타겟 청중, 그리고 작성자의 내재된 동기나 입장을 분석해 주십시오:\n\n",
+            "다음 게시물을 분석하세요:\n어조·감정: 어떤 언어를 사용하는가? 어떤 감정이 담겨 있는가?\n의도: 작성자가 달성하거나 강조하려는 것은 무엇인가?\n편향: 의도적으로 강조되거나 생략된 정보는 무엇인가?\n\n",
         },
         translate: {
-          label: "번역 및 설명",
+          label: "번역",
           icon: "🌐",
           prompt:
-            "【명령: 번역 및 설명】\n이 트윗을 자연스럽고 유창한 한국어로 번역하십시오. 인터넷 속어, 밈(Meme) 또는 문화적 맥락이 포함된 경우 그 배경 의미도 반드시 보충 설명해 주십시오:\n\n",
+            "（커스터마이즈 가능한 슬롯 — 설정에서 프롬프트를 편집하세요）\n\n",
         },
         tree: {
-          label: "커스텀 1",
-          icon: "✏️",
+          label: "핵심 요약",
+          icon: "📌",
           prompt:
-            "（커스터마이즈 가능한 모드입니다. 설정에서 제목과 프롬프트를 수정하세요）\n\n이 트윗이 무엇을 논의하고 있는지, 왜 주목할 만한지 한 단락으로 간단히 설명해 주세요：\n\n",
+            "TL;DR (한 문장):\n핵심 1:\n핵심 2:\n핵심 3:\n\n게시물 내용:\n\n",
         },
         solution: {
-          label: "커스텀 2",
-          icon: "✏️",
+          label: "반론 시각",
+          icon: "⚖️",
           prompt:
-            "（커스터마이즈 가능한 모드입니다. 설정에서 제목과 프롬프트를 수정하세요）\n\n이 트윗에서 가장 흥미롭거나 깊이 생각해볼 만한 점은 무엇인가요？\n\n",
+            "다음 게시물에 대한 가장 설득력 있는 반론 또는 다른 해석을 제시하세요. 원문 반복은 불필요합니다.\n\n",
         },
       },
       es: {
@@ -628,31 +652,31 @@
           label: "Verificar datos",
           icon: "🕵️",
           prompt:
-            "[Instrucción: Verificación de datos]\nRealiza una verificación detallada de los hechos del siguiente tweet. Señala posibles errores, información engañosa o falta de evidencia, y proporciona el contexto correcto:\n\n",
+            "Verifica los hechos del siguiente post. Responde en orden:\n✅/❌ Veredicto (una frase)\nEvidencia: hechos concretos que apoyan o refutan la afirmación\nContexto: información de fondo necesaria\n\n",
         },
         analysis: {
           label: "Análisis profundo",
           icon: "📊",
           prompt:
-            "[Instrucción: Análisis profundo]\nActúa como un observador experto de redes sociales. Analiza este tweet en cuanto a su tono, dirección emocional, audiencia objetivo y los posibles motivos o posturas implícitas del autor:\n\n",
+            "Analiza el siguiente post:\nTono y emoción: ¿qué lenguaje usa el autor? ¿qué emoción transmite?\nIntención probable: ¿qué intenta lograr o reforzar?\nSesgo potencial: ¿qué se enfatiza o se omite deliberadamente?\n\n",
         },
         translate: {
           label: "Traducir",
           icon: "🌐",
           prompt:
-            "[Instrucción: Traducir]\nTraduce este tweet al español fluido y natural. Si contiene jerga de internet, memes o referencias culturales, explica su significado y contexto:\n\n",
+            "(Espacio personalizable — edita el prompt en Configuración.)\n\n",
         },
         tree: {
-          label: "Personalizado 1",
-          icon: "✏️",
+          label: "Puntos clave",
+          icon: "📌",
           prompt:
-            "(Este es un modo personalizable. Edita la etiqueta y la indicación en Configuración.)\n\nEn un párrafo, explica brevemente de qué trata este tweet y por qué es importante:\n\n",
+            "TL;DR (una frase):\nPunto clave 1:\nPunto clave 2:\nPunto clave 3:\n\nContenido del post:\n\n",
         },
         solution: {
-          label: "Personalizado 2",
-          icon: "✏️",
+          label: "Contraargumento",
+          icon: "⚖️",
           prompt:
-            "(Este es un modo personalizable. Edita la etiqueta y la indicación en Configuración.)\n\n¿Cuál es la pregunta más interesante o reflexiva que plantea este tweet?\n\n",
+            "Da el contraargumento más sólido o una interpretación alternativa del siguiente post. Sin repetir el original.\n\n",
         },
       },
       "pt-BR": {
@@ -660,31 +684,31 @@
           label: "Verificar fatos",
           icon: "🕵️",
           prompt:
-            "[Instrução: Verificação de fatos]\nRealize uma verificação detalhada dos fatos do seguinte tweet. Aponte possíveis erros, informações enganosas ou falta de evidências, e forneça o contexto correto:\n\n",
+            "Verifique os fatos do seguinte post. Responda em ordem:\n✅/❌ Veredicto (uma frase)\nEvidência: fatos concretos que apoiam ou refutam a afirmação\nContexto: informação de fundo necessária\n\n",
         },
         analysis: {
           label: "Análise profunda",
           icon: "📊",
           prompt:
-            "[Instrução: Análise profunda]\nAja como um observador experiente de redes sociais. Analise este tweet quanto ao seu tom, direção emocional, público-alvo e possíveis motivos ou posições implícitas do autor:\n\n",
+            "Analise o seguinte post:\nTom e emoção: que linguagem o autor usa? Que emoção transmite?\nIntenção provável: o que tenta alcançar ou reforçar?\nViés potencial: o que é enfatizado ou omitido deliberadamente?\n\n",
         },
         translate: {
           label: "Traduzir",
           icon: "🌐",
           prompt:
-            "[Instrução: Traduzir]\nTraduzir este tweet para o português brasileiro fluente e natural. Se contiver gírias de internet, memes ou referências culturais, explique seu significado e contexto:\n\n",
+            "(Slot personalizável — edite o prompt em Configurações.)\n\n",
         },
         tree: {
-          label: "Personalizado 1",
-          icon: "✏️",
+          label: "Pontos-chave",
+          icon: "📌",
           prompt:
-            "(Este é um modo personalizável. Edite o rótulo e o prompt em Configurações.)\n\nEm um parágrafo, explique brevemente o que este tweet está discutindo e por que é importante:\n\n",
+            "TL;DR (uma frase):\nPonto-chave 1:\nPonto-chave 2:\nPonto-chave 3:\n\nConteúdo do post:\n\n",
         },
         solution: {
-          label: "Personalizado 2",
-          icon: "✏️",
+          label: "Contra-argumento",
+          icon: "⚖️",
           prompt:
-            "(Este é um modo personalizável. Edite o rótulo e o prompt em Configurações.)\n\nQual é a pergunta mais interessante ou reflexiva levantada por este tweet?\n\n",
+            "Dê o contra-argumento mais forte ou uma interpretação alternativa do seguinte post. Sem repetir o original.\n\n",
         },
       },
       fr: {
@@ -692,31 +716,31 @@
           label: "Vérifier les faits",
           icon: "🕵️",
           prompt:
-            "[Instruction : Vérification des faits]\nEffectuez une vérification détaillée des faits du tweet suivant. Signalez les erreurs potentielles, les informations trompeuses ou le manque de preuves, et fournissez le contexte correct :\n\n",
+            "Vérifiez les faits du post suivant. Répondez dans l'ordre :\n✅/❌ Verdict (une phrase)\nPreuves : faits concrets qui soutiennent ou réfutent l'affirmation\nContexte : informations de fond nécessaires\n\n",
         },
         analysis: {
           label: "Analyse approfondie",
           icon: "📊",
           prompt:
-            "[Instruction : Analyse approfondie]\nAgissez en tant qu'observateur expert des réseaux sociaux. Analysez ce tweet en termes de ton, de direction émotionnelle, de public cible et des motifs ou positions implicites de l'auteur :\n\n",
+            "Analysez le post suivant :\nTon et émotion : quel langage l'auteur utilise-t-il ? Quelle émotion transmet-il ?\nIntention probable : que cherche-t-il à accomplir ou à renforcer ?\nBiais potentiel : qu'est-ce qui est délibérément mis en avant ou omis ?\n\n",
         },
         translate: {
           label: "Traduire",
           icon: "🌐",
           prompt:
-            "[Instruction : Traduire]\nTraduisez ce tweet en français courant et naturel. S'il contient du jargon internet, des mèmes ou des références culturelles, expliquez leur signification et leur contexte :\n\n",
+            "(Emplacement personnalisable — modifiez le prompt dans Paramètres.)\n\n",
         },
         tree: {
-          label: "Personnalisé 1",
-          icon: "✏️",
+          label: "Points clés",
+          icon: "📌",
           prompt:
-            "(Ceci est un mode personnalisable. Modifiez l'étiquette et l'invite dans les Paramètres.)\n\nEn un paragraphe, expliquez brièvement ce dont ce tweet traite et pourquoi c'est important :\n\n",
+            "TL;DR (une phrase) :\nPoint clé 1 :\nPoint clé 2 :\nPoint clé 3 :\n\nContenu du post :\n\n",
         },
         solution: {
-          label: "Personnalisé 2",
-          icon: "✏️",
+          label: "Contre-argument",
+          icon: "⚖️",
           prompt:
-            "(Ceci est un mode personnalisable. Modifiez l'étiquette et l'invite dans les Paramètres.)\n\nQuelle est la question la plus intéressante ou stimulante soulevée par ce tweet ?\n\n",
+            "Donnez le contre-argument le plus solide ou une interprétation alternative du post suivant. Sans répéter l'original.\n\n",
         },
       },
     },
@@ -867,23 +891,6 @@
         }
         .grok-push-btn:hover { background: rgba(29,155,240,0.2); color: #1D9BF0; border-color: #1D9BF0; }
 
-        #grok-push-confirm-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.55); z-index: 2147483640;
-            display: flex; justify-content: center; align-items: center;
-        }
-        #grok-push-confirm-box {
-            background: #16181C; border: 1px solid #2f3336; border-radius: 16px;
-            padding: 24px; width: 320px; max-width: 90%;
-            font-family: sans-serif; color: #E7E9EA;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-        }
-        #grok-push-confirm-box h3 { margin: 0 0 12px; font-size: 16px; color: #fff; }
-        #grok-push-confirm-box p  { margin: 0 0 16px; font-size: 13px; color: #8899A6; word-break: break-all; }
-        .grok-push-confirm-check  { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #536471; margin-bottom: 20px; cursor: pointer; }
-        .grok-push-confirm-check input { cursor: pointer; }
-        .grok-push-confirm-btns   { display: flex; gap: 10px; justify-content: flex-end; }
-
         #grok-settings-overlay {
             all: initial !important;
             position: fixed !important;
@@ -943,7 +950,7 @@
             border-top: 1px solid #1e2532 !important;
             display: flex !important;
             justify-content: flex-end !important;
-            gap: 8px !important;
+            gap: 10px !important;
             flex-shrink: 0 !important;
             box-sizing: border-box !important;
             background: #0d1117 !important;
@@ -963,11 +970,24 @@
             letter-spacing: 1px; text-transform: uppercase;
             border-bottom: 1px solid #1e2532;
             display: flex; align-items: center; gap: 6px;
+            border-left: 3px solid #1d9bf0;
         }
         .grok-section-body {
             padding: 14px 16px;
             display: flex; flex-direction: column; gap: 12px;
         }
+        .grok-section-desc {
+            font-size: 11px; color: #536471; line-height: 1.6;
+            margin-bottom: 2px;
+        }
+
+        .grok-platform-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 11px; font-weight: 700; padding: 2px 8px;
+            border-radius: 10px; letter-spacing: 0.3px;
+        }
+        .grok-platform-badge.discord  { background: rgba(88,101,242,0.18); color: #8b9eff; border: 1px solid rgba(88,101,242,0.35); }
+        .grok-platform-badge.telegram { background: rgba(41,182,246,0.18); color: #64c8f5; border: 1px solid rgba(41,182,246,0.35); }
 
         .grok-form-row { display: flex; flex-direction: column; gap: 5px; }
         .grok-form-label { font-size: 12px; font-weight: 600; color: #8899A6; }
@@ -1234,24 +1254,28 @@
 
           <!-- ② 模板編輯器 -->
           <div class="grok-section-card">
-            <div class="grok-section-header">✏️ Prompt Templates</div>
-            <div class="grok-section-body" id="grok-template-editors"></div>
+            <div class="grok-section-header">${t("tmpl_section_label")}</div>
+            <div class="grok-section-body">
+              <div class="grok-section-desc">${t("tmpl_section_hint")}</div>
+              <div id="grok-template-editors"></div>
+            </div>
           </div>
 
           <!-- ③ 推送設定 -->
           <div class="grok-section-card">
-            <div class="grok-section-header">📨 ${t("push_section_label").replace("📨 ","")}</div>
+            <div class="grok-section-header">📨 ${t("push_section_label").replace(/^📨\s*/,"")}</div>
             <div class="grok-section-body">
+              <div class="grok-section-desc">${t("push_section_desc")}</div>
               <div class="grok-form-row">
                 <label class="grok-form-label">${t("push_url_converter")}</label>
                 <select id="grok-url-converter-select" class="grok-input-select">
-                  <option value="vxtwitter.com" ${pc.urlConverter==="vxtwitter.com"?"selected":""}>vxtwitter.com</option>
+                  <option value="x.com"         ${(!pc.urlConverter||pc.urlConverter==="x.com")?"selected":""}>x.com（不轉換）</option>
                   <option value="fixupx.com"    ${pc.urlConverter==="fixupx.com"   ?"selected":""}>fixupx.com</option>
                   <option value="fxtwitter.com" ${pc.urlConverter==="fxtwitter.com"?"selected":""}>fxtwitter.com</option>
+                  <option value="vxtwitter.com" ${pc.urlConverter==="vxtwitter.com"?"selected":""}>vxtwitter.com</option>
                   <option value="cunnyx.com"    ${pc.urlConverter==="cunnyx.com"   ?"selected":""}>cunnyx.com</option>
                   <option value="fixvx.com"     ${pc.urlConverter==="fixvx.com"    ?"selected":""}>fixvx.com</option>
                   <option value="twitter.com"   ${pc.urlConverter==="twitter.com"  ?"selected":""}>twitter.com</option>
-                  <option value="x.com"         ${(!pc.urlConverter||pc.urlConverter==="x.com")?"selected":""}>x.com（不轉換）</option>
                 </select>
                 <div class="grok-form-hint">${t("push_url_converter_hint")}</div>
               </div>
@@ -1302,17 +1326,16 @@
     });
     const modalFooterEl = overlay.querySelector(".grok-modal-footer");
     if (modalFooterEl) Object.assign(modalFooterEl.style, {
-      display: "flex", justifyContent: "flex-end", gap: "8px",
+      display: "flex", justifyContent: "flex-end", gap: "10px",
       flexShrink: "0", padding: "12px 18px", boxSizing: "border-box",
       borderTop: "1px solid #2f3336", background: "#000",
     });
 
     const editorContainer = document.getElementById("grok-template-editors");
-    const keys = ["factcheck", "analysis", "tree", "solution", "translate"];
 
     function renderEditors(templates) {
       editorContainer.innerHTML = "";
-      keys.forEach((key) => {
+      TEMPLATE_KEYS.forEach((key) => {
         const tmpl = templates[key];
         if (!tmpl) return;
         const div = document.createElement("div");
@@ -1342,8 +1365,11 @@
       container.innerHTML = "";
 
       const header = document.createElement("div");
-      header.style.cssText = "display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;";
-      header.innerHTML = `<span style="font-size:12px;font-weight:bold;color:#8899A6">${type === "discord" ? "Discord" : "Telegram"}</span>`;
+      header.style.cssText = "display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;";
+      const badge = document.createElement("span");
+      badge.className = `grok-platform-badge ${type}`;
+      badge.textContent = type === "discord" ? "Discord" : "Telegram";
+      header.appendChild(badge);
       const addBtn = document.createElement("button");
       addBtn.className = "grok-push-add-btn";
       addBtn.textContent = t("push_add");
@@ -2000,6 +2026,8 @@
     "Répondre",
   ];
 
+  const TEMPLATE_KEYS = ["factcheck", "analysis", "tree", "solution", "translate"];
+
   const BLACKLIST_LABELS = [
     "image",
     "picture",
@@ -2022,6 +2050,20 @@
 
   let activeInterval = null;
   let pendingTask = null;
+
+  let _drawerObserver = null;
+
+  function watchDrawerClose(ta) {
+    if (_drawerObserver) { clearInterval(_drawerObserver); _drawerObserver = null; }
+
+    _drawerObserver = setInterval(() => {
+      if (!document.contains(ta)) {
+        clearInterval(_drawerObserver);
+        _drawerObserver = null;
+        GM_setValue("grok_drawer_opened", false);
+      }
+    }, 500);
+  }
 
   function resetGlobalState() {
     if (activeInterval) {
@@ -2149,7 +2191,7 @@
     menu.style.left = `${finalX}px`;
     menu.style.top = `${finalY}px`;
 
-    const keys = ["factcheck", "analysis", "tree", "solution", "translate"];
+    const keys = TEMPLATE_KEYS;
     const pushCfg = loadPushConfig();
     const hasAnyTarget =
       (pushCfg.discord  || []).some(e => e.enabled && e.url) ||
@@ -2275,6 +2317,21 @@
     document.body.appendChild(menu);
   }
 
+  function isBottomRightFloating(btn) {
+    const rect = btn.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return false;
+    const nearRight = rect.right > window.innerWidth - 160;
+    const nearBottom = rect.bottom > window.innerHeight - 160;
+    if (!nearRight || !nearBottom) return false;
+    let el = btn;
+    while (el && el !== document.body) {
+      const pos = getComputedStyle(el).position;
+      if (pos === "fixed" || pos === "sticky") return true;
+      el = el.parentElement;
+    }
+    return false;
+  }
+
   function findGlobalGrokButton() {
     const paths = document.querySelectorAll("path");
     for (let p of paths) {
@@ -2284,7 +2341,8 @@
           btn &&
           !btn.closest("article") &&
           !btn.classList.contains("my-commander-btn") &&
-          btn.offsetParent !== null
+          btn.offsetParent !== null &&
+          isBottomRightFloating(btn)
         ) {
           return btn;
         }
@@ -2348,6 +2406,25 @@
     }
   }
 
+  function getDrawerToggleButton() {
+    const el = document.querySelector('[data-testid="GrokDrawerHeader"]');
+    if (!el) return null;
+    return el.tagName === "BUTTON" ? el : el.querySelector("button");
+  }
+
+  function findVisibleTextarea() {
+    for (const ta of document.querySelectorAll("textarea")) {
+      if (ta.offsetParent === null || !document.contains(ta)) continue;
+      const rect = ta.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) continue;
+      const style = getComputedStyle(ta);
+      if (parseFloat(style.opacity) === 0) continue;
+      if (style.pointerEvents === "none") continue;
+      return ta;
+    }
+    return null;
+  }
+
   function executeCommand(prompt, tweetData, withPrivacy = false) {
     const fullContent = `${prompt}\n\n[Tweet URL]: ${tweetData.url}\n[Tweet Content]: ${tweetData.text}`;
     const autoSend = loadConfig().autoSend === true;
@@ -2358,57 +2435,99 @@
       textFilled: false,
     };
 
-    const existingTextarea = (() => {
-      for (const ta of document.querySelectorAll("textarea")) {
-        if (ta.offsetParent !== null) return ta;
-      }
-      return null;
-    })();
+    const existingTextarea = findVisibleTextarea();
 
     if (existingTextarea) {
       pendingTask.targetInput = existingTextarea;
-
-      const drawerObs = new MutationObserver(() => {
-        if (existingTextarea.offsetParent === null) {
-          drawerObs.disconnect();
-          showWarnToast(t("need_reopen"));
-        }
-      });
-      drawerObs.observe(document.body, { childList: true, subtree: true });
-
+      watchDrawerClose(existingTextarea);
       startInjectionDirect(existingTextarea, withPrivacy);
       return;
     }
 
+    const drawerToggle = getDrawerToggleButton();
+    if (drawerToggle) {
+      GM_setValue("grok_drawer_opened", true);
+      triggerClick(drawerToggle);
+      let waitAttempts = 0;
+      const waitTimer = setInterval(() => {
+        waitAttempts++;
+        if (waitAttempts > 40) { clearInterval(waitTimer); return; }
+        const ta = findVisibleTextarea();
+        if (ta) {
+          clearInterval(waitTimer);
+          watchDrawerClose(ta);
+        }
+      }, 200);
+      startInjection(withPrivacy);
+      return;
+    }
+
     const hasOpenedBefore = GM_getValue("grok_drawer_opened", false);
-    if (!hasOpenedBefore) {
-      const globalBtn = findGlobalGrokButton();
-      if (globalBtn) {
+    let headerPollAttempts = 0;
+    const headerPollTimer = setInterval(() => {
+      headerPollAttempts++;
+
+      const btn = getDrawerToggleButton();
+      if (btn) {
+        clearInterval(headerPollTimer);
         GM_setValue("grok_drawer_opened", true);
-        triggerClick(globalBtn);
-
-        const waitForTextarea = new MutationObserver(() => {
-          for (const ta of document.querySelectorAll("textarea")) {
-            if (ta.offsetParent !== null) {
-              waitForTextarea.disconnect();
-              const drawerObs = new MutationObserver(() => {
-                if (ta.offsetParent === null) {
-                  drawerObs.disconnect();
-                  showWarnToast(t("need_reopen"));
-                }
-              });
-              drawerObs.observe(document.body, { childList: true, subtree: true });
-              return;
-            }
+        triggerClick(btn);
+        let waitAttempts = 0;
+        const waitTimer = setInterval(() => {
+          waitAttempts++;
+          if (waitAttempts > 40) { clearInterval(waitTimer); return; }
+          const ta = findVisibleTextarea();
+          if (ta) {
+            clearInterval(waitTimer);
+            watchDrawerClose(ta);
           }
-        });
-        waitForTextarea.observe(document.body, { childList: true, subtree: true });
-
+        }, 200);
         startInjection(withPrivacy);
         return;
       }
+
+      if (headerPollAttempts >= 10) {
+        clearInterval(headerPollTimer);
+        if (!hasOpenedBefore) {
+          const globalBtn = findGlobalGrokButton();
+          if (globalBtn) {
+            GM_setValue("grok_drawer_opened", true);
+            triggerClick(globalBtn);
+            let waitAttempts = 0;
+            const waitTimer = setInterval(() => {
+              waitAttempts++;
+              if (waitAttempts > 40) { clearInterval(waitTimer); return; }
+              const ta = findVisibleTextarea();
+              if (ta) {
+                clearInterval(waitTimer);
+                watchDrawerClose(ta);
+              }
+            }, 200);
+            startInjection(withPrivacy);
+            return;
+          }
+        }
+        showWarnToast(t("need_reopen"));
+      }
+    }, 100);
+  }
+
+  function findSendButton() {
+    const buttons = document.querySelectorAll("button");
+    for (const btn of buttons) {
+      const label = btn.getAttribute("aria-label");
+      if (label && BLACKLIST_LABELS.some((bad) => label.toLowerCase().includes(bad))) continue;
+      if (label && SEND_BTN_LABELS.some((good) => label === good)) return btn;
+      const svgPath = btn.querySelector("path");
+      if (svgPath) {
+        const d = svgPath.getAttribute("d");
+        if (
+          (d === SEND_SVG_FINGERPRINT || (d && d.startsWith("M12 3.59"))) &&
+          !d.startsWith("M3 12")
+        ) return btn;
+      }
     }
-    showWarnToast(t("need_reopen"));
+    return null;
   }
 
   function startInjectionDirect(targetInput, withPrivacy = false) {
@@ -2425,11 +2544,24 @@
         return;
       }
 
-      const stillVisible = targetInput && targetInput.offsetParent !== null;
+      const stillVisible = targetInput && document.contains(targetInput) && targetInput.offsetParent !== null;
       if (textareaEverSeen && !stillVisible) {
-        console.warn("[Commander] textarea 消失，中止直接注入");
+        console.warn("[Commander] textarea 消失，等待 GrokDrawerHeader 出現後重開");
         resetGlobalState();
-        showWarnToast(t("need_reopen"));
+        GM_setValue("grok_drawer_opened", false);
+
+        let reopenAttempts = 0;
+        const reopenTimer = setInterval(() => {
+          reopenAttempts++;
+          if (reopenAttempts > 20) { clearInterval(reopenTimer); return; }
+          const drawerToggle = getDrawerToggleButton();
+          if (drawerToggle) {
+            clearInterval(reopenTimer);
+            GM_setValue("grok_drawer_opened", true);
+            triggerClick(drawerToggle);
+            startInjection(withPrivacy);
+          }
+        }, 100);
         return;
       }
 
@@ -2460,20 +2592,7 @@
 
       if (pendingTask.textFilled && pendingTask.autoSend) {
         if (pendingTask.targetInput) simulateEnterKey(pendingTask.targetInput);
-        let targetBtn = null;
-        const buttons = document.querySelectorAll("button");
-        for (let btn of buttons) {
-          const label = btn.getAttribute("aria-label");
-          if (label && BLACKLIST_LABELS.some((bad) => label.toLowerCase().includes(bad))) continue;
-          if (label && SEND_BTN_LABELS.some((good) => label === good)) { targetBtn = btn; break; }
-          const svgPath = btn.querySelector("path");
-          if (svgPath) {
-            const d = svgPath.getAttribute("d");
-            if (d === SEND_SVG_FINGERPRINT || (d && d.startsWith("M12 3.59"))) {
-              if (!d.startsWith("M3 12")) { targetBtn = btn; break; }
-            }
-          }
-        }
+        const targetBtn = findSendButton();
         if (targetBtn && !targetBtn.disabled && targetBtn.getAttribute("aria-disabled") !== "true") {
           triggerClick(targetBtn);
           setTimeout(() => {
@@ -2508,18 +2627,13 @@
         return;
       }
 
-      const textarea = (() => {
-        for (const ta of document.querySelectorAll("textarea")) {
-          if (ta.offsetParent !== null) return ta;
-        }
-        return null;
-      })();
+      const textarea = findVisibleTextarea();
 
       if (textarea) textareaEverSeen = true;
 
       if (textareaEverSeen && !textarea) {
         resetGlobalState();
-        showWarnToast(t("need_reopen"));
+        GM_setValue("grok_drawer_opened", false);
         return;
       }
 
@@ -2572,33 +2686,7 @@
           simulateEnterKey(pendingTask.targetInput);
         }
 
-        let targetBtn = null;
-        const buttons = document.querySelectorAll("button");
-
-        for (let btn of buttons) {
-          const label = btn.getAttribute("aria-label");
-          if (
-            label &&
-            BLACKLIST_LABELS.some((bad) => label.toLowerCase().includes(bad))
-          )
-            continue;
-
-          if (label && SEND_BTN_LABELS.some((good) => label === good)) {
-            targetBtn = btn;
-            break;
-          }
-
-          const svgPath = btn.querySelector("path");
-          if (svgPath) {
-            const d = svgPath.getAttribute("d");
-            if (d === SEND_SVG_FINGERPRINT || (d && d.startsWith("M12 3.59"))) {
-              if (!d.startsWith("M3 12")) {
-                targetBtn = btn;
-                break;
-              }
-            }
-          }
-        }
+        const targetBtn = findSendButton();
 
         if (
           targetBtn &&
@@ -2639,5 +2727,5 @@
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.2.1.6 loaded.");
+  console.log("[Commander] Grok Commander v1.2.2.9 loaded.");
 })();
