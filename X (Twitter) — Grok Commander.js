@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.2.2.9
+// @version      1.2.2.12
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -55,7 +55,6 @@
         btn_save: "儲存設定",
         confirm_reset: "確定要恢復預設值？這將覆蓋您的自定義模版。",
         alert_saved: "設定已儲存！",
-        alert_no_grok: "錯誤：找不到全域 Grok 按鈕。",
         private_tooltip: "私人模式（抽屜內啟用私人聊天）",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok 指揮官",
@@ -65,16 +64,15 @@
         push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
         tmpl_section_label: "✏️ 提示詞模板 (Prompt Templates)",
         tmpl_section_hint: "點選選單中的模式時，對應的提示詞會自動附加到貼文內容後方。",
-        push_enable_discord: "啟用 Discord 推送",
-        push_enable_telegram: "啟用 Telegram 推送",
+        tmpl_reset_one_tooltip: "重置此模板為預設值",
+        confirm_reset_one: "確定要將「{label}」模板恢復為預設值？此操作可用 Ctrl+Z 復原。",
+        toast_reset_one: "已重置「{label}」模板（可按 Ctrl+Z 復原）",
         push_discord_url: "Discord Webhook URL",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Telegram Bot Token",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "Telegram Chat ID",
         push_tg_chat_placeholder: "-100xxxxxxxxxx 或 @頻道名稱",
-        push_confirm_title: "確認推送",
-        push_confirm_body: "推送此貼文連結？",
         push_confirm_check: "之後不再提示（可在設定中恢復）",
         push_confirm_ok: "推送",
         push_confirm_cancel: "取消",
@@ -110,7 +108,6 @@
         btn_save: "保存设置",
         confirm_reset: "确定要恢复默认值？这将覆盖您的自定义模板。",
         alert_saved: "设置已保存！",
-        alert_no_grok: "错误：找不到全局 Grok 按钮。",
         private_tooltip: "私密模式（抽屜内启用私人聊天）",
         settings_tooltip: "设置 (Settings)",
         commander_btn_label: "Grok 指挥官",
@@ -120,16 +117,15 @@
         push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
         tmpl_section_label: "✏️ 提示词模板 (Prompt Templates)",
         tmpl_section_hint: "点选菜单中的模式时，对应的提示词会自动附加到贴文内容后方。",
-        push_enable_discord: "启用 Discord 推送",
-        push_enable_telegram: "启用 Telegram 推送",
+        tmpl_reset_one_tooltip: "将此模板重置为默认值",
+        confirm_reset_one: "确定要将\"{label}\"模板恢复为默认值？此操作可用 Ctrl+Z 撤销。",
+        toast_reset_one: "已重置\"{label}\"模板（可按 Ctrl+Z 撤销）",
         push_discord_url: "Discord Webhook URL",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Telegram Bot Token",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "Telegram Chat ID",
         push_tg_chat_placeholder: "-100xxxxxxxxxx 或 @频道名",
-        push_confirm_title: "确认推送",
-        push_confirm_body: "推送此帖子链接？",
         push_confirm_check: "之后不再提示（可在设置中恢复）",
         push_confirm_ok: "推送",
         push_confirm_cancel: "取消",
@@ -167,7 +163,6 @@
         confirm_reset:
           "Reset to defaults? This will overwrite your custom templates.",
         alert_saved: "Settings saved!",
-        alert_no_grok: "Error: Global Grok button not found.",
         private_tooltip: "Private Mode (enable private chat in drawer)",
         settings_tooltip: "Settings",
         commander_btn_label: "Grok Commander",
@@ -177,16 +172,15 @@
         push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
         tmpl_section_label: "✏️ Prompt Templates",
         tmpl_section_hint: "When you select a mode from the menu, its prompt is automatically appended to the post content.",
-        push_enable_discord: "Enable Discord Push",
-        push_enable_telegram: "Enable Telegram Push",
+        tmpl_reset_one_tooltip: "Reset this template to default",
+        confirm_reset_one: "Reset the \"{label}\" template to its default value? You can undo this with Ctrl+Z.",
+        toast_reset_one: "Reset \"{label}\" template to default (press Ctrl+Z to undo)",
         push_discord_url: "Discord Webhook URL",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Telegram Bot Token",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "Telegram Chat ID",
         push_tg_chat_placeholder: "-100xxxxxxxxxx or @channelname",
-        push_confirm_title: "Confirm Push",
-        push_confirm_body: "Push this tweet link?",
         push_confirm_check: "Don't ask again (can be restored in Settings)",
         push_confirm_ok: "Push",
         push_confirm_cancel: "Cancel",
@@ -224,7 +218,6 @@
         confirm_reset:
           "デフォルトに戻しますか？カスタムテンプレートが上書きされます。",
         alert_saved: "設定を保存しました！",
-        alert_no_grok: "エラー：グローバル Grok ボタンが見つかりません。",
         private_tooltip: "プライベートモード（ドロワー内でプライベートチャットを有効化）",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok コマンダー",
@@ -234,16 +227,15 @@
         push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
         tmpl_section_label: "✏️ プロンプトテンプレート",
         tmpl_section_hint: "メニューからモードを選択すると、対応するプロンプトが投稿内容の後に自動追加されます。",
-        push_enable_discord: "Discord プッシュを有効化",
-        push_enable_telegram: "Telegram プッシュを有効化",
+        tmpl_reset_one_tooltip: "このテンプレートをデフォルトに戻す",
+        confirm_reset_one: "「{label}」テンプレートをデフォルトに戻しますか？Ctrl+Z で元に戻せます。",
+        toast_reset_one: "「{label}」テンプレートをデフォルトに戻しました（Ctrl+Z で元に戻せます）",
         push_discord_url: "Discord Webhook URL",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Telegram Bot Token",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "Telegram Chat ID",
         push_tg_chat_placeholder: "-100xxxxxxxxxx または @チャンネル名",
-        push_confirm_title: "プッシュ確認",
-        push_confirm_body: "この投稿リンクをプッシュしますか？",
         push_confirm_check: "今後確認しない（設定で復元可能）",
         push_confirm_ok: "送信",
         push_confirm_cancel: "キャンセル",
@@ -281,7 +273,6 @@
         confirm_reset:
           "기본값으로 재설정하시겠습니까? 커스텀 템플릿이 덮어쓰여집니다.",
         alert_saved: "설정이 저장되었습니다！",
-        alert_no_grok: "오류: 전역 Grok 버튼을 찾을 수 없습니다.",
         private_tooltip: "비공개 모드（드로어 내 비공개 채팅 활성화）",
         settings_tooltip: "설정 (Settings)",
         commander_btn_label: "Grok 커맨더",
@@ -291,16 +282,15 @@
         push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
         tmpl_section_label: "✏️ 프롬프트 템플릿",
         tmpl_section_hint: "메뉴에서 모드를 선택하면 해당 프롬프트가 게시물 내용 뒤에 자동으로 추가됩니다.",
-        push_enable_discord: "Discord 푸시 활성화",
-        push_enable_telegram: "Telegram 푸시 활성화",
+        tmpl_reset_one_tooltip: "이 템플릿을 기본값으로 재설정",
+        confirm_reset_one: "「{label}」 템플릿을 기본값으로 재설정하시겠습니까? Ctrl+Z로 되돌릴 수 있습니다.",
+        toast_reset_one: "「{label}」 템플릿을 기본값으로 재설정했습니다 (Ctrl+Z로 되돌리기 가능)",
         push_discord_url: "Discord Webhook URL",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Telegram Bot Token",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "Telegram Chat ID",
         push_tg_chat_placeholder: "-100xxxxxxxxxx 또는 @채널명",
-        push_confirm_title: "푸시 확인",
-        push_confirm_body: "이 트윗 링크를 푸시하시겠습니까？",
         push_confirm_check: "다시 묻지 않음（설정에서 복원 가능）",
         push_confirm_ok: "전송",
         push_confirm_cancel: "취소",
@@ -336,7 +326,6 @@
         btn_save: "Guardar configuración",
         confirm_reset: "¿Restablecer valores predeterminados? Esto sobrescribirá sus plantillas personalizadas.",
         alert_saved: "¡Configuración guardada!",
-        alert_no_grok: "Error: no se encontró el botón global de Grok.",
         private_tooltip: "Modo privado (activar chat privado en el panel)",
         settings_tooltip: "Configuración",
         commander_btn_label: "Grok Comandante",
@@ -346,16 +335,15 @@
         push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
         tmpl_section_label: "✏️ Plantillas de prompts",
         tmpl_section_hint: "Al seleccionar un modo del menú, el prompt correspondiente se añade automáticamente al contenido del post.",
-        push_enable_discord: "Activar push de Discord",
-        push_enable_telegram: "Activar push de Telegram",
+        tmpl_reset_one_tooltip: "Restablecer esta plantilla a su valor predeterminado",
+        confirm_reset_one: "¿Restablecer la plantilla \"{label}\" a su valor predeterminado? Puedes deshacerlo con Ctrl+Z.",
+        toast_reset_one: "Plantilla \"{label}\" restablecida (Ctrl+Z para deshacer)",
         push_discord_url: "URL de Discord Webhook",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Token del Bot de Telegram",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "ID de Chat de Telegram",
         push_tg_chat_placeholder: "-100xxxxxxxxxx o @nombrecanal",
-        push_confirm_title: "Confirmar envío",
-        push_confirm_body: "¿Enviar el enlace de este tweet?",
         push_confirm_check: "No volver a preguntar (se puede restaurar en Configuración)",
         push_confirm_ok: "Enviar",
         push_confirm_cancel: "Cancelar",
@@ -391,7 +379,6 @@
         btn_save: "Salvar configurações",
         confirm_reset: "Restaurar padrões? Isso sobrescreverá seus modelos personalizados.",
         alert_saved: "Configurações salvas!",
-        alert_no_grok: "Erro: botão global do Grok não encontrado.",
         private_tooltip: "Modo privado (ativar chat privado no painel)",
         settings_tooltip: "Configurações",
         commander_btn_label: "Grok Comandante",
@@ -401,16 +388,15 @@
         push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
         tmpl_section_label: "✏️ Templates de prompts",
         tmpl_section_hint: "Ao selecionar um modo no menu, o prompt correspondente é adicionado automaticamente ao conteúdo do post.",
-        push_enable_discord: "Ativar push do Discord",
-        push_enable_telegram: "Ativar push do Telegram",
+        tmpl_reset_one_tooltip: "Restaurar este modelo para o padrão",
+        confirm_reset_one: "Restaurar o modelo \"{label}\" para o padrão? Você pode desfazer com Ctrl+Z.",
+        toast_reset_one: "Modelo \"{label}\" restaurado para o padrão (Ctrl+Z para desfazer)",
         push_discord_url: "URL do Discord Webhook",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Token do Bot do Telegram",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "ID do Chat do Telegram",
         push_tg_chat_placeholder: "-100xxxxxxxxxx ou @nomecanal",
-        push_confirm_title: "Confirmar envio",
-        push_confirm_body: "Enviar o link deste tweet?",
         push_confirm_check: "Não perguntar novamente (pode ser restaurado em Configurações)",
         push_confirm_ok: "Enviar",
         push_confirm_cancel: "Cancelar",
@@ -446,7 +432,6 @@
         btn_save: "Enregistrer les paramètres",
         confirm_reset: "Rétablir les valeurs par défaut ? Cela écrasera vos modèles personnalisés.",
         alert_saved: "Paramètres enregistrés !",
-        alert_no_grok: "Erreur : bouton Grok global introuvable.",
         private_tooltip: "Mode privé (activer le chat privé dans le panneau)",
         settings_tooltip: "Paramètres",
         commander_btn_label: "Grok Commandant",
@@ -456,16 +441,15 @@
         push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
         tmpl_section_label: "✏️ Modèles de prompts",
         tmpl_section_hint: "Lorsque vous sélectionnez un mode dans le menu, le prompt correspondant est automatiquement ajouté au contenu du post.",
-        push_enable_discord: "Activer les push Discord",
-        push_enable_telegram: "Activer les push Telegram",
+        tmpl_reset_one_tooltip: "Réinitialiser ce modèle aux valeurs par défaut",
+        confirm_reset_one: "Réinitialiser le modèle « {label} » à sa valeur par défaut ? Vous pouvez annuler avec Ctrl+Z.",
+        toast_reset_one: "Modèle « {label} » réinitialisé (Ctrl+Z pour annuler)",
         push_discord_url: "URL du Webhook Discord",
         push_discord_placeholder: "https://discord.com/api/webhooks/...",
         push_tg_token: "Token du Bot Telegram",
         push_tg_token_placeholder: "123456789:ABC-xxxxxxxx",
         push_tg_chat: "ID du Chat Telegram",
         push_tg_chat_placeholder: "-100xxxxxxxxxx ou @nomcanal",
-        push_confirm_title: "Confirmer l'envoi",
-        push_confirm_body: "Envoyer le lien de ce tweet ?",
         push_confirm_check: "Ne plus demander (restaurable dans les Paramètres)",
         push_confirm_ok: "Envoyer",
         push_confirm_cancel: "Annuler",
@@ -1055,7 +1039,13 @@
         .grok-test-btn:disabled { opacity: 0.5; cursor: default; }
 
         .grok-tmpl-item { border: 1px solid #2f3336; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
-        .grok-tmpl-title { font-size: 12px; font-weight: bold; color: #8899A6; margin-bottom: 2px; }
+        .grok-tmpl-title { font-size: 12px; font-weight: bold; color: #8899A6; margin-bottom: 2px; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+        .grok-tmpl-reset-btn {
+            border: 1px solid #2f3336; border-radius: 6px; background: transparent;
+            color: #8899A6; font-size: 12px; line-height: 1; cursor: pointer;
+            padding: 2px 6px; transition: all 0.15s; flex-shrink: 0; font-weight: normal;
+        }
+        .grok-tmpl-reset-btn:hover { border-color: #1D9BF0; color: #1D9BF0; background: rgba(29,155,240,0.1); }
         .grok-tmpl-row   { display: flex; gap: 8px; align-items: center; }
         .grok-tmpl-row span { font-size: 11px; color: #536471; white-space: nowrap; }
 
@@ -1333,6 +1323,26 @@
 
     const editorContainer = document.getElementById("grok-template-editors");
 
+    function setUndoableValue(el, value) {
+      el.focus();
+      el.select();
+      const ok = document.execCommand("insertText", false, value);
+      if (!ok) {
+        el.value = value;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+    }
+
+    function getDefaultTemplatesForSelection() {
+      const targetVal = langSelect.value;
+      if (targetVal === "custom") {
+        const pack = loadCustomLangPack();
+        return (pack && pack.templates) ? pack.templates : DEFAULT_CONFIG.templates["en"];
+      }
+      const targetLang = resolveLang(targetVal);
+      return DEFAULT_CONFIG.templates[targetLang] || DEFAULT_CONFIG.templates["en"];
+    }
+
     function renderEditors(templates) {
       editorContainer.innerHTML = "";
       TEMPLATE_KEYS.forEach((key) => {
@@ -1341,7 +1351,10 @@
         const div = document.createElement("div");
         div.className = "grok-tmpl-item";
         div.innerHTML = `
-          <div class="grok-tmpl-title">${escapeHtml(tmpl.icon)} ${escapeHtml(tmpl.label)}</div>
+          <div class="grok-tmpl-title">
+            <span>${escapeHtml(tmpl.icon)} ${escapeHtml(tmpl.label)}</span>
+            <button type="button" class="grok-tmpl-reset-btn" data-reset-key="${key}" title="${escapeHtml(t("tmpl_reset_one_tooltip"))}">↺</button>
+          </div>
           <div class="grok-tmpl-row">
             <span>${t("label_label")}</span>
             <input type="text" class="grok-input-select" style="height:28px;padding:3px 8px;font-size:12px;flex:1;"
@@ -1353,6 +1366,19 @@
           </div>
         `;
         editorContainer.appendChild(div);
+
+        div.querySelector(`[data-reset-key="${key}"]`).onclick = () => {
+          const labelInput = div.querySelector(`input[data-label-key="${key}"]`);
+          const textarea = div.querySelector(`textarea[data-key="${key}"]`);
+          const currentLabel = labelInput.value.trim() || tmpl.label;
+          if (!confirm(t("confirm_reset_one").replace("{label}", currentLabel))) return;
+          const defaults = getDefaultTemplatesForSelection();
+          const def = defaults[key];
+          if (!def) return;
+          setUndoableValue(labelInput, def.label);
+          setUndoableValue(textarea, def.prompt);
+          showToast(t("toast_reset_one").replace("{label}", def.label));
+        };
       });
     }
     renderEditors(templatesToEdit);
@@ -2127,6 +2153,7 @@
           !originalBtn.classList.contains("my-commander-btn") &&
           !_hijackedBtns.has(originalBtn)
         ) {
+          if (!originalBtn.closest("article").querySelector('[data-testid="tweetText"]')) return;
           const newBtn = originalBtn.cloneNode(true);
           newBtn.classList.add("my-commander-btn", "my-commander-btn-active");
           newBtn.style.color = "#FF1493";
@@ -2710,7 +2737,16 @@
   style.textContent = STYLES;
   document.head.appendChild(style);
 
-  const observer = new MutationObserver(() => hijackOperations());
+  let _hijackRafPending = false;
+  const observer = new MutationObserver(() => {
+    if (!_hijackRafPending) {
+      _hijackRafPending = true;
+      requestAnimationFrame(() => {
+        _hijackRafPending = false;
+        hijackOperations();
+      });
+    }
+  });
   observer.observe(document.body, { childList: true, subtree: true });
 
   setTimeout(hijackOperations, 1000);
@@ -2727,5 +2763,5 @@
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.2.2.9 loaded.");
+  console.log("[Commander] Grok Commander v1.2.2.11 loaded.");
 })();
