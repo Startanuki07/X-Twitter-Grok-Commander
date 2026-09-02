@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.2.2.12
+// @version      1.2.2.15
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -56,6 +56,8 @@
         confirm_reset: "確定要恢復預設值？這將覆蓋您的自定義模版。",
         alert_saved: "設定已儲存！",
         private_tooltip: "私人模式（抽屜內啟用私人聊天）",
+        btn_confirm: "確定",
+        privacy_auto_synced: "已自動同步私人模式狀態",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok 指揮官",
         commander_btn_title: "AI 指揮官（已啟用）",
@@ -109,6 +111,8 @@
         confirm_reset: "确定要恢复默认值？这将覆盖您的自定义模板。",
         alert_saved: "设置已保存！",
         private_tooltip: "私密模式（抽屜内启用私人聊天）",
+        btn_confirm: "确定",
+        privacy_auto_synced: "已自动同步私密模式状态",
         settings_tooltip: "设置 (Settings)",
         commander_btn_label: "Grok 指挥官",
         commander_btn_title: "AI 指挥官（已启用）",
@@ -164,6 +168,8 @@
           "Reset to defaults? This will overwrite your custom templates.",
         alert_saved: "Settings saved!",
         private_tooltip: "Private Mode (enable private chat in drawer)",
+        btn_confirm: "Confirm",
+        privacy_auto_synced: "Private mode auto-synced",
         settings_tooltip: "Settings",
         commander_btn_label: "Grok Commander",
         commander_btn_title: "AI Commander (Active)",
@@ -219,6 +225,8 @@
           "デフォルトに戻しますか？カスタムテンプレートが上書きされます。",
         alert_saved: "設定を保存しました！",
         private_tooltip: "プライベートモード（ドロワー内でプライベートチャットを有効化）",
+        btn_confirm: "確定",
+        privacy_auto_synced: "プライベートモードを自動同期しました",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok コマンダー",
         commander_btn_title: "AI コマンダー（有効）",
@@ -274,6 +282,8 @@
           "기본값으로 재설정하시겠습니까? 커스텀 템플릿이 덮어쓰여집니다.",
         alert_saved: "설정이 저장되었습니다！",
         private_tooltip: "비공개 모드（드로어 내 비공개 채팅 활성화）",
+        btn_confirm: "확인",
+        privacy_auto_synced: "비공개 모드가 자동으로 동기화되었습니다",
         settings_tooltip: "설정 (Settings)",
         commander_btn_label: "Grok 커맨더",
         commander_btn_title: "AI 커맨더（활성화）",
@@ -327,6 +337,8 @@
         confirm_reset: "¿Restablecer valores predeterminados? Esto sobrescribirá sus plantillas personalizadas.",
         alert_saved: "¡Configuración guardada!",
         private_tooltip: "Modo privado (activar chat privado en el panel)",
+        btn_confirm: "Confirmar",
+        privacy_auto_synced: "Modo privado sincronizado automáticamente",
         settings_tooltip: "Configuración",
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Activo)",
@@ -380,6 +392,8 @@
         confirm_reset: "Restaurar padrões? Isso sobrescreverá seus modelos personalizados.",
         alert_saved: "Configurações salvas!",
         private_tooltip: "Modo privado (ativar chat privado no painel)",
+        btn_confirm: "Confirmar",
+        privacy_auto_synced: "Modo privado sincronizado automaticamente",
         settings_tooltip: "Configurações",
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Ativo)",
@@ -433,6 +447,8 @@
         confirm_reset: "Rétablir les valeurs par défaut ? Cela écrasera vos modèles personnalisés.",
         alert_saved: "Paramètres enregistrés !",
         private_tooltip: "Mode privé (activer le chat privé dans le panneau)",
+        btn_confirm: "Confirmer",
+        privacy_auto_synced: "Mode privé synchronisé automatiquement",
         settings_tooltip: "Paramètres",
         commander_btn_label: "Grok Commandant",
         commander_btn_title: "Commandant IA (Actif)",
@@ -485,8 +501,8 @@
             "請分析以下貼文：\n語氣與情緒傾向：作者用了什麼措辭？帶有哪種情緒？\n可能動機：發文者想達到什麼目的或強化什麼立場？\n潛在偏頗：有哪些資訊被刻意強調或省略？\n\n",
         },
         translate: {
-          label: "翻譯",
-          icon: "🌐",
+          label: "自訂",
+          icon: "✏️",
           prompt:
             "（可自訂的槽位，請在設定中填入你的提示詞）\n\n",
         },
@@ -517,8 +533,8 @@
             "请分析以下帖子：\n语气与情绪倾向：作者用了什么措辞？带有哪种情绪？\n可能动机：发帖者想达到什么目的或强化什么立场？\n潜在偏颇：有哪些信息被刻意强调或省略？\n\n",
         },
         translate: {
-          label: "翻译",
-          icon: "🌐",
+          label: "自定义",
+          icon: "✏️",
           prompt:
             "（可自定义的槽位，请在设置中填入你的提示词）\n\n",
         },
@@ -549,8 +565,8 @@
             "Analyze the following post:\nTone & emotion: What language choices does the author make? What emotion does it carry?\nLikely intent: What is the poster trying to achieve or reinforce?\nPotential bias: What is being emphasized or left out?\n\n",
         },
         translate: {
-          label: "Translate",
-          icon: "🌐",
+          label: "Custom",
+          icon: "✏️",
           prompt:
             "(Customizable slot — edit the prompt in Settings.)\n\n",
         },
@@ -581,8 +597,8 @@
             "以下の投稿を分析してください：\nトーン・感情：どのような言葉を使っているか？どんな感情が込められているか？\n意図：投稿者は何を達成・強調しようとしているか？\n偏り：意図的に強調または省略されている情報は何か？\n\n",
         },
         translate: {
-          label: "翻訳",
-          icon: "🌐",
+          label: "カスタム",
+          icon: "✏️",
           prompt:
             "（カスタマイズ可能なスロット — 設定でプロンプトを編集してください）\n\n",
         },
@@ -613,8 +629,8 @@
             "다음 게시물을 분석하세요:\n어조·감정: 어떤 언어를 사용하는가? 어떤 감정이 담겨 있는가?\n의도: 작성자가 달성하거나 강조하려는 것은 무엇인가?\n편향: 의도적으로 강조되거나 생략된 정보는 무엇인가?\n\n",
         },
         translate: {
-          label: "번역",
-          icon: "🌐",
+          label: "커스텀",
+          icon: "✏️",
           prompt:
             "（커스터마이즈 가능한 슬롯 — 설정에서 프롬프트를 편집하세요）\n\n",
         },
@@ -645,8 +661,8 @@
             "Analiza el siguiente post:\nTono y emoción: ¿qué lenguaje usa el autor? ¿qué emoción transmite?\nIntención probable: ¿qué intenta lograr o reforzar?\nSesgo potencial: ¿qué se enfatiza o se omite deliberadamente?\n\n",
         },
         translate: {
-          label: "Traducir",
-          icon: "🌐",
+          label: "Personalizado",
+          icon: "✏️",
           prompt:
             "(Espacio personalizable — edita el prompt en Configuración.)\n\n",
         },
@@ -677,8 +693,8 @@
             "Analise o seguinte post:\nTom e emoção: que linguagem o autor usa? Que emoção transmite?\nIntenção provável: o que tenta alcançar ou reforçar?\nViés potencial: o que é enfatizado ou omitido deliberadamente?\n\n",
         },
         translate: {
-          label: "Traduzir",
-          icon: "🌐",
+          label: "Personalizado",
+          icon: "✏️",
           prompt:
             "(Slot personalizável — edite o prompt em Configurações.)\n\n",
         },
@@ -709,8 +725,8 @@
             "Analysez le post suivant :\nTon et émotion : quel langage l'auteur utilise-t-il ? Quelle émotion transmet-il ?\nIntention probable : que cherche-t-il à accomplir ou à renforcer ?\nBiais potentiel : qu'est-ce qui est délibérément mis en avant ou omis ?\n\n",
         },
         translate: {
-          label: "Traduire",
-          icon: "🌐",
+          label: "Personnalisé",
+          icon: "✏️",
           prompt:
             "(Emplacement personnalisable — modifiez le prompt dans Paramètres.)\n\n",
         },
@@ -732,12 +748,21 @@
 
   let _configCache = null;
 
+  function migrateCustomTemplates(config) {
+    const ct = config.customTemplates;
+    if (ct && typeof ct._lang === "string" && !ct[ct._lang]) {
+      const { _lang, ...rest } = ct;
+      config.customTemplates = { [_lang]: rest };
+    }
+    return config;
+  }
+
   function loadConfig() {
     if (_configCache) return _configCache;
     const saved = GM_getValue("grok_user_config", null);
     if (saved) {
       try {
-        _configCache = JSON.parse(saved);
+        _configCache = migrateCustomTemplates(JSON.parse(saved));
         return _configCache;
       } catch (e) {
         console.warn("[Commander] Config corrupted, resetting.", e);
@@ -795,22 +820,17 @@
   function getCurrentTemplates() {
     const config = loadConfig();
     const lang = resolveLang(config.lang);
+    const store = config.customTemplates || {};
 
     if (lang === "custom") {
       const pack = loadCustomLangPack();
       const base = (pack && pack.templates) ? pack.templates : DEFAULT_CONFIG.templates["en"];
-      if (config.customTemplates && config.customTemplates._lang === "custom") {
-        return config.customTemplates;
-      }
-      return base;
+      return store["custom"] || base;
     }
 
     const defaults =
       DEFAULT_CONFIG.templates[lang] || DEFAULT_CONFIG.templates["en"];
-    if (config.customTemplates && config.customTemplates._lang === lang) {
-      return config.customTemplates;
-    }
-    return defaults;
+    return store[lang] || defaults;
   }
 
   const STYLES = `
@@ -823,7 +843,7 @@
             animation: fadeIn 0.15s ease-out;
         }
         .grok-menu-item {
-            display: flex; align-items: center; gap: 10px;
+            display: flex; align-items: center; gap: 12px;
             padding: 10px 12px; color: #E7E9EA; font-size: 14px;
             border-radius: 8px; cursor: pointer; user-select: none;
             transition: background 0.1s;
@@ -831,7 +851,7 @@
         .grok-menu-item:hover { background-color: #1D9BF0; color: #fff; }
         .grok-menu-item-label { flex: 1; }
         .grok-private-btn {
-            font-size: 13px; padding: 2px 6px; border-radius: 5px;
+            font-size: 13px; padding: 4px 8px; border-radius: 6px;
             color: #1d9bf0; cursor: pointer; flex-shrink: 0;
             transition: background 0.1s, color 0.1s;
             border: 1px solid #1d9bf0;
@@ -849,6 +869,11 @@
             color: #71767B; border-radius: 4px;
         }
         .grok-settings-btn:hover { background-color: rgba(255,255,255,0.1); color: #fff; }
+        @keyframes grok-settings-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(29,155,240,0.55); }
+            50% { box-shadow: 0 0 0 6px rgba(29,155,240,0); }
+        }
+        .grok-settings-btn-highlight { border-radius: 50%; animation: grok-settings-pulse 1.6s ease-in-out infinite; }
         .grok-lang-quick-btn {
             padding: 3px 8px; font-size: 12px; cursor: pointer;
             color: #71767B; border-radius: 4px; border: 1px solid #333;
@@ -868,10 +893,11 @@
         .grok-lang-submenu-item.active { color: #1D9BF0; font-weight: bold; }
 
         .grok-push-btn {
-            font-size: 13px; padding: 2px 6px; border-radius: 5px;
+            font-size: 13px; padding: 4px 8px; border-radius: 6px;
             color: #71767B; cursor: pointer; flex-shrink: 0;
             transition: background 0.1s, color 0.1s;
             border: 1px solid #333; background: transparent; line-height: 1;
+            margin-left: 2px;
         }
         .grok-push-btn:hover { background: rgba(29,155,240,0.2); color: #1D9BF0; border-color: #1D9BF0; }
 
@@ -1079,6 +1105,20 @@
         }
         .grok-toast-warn.fade-out { opacity: 0; transition: opacity 0.3s ease-out; }
 
+        #grok-confirm-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 2147483646;
+            display: flex; justify-content: center; align-items: center;
+        }
+        #grok-confirm-box {
+            background: #16181C; border: 1px solid #2f3336; border-radius: 14px;
+            padding: 18px 20px; width: min(320px, 88vw);
+            font-family: sans-serif; color: #E7E9EA;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+        }
+        #grok-confirm-box p { margin: 0 0 16px; font-size: 13px; line-height: 1.6; }
+        .grok-confirm-btns { display: flex; justify-content: flex-end; gap: 8px; }
+
         .my-commander-btn-active { color: #FF1493 !important; transition: color 0.2s ease; }
 
         #grok-custom-lang-panel {
@@ -1208,7 +1248,6 @@
         </div>
         <div class="grok-modal-body">
 
-          <!-- ① 語言 & 送出模式 -->
           <div class="grok-section-card">
             <div class="grok-section-header">⚙️ ${t("send_mode_label")} &amp; ${t("lang_label")}</div>
             <div class="grok-section-body">
@@ -1228,7 +1267,7 @@
                 </select>
                 <div class="grok-form-hint">${t("lang_hint")}</div>
                 <div id="grok-custom-lang-inline" style="display:${currentLang==="custom"?"flex":"none"};align-items:center;gap:8px;padding:6px 0 2px;">
-                  <!-- status badge + manage button, injected by JS -->
+                  
                 </div>
               </div>
               <div class="grok-form-row">
@@ -1242,7 +1281,6 @@
             </div>
           </div>
 
-          <!-- ② 模板編輯器 -->
           <div class="grok-section-card">
             <div class="grok-section-header">${t("tmpl_section_label")}</div>
             <div class="grok-section-body">
@@ -1251,7 +1289,6 @@
             </div>
           </div>
 
-          <!-- ③ 推送設定 -->
           <div class="grok-section-card">
             <div class="grok-section-header">📨 ${t("push_section_label").replace(/^📨\s*/,"")}</div>
             <div class="grok-section-body">
@@ -1371,13 +1408,14 @@
           const labelInput = div.querySelector(`input[data-label-key="${key}"]`);
           const textarea = div.querySelector(`textarea[data-key="${key}"]`);
           const currentLabel = labelInput.value.trim() || tmpl.label;
-          if (!confirm(t("confirm_reset_one").replace("{label}", currentLabel))) return;
-          const defaults = getDefaultTemplatesForSelection();
-          const def = defaults[key];
-          if (!def) return;
-          setUndoableValue(labelInput, def.label);
-          setUndoableValue(textarea, def.prompt);
-          showToast(t("toast_reset_one").replace("{label}", def.label));
+          showCustomConfirm(t("confirm_reset_one").replace("{label}", currentLabel), () => {
+            const defaults = getDefaultTemplatesForSelection();
+            const def = defaults[key];
+            if (!def) return;
+            setUndoableValue(labelInput, def.label);
+            setUndoableValue(textarea, def.prompt);
+            showToast(t("toast_reset_one").replace("{label}", def.label));
+          });
         };
       });
     }
@@ -1789,7 +1827,7 @@
     };
 
     document.getElementById("grok-settings-reset").onclick = () => {
-      if (confirm(t("confirm_reset"))) {
+      showCustomConfirm(t("confirm_reset"), () => {
         const targetVal = langSelect.value;
         if (targetVal === "custom") {
           const pack = loadCustomLangPack();
@@ -1798,7 +1836,7 @@
           const targetLang = resolveLang(targetVal);
           renderEditors(DEFAULT_CONFIG.templates[targetLang] || DEFAULT_CONFIG.templates["en"]);
         }
-      }
+      });
     };
 
     document.getElementById("grok-settings-save").onclick = () => {
@@ -1809,13 +1847,12 @@
         realLangCode = resolveLang("auto");
       }
 
+      const existingConfig = loadConfig();
       const newConfig = {
         lang: selectedLang,
         autoSend:
           document.getElementById("grok-autosend-select").value === "auto",
-        customTemplates: {
-          _lang: realLangCode,
-        },
+        customTemplates: { ...(existingConfig.customTemplates || {}) },
       };
 
       let baseTemplates;
@@ -1825,6 +1862,7 @@
       } else {
         baseTemplates = DEFAULT_CONFIG.templates[realLangCode] || DEFAULT_CONFIG.templates["en"];
       }
+      const langTemplates = {};
       editorContainer.querySelectorAll("textarea").forEach((ta) => {
         const key = ta.getAttribute("data-key");
         const labelInput = editorContainer.querySelector(
@@ -1832,12 +1870,13 @@
         );
         const customLabel =
           labelInput?.value?.trim() || baseTemplates[key]?.label;
-        newConfig.customTemplates[key] = {
+        langTemplates[key] = {
           ...baseTemplates[key],
           label: customLabel,
           prompt: ta.value,
         };
       });
+      newConfig.customTemplates[realLangCode] = langTemplates;
       saveConfig(newConfig);
 
       savePushConfig({
@@ -1876,6 +1915,25 @@
       toast.classList.add("fade-out");
       setTimeout(() => toast.remove(), 320);
     }, duration);
+  }
+
+  function showCustomConfirm(message, onConfirm) {
+    document.getElementById("grok-confirm-overlay")?.remove();
+    const overlay = document.createElement("div");
+    overlay.id = "grok-confirm-overlay";
+    overlay.innerHTML = `
+      <div id="grok-confirm-box">
+        <p>${escapeHtml(message)}</p>
+        <div class="grok-confirm-btns">
+          <button id="grok-confirm-cancel" class="grok-btn grok-btn-secondary">${t("btn_cancel")}</button>
+          <button id="grok-confirm-ok" class="grok-btn grok-btn-primary">${t("btn_confirm")}</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    overlay.querySelector("#grok-confirm-cancel").onclick = () => overlay.remove();
+    overlay.querySelector("#grok-confirm-ok").onclick = () => { overlay.remove(); onConfirm(); };
+    overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
   }
 
   function loadPushConfig() {
@@ -1980,6 +2038,8 @@
 
     if (!allTargets.length) { showToast(t("push_not_configured")); return; }
 
+    if (allTargets.length === 1) { onConfirm(allTargets); return; }
+
     document.getElementById("grok-push-select-overlay")?.remove();
     const overlay = document.createElement("div");
     overlay.id = "grok-push-select-overlay";
@@ -1987,7 +2047,7 @@
     const itemsHtml = allTargets.map((target, i) => `
       <label class="grok-push-select-item">
         <input type="checkbox" data-idx="${i}" checked>
-        <span style="flex:1">${escapeHtml(target.label)}</span><!-- [XSS-L0] 頻道名稱來自使用者輸入 -->
+        <span style="flex:1">${escapeHtml(target.label)}</span>
         <span class="grok-push-select-badge ${target.type}">${target.type === "discord" ? "Discord" : "Telegram"}</span>
       </label>
     `).join("");
@@ -2328,10 +2388,14 @@
 
     const settingsBtn = document.createElement("div");
     settingsBtn.className = "grok-settings-btn";
+    if (!GM_getValue("grok_setup_complete_global", false)) {
+      settingsBtn.classList.add("grok-settings-btn-highlight");
+    }
     settingsBtn.title = t("settings_tooltip");
     settingsBtn.textContent = "⚙️";
     settingsBtn.onclick = (e) => {
       e.stopPropagation();
+      GM_setValue("grok_setup_complete_global", true);
       overlay.remove();
       menu.remove();
       openSettings();
@@ -2421,11 +2485,12 @@
     if (!btn) return { found: false, needsSecondClick: false };
     const currentlyOn = isDrawerPrivacyOn(btn);
     if (!withPrivacy) {
-      if (currentlyOn) triggerClick(btn);
+      if (currentlyOn) { triggerClick(btn); showToast(t("privacy_auto_synced")); }
       return { found: true, needsSecondClick: false };
     } else {
       if (!currentlyOn) {
         triggerClick(btn);
+        showToast(t("privacy_auto_synced"));
         return { found: true, needsSecondClick: false };
       } else {
         return { found: true, needsSecondClick: false };
@@ -2493,6 +2558,11 @@
     let headerPollAttempts = 0;
     const headerPollTimer = setInterval(() => {
       headerPollAttempts++;
+      if (headerPollAttempts > MAX_INJECTION_ATTEMPTS) {
+        clearInterval(headerPollTimer);
+        showWarnToast(t("need_reopen"));
+        return;
+      }
 
       const btn = getDrawerToggleButton();
       if (btn) {
@@ -2513,28 +2583,25 @@
         return;
       }
 
-      if (headerPollAttempts >= 10) {
-        clearInterval(headerPollTimer);
-        if (!hasOpenedBefore) {
-          const globalBtn = findGlobalGrokButton();
-          if (globalBtn) {
-            GM_setValue("grok_drawer_opened", true);
-            triggerClick(globalBtn);
-            let waitAttempts = 0;
-            const waitTimer = setInterval(() => {
-              waitAttempts++;
-              if (waitAttempts > 40) { clearInterval(waitTimer); return; }
-              const ta = findVisibleTextarea();
-              if (ta) {
-                clearInterval(waitTimer);
-                watchDrawerClose(ta);
-              }
-            }, 200);
-            startInjection(withPrivacy);
-            return;
-          }
+      if (!hasOpenedBefore) {
+        const globalBtn = findGlobalGrokButton();
+        if (globalBtn) {
+          clearInterval(headerPollTimer);
+          GM_setValue("grok_drawer_opened", true);
+          triggerClick(globalBtn);
+          let waitAttempts = 0;
+          const waitTimer = setInterval(() => {
+            waitAttempts++;
+            if (waitAttempts > 40) { clearInterval(waitTimer); return; }
+            const ta = findVisibleTextarea();
+            if (ta) {
+              clearInterval(waitTimer);
+              watchDrawerClose(ta);
+            }
+          }, 200);
+          startInjection(withPrivacy);
+          return;
         }
-        showWarnToast(t("need_reopen"));
       }
     }, 100);
   }
@@ -2753,15 +2820,7 @@
 
   GM_setValue("grok_drawer_opened", false);
 
-  const hasRun = GM_getValue("grok_setup_complete_global", false);
-  if (!hasRun) {
-    setTimeout(() => {
-      openSettings();
-      GM_setValue("grok_setup_complete_global", true);
-    }, 2000);
-  }
-
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.2.2.11 loaded.");
+  console.log("[Commander] Grok Commander v1.2.2.15 loaded.");
 })();
