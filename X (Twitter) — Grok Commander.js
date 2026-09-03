@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.2.2.15
+// @version      1.3.0.0
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -2139,7 +2139,28 @@
 
   let _drawerObserver = null;
 
+  const SESSION_KEY_EVER_OPENED = "grok_ever_opened_this_page";
+
+  function markDrawerEverOpened() {
+    try {
+      if (sessionStorage.getItem(SESSION_KEY_EVER_OPENED) !== "1") {
+        sessionStorage.setItem(SESSION_KEY_EVER_OPENED, "1");
+      }
+    } catch (_) {
+    }
+  }
+
+  function hasDrawerEverOpened() {
+    try {
+      return sessionStorage.getItem(SESSION_KEY_EVER_OPENED) === "1";
+    } catch (_) {
+      return false;
+    }
+  }
+
   function watchDrawerClose(ta) {
+    markDrawerEverOpened();
+
     if (_drawerObserver) { clearInterval(_drawerObserver); _drawerObserver = null; }
 
     _drawerObserver = setInterval(() => {
@@ -2147,8 +2168,19 @@
         clearInterval(_drawerObserver);
         _drawerObserver = null;
         GM_setValue("grok_drawer_opened", false);
+        hijackOperations();
       }
     }, 500);
+  }
+
+  let _waitTimer = null;
+  let _headerPollTimer = null;
+  let _reopenTimer = null;
+
+  function clearInjectionTimers() {
+    if (_waitTimer) { clearInterval(_waitTimer); _waitTimer = null; }
+    if (_headerPollTimer) { clearInterval(_headerPollTimer); _headerPollTimer = null; }
+    if (_reopenTimer) { clearInterval(_reopenTimer); _reopenTimer = null; }
   }
 
   function resetGlobalState() {
@@ -2156,6 +2188,7 @@
       clearInterval(activeInterval);
       activeInterval = null;
     }
+    clearInjectionTimers();
     pendingTask = null;
   }
 
@@ -2444,11 +2477,27 @@
 
   function triggerClick(element) {
     if (!element) return;
+    const rect = element.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const pointerOpts = {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+      pointerId: 1,
+      pointerType: "mouse",
+      isPrimary: true,
+      button: 0,
+      clientX: cx,
+      clientY: cy,
+    };
+    element.dispatchEvent(new PointerEvent("pointerdown", { ...pointerOpts, buttons: 1 }));
     element.dispatchEvent(
-      new MouseEvent("mousedown", { bubbles: true, cancelable: true }),
+      new MouseEvent("mousedown", { bubbles: true, cancelable: true, clientX: cx, clientY: cy, button: 0 }),
     );
+    element.dispatchEvent(new PointerEvent("pointerup", { ...pointerOpts, buttons: 0 }));
     element.dispatchEvent(
-      new MouseEvent("mouseup", { bubbles: true, cancelable: true }),
+      new MouseEvent("mouseup", { bubbles: true, cancelable: true, clientX: cx, clientY: cy, button: 0 }),
     );
     element.click();
   }
@@ -2476,6 +2525,10 @@
 
   function isDrawerPrivacyOn(btn) {
     if (!btn) return false;
+    if (btn.getAttribute("aria-label") !== "私人聊天") {
+      console.warn("[Commander] isDrawerPrivacyOn: unexpected aria-label on button, treated as not found", btn.getAttribute("aria-label"));
+      return false;
+    }
     const svg = btn.querySelector("svg");
     return svg ? svg.classList.contains("r-1cvl2hr") : false;
   }
@@ -2504,8 +2557,21 @@
     return el.tagName === "BUTTON" ? el : el.querySelector("button");
   }
 
+  let _globalDrawerHeaderSeen = false;
+  function watchGlobalDrawerCollapse() {
+    setInterval(() => {
+      const headerExists = !!document.querySelector('[data-testid="GrokDrawerHeader"]');
+      if (_globalDrawerHeaderSeen && !headerExists) {
+        hijackOperations();
+      }
+      _globalDrawerHeaderSeen = headerExists;
+    }, 500);
+  }
+
   function findVisibleTextarea() {
-    for (const ta of document.querySelectorAll("textarea")) {
+    const drawer = document.querySelector('[data-testid="GrokDrawer"]');
+    const searchRoot = drawer || document;
+    for (const ta of searchRoot.querySelectorAll("textarea")) {
       if (ta.offsetParent === null || !document.contains(ta)) continue;
       const rect = ta.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) continue;
@@ -2518,6 +2584,8 @@
   }
 
   function executeCommand(prompt, tweetData, withPrivacy = false) {
+    resetGlobalState();
+
     const fullContent = `${prompt}\n\n[Tweet URL]: ${tweetData.url}\n[Tweet Content]: ${tweetData.text}`;
     const autoSend = loadConfig().autoSend === true;
     pendingTask = {
@@ -2541,67 +2609,80 @@
       GM_setValue("grok_drawer_opened", true);
       triggerClick(drawerToggle);
       let waitAttempts = 0;
-      const waitTimer = setInterval(() => {
+      _waitTimer = setInterval(() => {
         waitAttempts++;
-        if (waitAttempts > 40) { clearInterval(waitTimer); return; }
+        if (waitAttempts > 40) {
+          console.warn("[Commander] Fallback path A: timed out waiting for textarea (40 x 200ms = 8s), giving up");
+          clearInterval(_waitTimer); _waitTimer = null;
+          return;
+        }
         const ta = findVisibleTextarea();
         if (ta) {
-          clearInterval(waitTimer);
+          clearInterval(_waitTimer);
+          _waitTimer = null;
           watchDrawerClose(ta);
+          startInjection(withPrivacy);
         }
       }, 200);
-      startInjection(withPrivacy);
       return;
     }
 
     const hasOpenedBefore = GM_getValue("grok_drawer_opened", false);
+    const headerMaxAttempts = hasOpenedBefore ? 10 : MAX_INJECTION_ATTEMPTS;
     let headerPollAttempts = 0;
-    const headerPollTimer = setInterval(() => {
+
+    function reopenViaButton(btn, source) {
+      GM_setValue("grok_drawer_opened", true);
+      triggerClick(btn);
+      let waitAttempts = 0;
+      _waitTimer = setInterval(() => {
+        waitAttempts++;
+        if (waitAttempts > 40) {
+          console.warn(`[Commander] Fallback path B(${source}): timed out waiting for textarea (40 x 200ms = 8s), giving up`);
+          clearInterval(_waitTimer); _waitTimer = null;
+          return;
+        }
+        const ta = findVisibleTextarea();
+        if (ta) {
+          clearInterval(_waitTimer);
+          _waitTimer = null;
+          watchDrawerClose(ta);
+          startInjection(withPrivacy);
+        }
+      }, 200);
+    }
+
+    _headerPollTimer = setInterval(() => {
       headerPollAttempts++;
-      if (headerPollAttempts > MAX_INJECTION_ATTEMPTS) {
-        clearInterval(headerPollTimer);
+      if (headerPollAttempts > headerMaxAttempts) {
+        clearInterval(_headerPollTimer);
+        _headerPollTimer = null;
+        console.warn(`[Commander] Fallback path B: ${headerMaxAttempts} polls found no collapse handle, giving up and prompting manual reopen`);
         showWarnToast(t("need_reopen"));
         return;
       }
 
       const btn = getDrawerToggleButton();
       if (btn) {
-        clearInterval(headerPollTimer);
-        GM_setValue("grok_drawer_opened", true);
-        triggerClick(btn);
-        let waitAttempts = 0;
-        const waitTimer = setInterval(() => {
-          waitAttempts++;
-          if (waitAttempts > 40) { clearInterval(waitTimer); return; }
-          const ta = findVisibleTextarea();
-          if (ta) {
-            clearInterval(waitTimer);
-            watchDrawerClose(ta);
-          }
-        }, 200);
-        startInjection(withPrivacy);
+        clearInterval(_headerPollTimer);
+        _headerPollTimer = null;
+        reopenViaButton(btn, "handle");
         return;
       }
 
-      if (!hasOpenedBefore) {
-        const globalBtn = findGlobalGrokButton();
-        if (globalBtn) {
-          clearInterval(headerPollTimer);
-          GM_setValue("grok_drawer_opened", true);
-          triggerClick(globalBtn);
-          let waitAttempts = 0;
-          const waitTimer = setInterval(() => {
-            waitAttempts++;
-            if (waitAttempts > 40) { clearInterval(waitTimer); return; }
-            const ta = findVisibleTextarea();
-            if (ta) {
-              clearInterval(waitTimer);
-              watchDrawerClose(ta);
-            }
-          }, 200);
-          startInjection(withPrivacy);
-          return;
+      const globalBtn = findGlobalGrokButton();
+      if (globalBtn) {
+        if (hasDrawerEverOpened()) {
+          clearInterval(_headerPollTimer);
+          _headerPollTimer = null;
+          reopenViaButton(globalBtn, "global floating button (page already opened before)");
+        } else {
+          clearInterval(_headerPollTimer);
+          _headerPollTimer = null;
+          console.warn("[Commander] This page has not truly opened Grok yet, synthetic click on the floating button is known to be ineffective, prompting manual click");
+          showWarnToast(t("need_reopen"));
         }
+        return;
       }
     }, 100);
   }
@@ -2634,28 +2715,16 @@
     activeInterval = setInterval(() => {
       attempts++;
       if (attempts > MAX_INJECTION_ATTEMPTS || !pendingTask) {
+        const neverFilled = pendingTask && !pendingTask.textFilled;
         resetGlobalState();
+        if (neverFilled) showWarnToast(t("need_reopen"));
         return;
       }
 
       const stillVisible = targetInput && document.contains(targetInput) && targetInput.offsetParent !== null;
       if (textareaEverSeen && !stillVisible) {
-        console.warn("[Commander] textarea 消失，等待 GrokDrawerHeader 出現後重開");
         resetGlobalState();
         GM_setValue("grok_drawer_opened", false);
-
-        let reopenAttempts = 0;
-        const reopenTimer = setInterval(() => {
-          reopenAttempts++;
-          if (reopenAttempts > 20) { clearInterval(reopenTimer); return; }
-          const drawerToggle = getDrawerToggleButton();
-          if (drawerToggle) {
-            clearInterval(reopenTimer);
-            GM_setValue("grok_drawer_opened", true);
-            triggerClick(drawerToggle);
-            startInjection(withPrivacy);
-          }
-        }, 100);
         return;
       }
 
@@ -2708,7 +2777,10 @@
     activeInterval = setInterval(() => {
       attempts++;
       if (attempts > MAX_INJECTION_ATTEMPTS || !pendingTask) {
+        const neverFilled = pendingTask && !pendingTask.textFilled;
+        console.warn(`[Commander] startInjection: ${attempts > MAX_INJECTION_ATTEMPTS ? `timed out (${MAX_INJECTION_ATTEMPTS} attempts)` : 'pendingTask was cleared'}, neverFilled:${neverFilled}`);
         resetGlobalState();
+        if (neverFilled) showWarnToast(t("need_reopen"));
         return;
       }
       const mask = document.querySelector('[data-testid="mask"]');
@@ -2716,7 +2788,7 @@
         'button[data-testid="app-bar-close"]',
       );
       if (mask && closeBtn) {
-        console.warn("[Commander] 攔截到生圖視窗 -> 執行關閉！");
+        console.warn("[Commander] Intercepted image-generation dialog -> closing it!");
         triggerClick(closeBtn);
         return;
       }
@@ -2817,10 +2889,11 @@
   observer.observe(document.body, { childList: true, subtree: true });
 
   setTimeout(hijackOperations, 1000);
+  watchGlobalDrawerCollapse();
 
   GM_setValue("grok_drawer_opened", false);
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.2.2.15 loaded.");
+  console.log("[Commander] Grok Commander v1.3.0.0 loaded.");
 })();
