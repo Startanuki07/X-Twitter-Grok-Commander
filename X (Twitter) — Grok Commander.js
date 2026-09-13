@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.0.0.0
+// @version      2.0.0.1
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -20,6 +20,7 @@
 // @grant        GM_registerMenuCommand
 // @grant        GM_openInTab
 // @grant        GM_xmlhttpRequest
+// @grant        GM_info
 // @connect      discord.com
 // @connect      api.telegram.org
 // @run-at       document-end
@@ -56,6 +57,8 @@
         confirm_reset: "確定要恢復預設值？這將覆蓋您的自定義模版。",
         alert_saved: "設定已儲存！",
         private_tooltip: "私人模式（開啟後以私人聊天執行指令）",
+        menu_privacy_row_label: "隱私模式",
+        menu_gf_link_tooltip: "在 Greasy Fork 上查看此腳本",
         btn_confirm: "確定",
         privacy_auto_synced: "已自動同步私人模式狀態",
         settings_tooltip: "設定 (Settings)",
@@ -64,6 +67,7 @@
         need_reopen: "找不到右下角的 Grok 按鈕，請先手動點擊開啟側邊欄再使用指令選單；若瀏覽器視窗較窄，該按鈕可能被隱藏，請嘗試拉寬視窗",
         push_section_label: "📨 推送設定 (Push Notifications)",
         push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
+        push_master_toggle: "啟用推送",
         tmpl_section_label: "✏️ 提示詞模板 (Prompt Templates)",
         tmpl_section_hint: "點選選單中的模式時，對應的提示詞會自動附加到貼文內容後方。",
         tmpl_reset_one_tooltip: "重置此模板為預設值",
@@ -121,6 +125,8 @@
         confirm_reset: "确定要恢复默认值？这将覆盖您的自定义模板。",
         alert_saved: "设置已保存！",
         private_tooltip: "私密模式（开启后以私密聊天执行指令）",
+        menu_privacy_row_label: "隐私模式",
+        menu_gf_link_tooltip: "在 Greasy Fork 上查看此脚本",
         btn_confirm: "确定",
         privacy_auto_synced: "已自动同步私密模式状态",
         settings_tooltip: "设置 (Settings)",
@@ -129,6 +135,7 @@
         need_reopen: "找不到右下角的 Grok 按钮，请先手动点击打开侧边栏再使用指令菜单；若浏览器窗口较窄，该按钮可能被隐藏，请尝试拉宽窗口",
         push_section_label: "📨 推送设置 (Push Notifications)",
         push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
+        push_master_toggle: "启用推送",
         tmpl_section_label: "✏️ 提示词模板 (Prompt Templates)",
         tmpl_section_hint: "点选菜单中的模式时，对应的提示词会自动附加到贴文内容后方。",
         tmpl_reset_one_tooltip: "将此模板重置为默认值",
@@ -188,6 +195,8 @@
           "Reset to defaults? This will overwrite your custom templates.",
         alert_saved: "Settings saved!",
         private_tooltip: "Private Mode (runs command in private chat when enabled)",
+        menu_privacy_row_label: "Privacy",
+        menu_gf_link_tooltip: "View this script on Greasy Fork",
         btn_confirm: "Confirm",
         privacy_auto_synced: "Private mode auto-synced",
         settings_tooltip: "Settings",
@@ -196,6 +205,7 @@
         need_reopen: "Couldn't find the Grok button (bottom-right). Please open the sidebar manually first, then use the command menu; if your browser window is narrow, the button may be hidden — try widening it",
         push_section_label: "📨 Push Notifications",
         push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
+        push_master_toggle: "Enable Push",
         tmpl_section_label: "✏️ Prompt Templates",
         tmpl_section_hint: "When you select a mode from the menu, its prompt is automatically appended to the post content.",
         tmpl_reset_one_tooltip: "Reset this template to default",
@@ -255,6 +265,8 @@
           "デフォルトに戻しますか？カスタムテンプレートが上書きされます。",
         alert_saved: "設定を保存しました！",
         private_tooltip: "プライベートモード（有効時はプライベートチャットでコマンドを実行）",
+        menu_privacy_row_label: "プライバシー",
+        menu_gf_link_tooltip: "Greasy Fork でこのスクリプトを見る",
         btn_confirm: "確定",
         privacy_auto_synced: "プライベートモードを自動同期しました",
         settings_tooltip: "設定 (Settings)",
@@ -263,6 +275,7 @@
         need_reopen: "右下のGrokボタンが見つかりません。手動でサイドバーを開いてからコマンドメニューをご利用ください。ブラウザの幅が狭いとボタンが隠れることがあるので、幅を広げてお試しください",
         push_section_label: "📨 プッシュ通知設定",
         push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
+        push_master_toggle: "プッシュを有効化",
         tmpl_section_label: "✏️ プロンプトテンプレート",
         tmpl_section_hint: "メニューからモードを選択すると、対応するプロンプトが投稿内容の後に自動追加されます。",
         tmpl_reset_one_tooltip: "このテンプレートをデフォルトに戻す",
@@ -322,6 +335,8 @@
           "기본값으로 재설정하시겠습니까? 커스텀 템플릿이 덮어쓰여집니다.",
         alert_saved: "설정이 저장되었습니다！",
         private_tooltip: "비공개 모드（활성화 시 비공개 채팅으로 명령 실행）",
+        menu_privacy_row_label: "개인정보",
+        menu_gf_link_tooltip: "Greasy Fork에서 이 스크립트 보기",
         btn_confirm: "확인",
         privacy_auto_synced: "비공개 모드가 자동으로 동기화되었습니다",
         settings_tooltip: "설정 (Settings)",
@@ -330,6 +345,7 @@
         need_reopen: "오른쪽 하단의 Grok 버튼을 찾을 수 없습니다. 먼저 수동으로 사이드바를 연 후 명령 메뉴를 사용하세요. 브라우저 창이 좁으면 버튼이 가려질 수 있으니 창을 넓혀 보세요",
         push_section_label: "📨 푸시 알림 설정",
         push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
+        push_master_toggle: "푸시 활성화",
         tmpl_section_label: "✏️ 프롬프트 템플릿",
         tmpl_section_hint: "메뉴에서 모드를 선택하면 해당 프롬프트가 게시물 내용 뒤에 자동으로 추가됩니다.",
         tmpl_reset_one_tooltip: "이 템플릿을 기본값으로 재설정",
@@ -387,6 +403,8 @@
         confirm_reset: "¿Restablecer valores predeterminados? Esto sobrescribirá sus plantillas personalizadas.",
         alert_saved: "¡Configuración guardada!",
         private_tooltip: "Modo privado (ejecuta el comando en chat privado cuando está activado)",
+        menu_privacy_row_label: "Privacidad",
+        menu_gf_link_tooltip: "Ver este script en Greasy Fork",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automáticamente",
         settings_tooltip: "Configuración",
@@ -395,6 +413,7 @@
         need_reopen: "No se encontró el botón de Grok (abajo a la derecha). Ábrelo manualmente primero y luego usa el menú de comandos; si la ventana del navegador es estrecha, el botón puede estar oculto — intenta ensancharla",
         push_section_label: "📨 Notificaciones push",
         push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
+        push_master_toggle: "Activar envío",
         tmpl_section_label: "✏️ Plantillas de prompts",
         tmpl_section_hint: "Al seleccionar un modo del menú, el prompt correspondiente se añade automáticamente al contenido del post.",
         tmpl_reset_one_tooltip: "Restablecer esta plantilla a su valor predeterminado",
@@ -452,6 +471,8 @@
         confirm_reset: "Restaurar padrões? Isso sobrescreverá seus modelos personalizados.",
         alert_saved: "Configurações salvas!",
         private_tooltip: "Modo privado (executa o comando em chat privado quando ativado)",
+        menu_privacy_row_label: "Privacidade",
+        menu_gf_link_tooltip: "Ver este script no Greasy Fork",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automaticamente",
         settings_tooltip: "Configurações",
@@ -460,6 +481,7 @@
         need_reopen: "Não foi possível encontrar o botão do Grok (canto inferior direito). Abra o painel manualmente primeiro e depois use o menu de comandos; se a janela do navegador estiver estreita, o botão pode estar oculto — tente alargá-la",
         push_section_label: "📨 Notificações push",
         push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
+        push_master_toggle: "Ativar envio",
         tmpl_section_label: "✏️ Templates de prompts",
         tmpl_section_hint: "Ao selecionar um modo no menu, o prompt correspondente é adicionado automaticamente ao conteúdo do post.",
         tmpl_reset_one_tooltip: "Restaurar este modelo para o padrão",
@@ -517,6 +539,8 @@
         confirm_reset: "Rétablir les valeurs par défaut ? Cela écrasera vos modèles personnalisés.",
         alert_saved: "Paramètres enregistrés !",
         private_tooltip: "Mode privé (exécute la commande en chat privé une fois activé)",
+        menu_privacy_row_label: "Confidentialité",
+        menu_gf_link_tooltip: "Voir ce script sur Greasy Fork",
         btn_confirm: "Confirmer",
         privacy_auto_synced: "Mode privé synchronisé automatiquement",
         settings_tooltip: "Paramètres",
@@ -525,6 +549,7 @@
         need_reopen: "Bouton Grok introuvable (en bas à droite). Ouvrez d'abord le panneau manuellement, puis utilisez le menu de commandes ; si la fenêtre du navigateur est étroite, le bouton peut être masqué — essayez de l'élargir",
         push_section_label: "📨 Notifications push",
         push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
+        push_master_toggle: "Activer l'envoi",
         tmpl_section_label: "✏️ Modèles de prompts",
         tmpl_section_hint: "Lorsque vous sélectionnez un mode dans le menu, le prompt correspondant est automatiquement ajouté au contenu du post.",
         tmpl_reset_one_tooltip: "Réinitialiser ce modèle aux valeurs par défaut",
@@ -963,18 +988,42 @@
         .grok-menu-item-icon svg { display: block; }
         
         .grok-menu-titlebar {
-            display: flex; justify-content: flex-end; align-items: center;
-            padding: 2px 2px 6px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 4px 4px 8px;
+        }
+        .grok-menu-titlebar-label {
+            font-size: 10px; font-weight: 600; color: #6b7280;
+            letter-spacing: 0.5px; text-transform: uppercase;
+            user-select: none;
+        }
+        
+        .grok-menu-titlebar-divider {
+            height: 1px; margin: 0 -8px;
+            background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5) 50%, transparent);
         }
         .grok-menu-footer {
-            margin-top: 4px; border-top: 1px solid #333; padding-top: 4px;
+            margin-top: 4px; padding-top: 8px;
             display: flex; justify-content: space-between; align-items: center; gap: 6px;
+            position: relative;
         }
+        
+        .grok-menu-footer::before {
+            content: ""; position: absolute; top: 0; left: -8px; right: -8px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5) 50%, transparent);
+        }
+        
+        .grok-menu-version-label {
+            font-size: 10px; color: #4b5563; letter-spacing: 0.2px;
+            cursor: pointer; transition: color 0.15s; user-select: none;
+        }
+        .grok-menu-version-label:hover { color: #8b5cf6; }
+        .grok-menu-footer-right-group { display: flex; align-items: center; gap: 4px; }
         
         .grok-privacy-btn-wrapper { position: relative; display: inline-flex; }
         
         .grok-privacy-toggle-btn {
-            padding: 3px; font-size: 0; cursor: pointer; line-height: 1;
+            padding: 4px; font-size: 0; cursor: pointer; line-height: 1;
             color: #71767B; border-radius: 6px; border: 1px solid #333;
             background: transparent;
             display: inline-flex; align-items: center; justify-content: center;
@@ -1213,8 +1262,20 @@
             background: #171b26;
             font-size: 10px; font-weight: 700; color: #4a90d9;
             letter-spacing: 1px; text-transform: uppercase;
-            display: flex; align-items: center; gap: 6px;
+            display: flex; align-items: center; justify-content: space-between; gap: 6px;
             border-left: 3px solid #1d9bf0;
+        }
+        .grok-section-header-title { display: flex; align-items: center; gap: 6px; }
+        
+        .grok-section-header-toggle {
+            display: flex; align-items: center; gap: 5px;
+            font-size: 10px; font-weight: 500; color: #8899A6;
+            text-transform: none; letter-spacing: normal; cursor: pointer;
+        }
+        .grok-section-header-toggle input { cursor: pointer; width: 13px; height: 13px; flex-shrink: 0; }
+        
+        #grok-push-section-body.grok-section-body-disabled {
+            opacity: 0.4; pointer-events: none; user-select: none;
         }
         .grok-section-body {
             padding: 14px 16px;
@@ -1510,7 +1571,7 @@
           <div class="gcm-tab-pane active" data-pane="template">
             
             <div class="grok-section-card">
-              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.template}</span>${t("tmpl_section_label").replace(/^\u270f\ufe0f?\s*/, "")}</div>
+              <div class="grok-section-header"><span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.template}</span>${t("tmpl_section_label").replace(/^\u270f\ufe0f?\s*/, "")}</span></div>
               <div class="grok-section-body">
                 <div class="grok-section-desc">${t("tmpl_section_hint")}</div>
                 <div id="grok-template-editors"></div>
@@ -1521,7 +1582,7 @@
           <div class="gcm-tab-pane" data-pane="lang_send">
             
             <div class="grok-section-card">
-              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.options}</span>${t("send_mode_label")} &amp; ${t("lang_label")}</div>
+              <div class="grok-section-header"><span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.options}</span>${t("send_mode_label")} &amp; ${t("lang_label")}</span></div>
               <div class="grok-section-body">
                 <div class="grok-form-row">
                   <label class="grok-form-label">${t("send_mode_label")}</label>
@@ -1557,8 +1618,14 @@
           <div class="gcm-tab-pane" data-pane="push">
             
             <div class="grok-section-card">
-              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.push}</span>${t("push_section_label").replace(/^\ud83d\udce8\s*/,"")}</div>
-              <div class="grok-section-body">
+              <div class="grok-section-header">
+                <span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.push}</span>${t("push_section_label").replace(/^\ud83d\udce8\s*/,"")}</span>
+                <label class="grok-section-header-toggle">
+                  <input type="checkbox" id="grok-push-master-toggle" ${pc.pushMasterEnabled !== false ? "checked" : ""}>
+                  ${t("push_master_toggle")}
+                </label>
+              </div>
+              <div class="grok-section-body" id="grok-push-section-body">
                 <div class="grok-section-desc">${t("push_section_desc")}</div>
                 <div class="grok-form-row">
                   <label class="grok-form-label">${t("push_url_converter")}</label>
@@ -1858,6 +1925,14 @@
     renderPushEntries("grok-push-discord-list", "discord",  draftDiscord);
     renderPushEntries("grok-push-tg-list",      "telegram", draftTelegram);
 
+    const pushMasterToggle = document.getElementById("grok-push-master-toggle");
+    const pushSectionBody  = document.getElementById("grok-push-section-body");
+    function applyPushMasterState() {
+      pushSectionBody.classList.toggle("grok-section-body-disabled", !pushMasterToggle.checked);
+    }
+    applyPushMasterState();
+    pushMasterToggle.onchange = applyPushMasterState;
+
     function snapshotTemplateEditors() {
       const result = {};
       editorContainer.querySelectorAll("textarea[data-key]").forEach((ta) => {
@@ -1875,6 +1950,7 @@
       urlConverter: document.getElementById("grok-url-converter-select").value,
       discord: JSON.stringify(draftDiscord),
       telegram: JSON.stringify(draftTelegram),
+      pushMasterEnabled: document.getElementById("grok-push-master-toggle").checked,
     };
     _unsavedGuardReady = true;
 
@@ -1885,7 +1961,8 @@
         snapshotTemplateEditors() !== initialSnapshot.templates ||
         document.getElementById("grok-url-converter-select").value !== initialSnapshot.urlConverter ||
         JSON.stringify(draftDiscord)  !== initialSnapshot.discord ||
-        JSON.stringify(draftTelegram) !== initialSnapshot.telegram
+        JSON.stringify(draftTelegram) !== initialSnapshot.telegram ||
+        document.getElementById("grok-push-master-toggle").checked !== initialSnapshot.pushMasterEnabled
       );
     }
 
@@ -2234,9 +2311,10 @@
       saveConfig(newConfig);
 
       savePushConfig({
-        discord:      draftDiscord,
-        telegram:     draftTelegram,
-        urlConverter: document.getElementById("grok-url-converter-select").value,
+        discord:           draftDiscord,
+        telegram:          draftTelegram,
+        urlConverter:      document.getElementById("grok-url-converter-select").value,
+        pushMasterEnabled: document.getElementById("grok-push-master-toggle").checked,
       });
 
       closeSettings();
@@ -2303,12 +2381,14 @@
             : [],
           skipConfirm: raw.skipConfirm || false,
           urlConverter: raw.urlConverter || "x.com",
+          pushMasterEnabled: raw.pushMasterEnabled !== false,
         };
       }
       if (!raw.urlConverter) raw.urlConverter = "x.com";
+      if (raw.pushMasterEnabled === undefined) raw.pushMasterEnabled = true;
       return raw;
     } catch (e) {
-      return { discord: [], telegram: [] };
+      return { discord: [], telegram: [], pushMasterEnabled: true };
     }
   }
 
@@ -2698,13 +2778,18 @@
     const titleBar = document.createElement("div");
     titleBar.className = "grok-menu-titlebar";
 
+    const titleBarLabel = document.createElement("span");
+    titleBarLabel.className = "grok-menu-titlebar-label";
+    titleBarLabel.textContent = t("menu_privacy_row_label");
+    titleBar.appendChild(titleBarLabel);
+
     const privacyBtnWrapper = document.createElement("div");
     privacyBtnWrapper.className = "grok-privacy-btn-wrapper";
 
     const privacyToggleBtn = document.createElement("button");
     privacyToggleBtn.className = "grok-privacy-toggle-btn";
     privacyToggleBtn.title = t("private_tooltip");
-    privacyToggleBtn.innerHTML = `<svg viewBox="0 0 20 20" width="19" height="19" aria-hidden="true"><g><mask id="gc-priv-a" fill="currentColor"><ellipse cx="8.334" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="8.334" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M9.375 8.541H8.042c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806H9.375zM8.334 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H5.959c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zM7.292 8.54h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.074-.06.009.013.056.1.056.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.991-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-a)"/><mask id="gc-priv-b" fill="currentColor"><ellipse cx="11.667" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="11.667" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M12.708 8.541h-1.333c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806h-1.333zM11.667 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H9.292c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zm-1.042-1.46h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.075-.06.01.013.057.1.057.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.992-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-b)"/><path d="M10 3.333c-6.667 0-3.27 5.601-7.5 7.5 0 1.374 1.17 1.25 1.608 2.308.367.886-.545 2.658-.775 3.525h3.334L10 17.5l3.333-.834h3.334c-.315-1.066-.993-2.38-.771-3.521.227-1.172 1.604-.86 1.604-2.312-4.23-1.899-.833-7.5-7.5-7.5z" fill="none" stroke="currentColor" stroke-width="1.333"/></g></svg>`;
+    privacyToggleBtn.innerHTML = `<svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><g><mask id="gc-priv-a" fill="currentColor"><ellipse cx="8.334" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="8.334" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M9.375 8.541H8.042c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806H9.375zM8.334 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H5.959c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zM7.292 8.54h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.074-.06.009.013.056.1.056.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.991-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-a)"/><mask id="gc-priv-b" fill="currentColor"><ellipse cx="11.667" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="11.667" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M12.708 8.541h-1.333c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806h-1.333zM11.667 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H9.292c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zm-1.042-1.46h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.075-.06.01.013.057.1.057.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.992-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-b)"/><path d="M10 3.333c-6.667 0-3.27 5.601-7.5 7.5 0 1.374 1.17 1.25 1.608 2.308.367.886-.545 2.658-.775 3.525h3.334L10 17.5l3.333-.834h3.334c-.315-1.066-.993-2.38-.771-3.521.227-1.172 1.604-.86 1.604-2.312-4.23-1.899-.833-7.5-7.5-7.5z" fill="none" stroke="currentColor" stroke-width="1.333"/></g></svg>`;
     function renderPrivacyToggle() {
       privacyToggleBtn.classList.toggle("active", isPrivateModeOn);
       privacyToggleBtn.classList.toggle("disabled-mode", privacyUiMode === "per-item");
@@ -2757,6 +2842,10 @@
     titleBar.appendChild(privacyBtnWrapper);
     menu.appendChild(titleBar);
 
+    const titleBarDivider = document.createElement("div");
+    titleBarDivider.className = "grok-menu-titlebar-divider";
+    menu.appendChild(titleBarDivider);
+
     function buildPerItemPrivateBtn(key, tmpl) {
       const perItemPrivateBtn = document.createElement("button");
       perItemPrivateBtn.className = "grok-private-btn";
@@ -2783,8 +2872,10 @@
       const keys = TEMPLATE_KEYS;
       const pushCfg = loadPushConfig();
       const hasAnyTarget =
-        (pushCfg.discord  || []).some(e => e.enabled && e.url) ||
-        (pushCfg.telegram || []).some(e => e.enabled && e.token && e.chat);
+        pushCfg.pushMasterEnabled !== false && (
+          (pushCfg.discord  || []).some(e => e.enabled && e.url) ||
+          (pushCfg.telegram || []).some(e => e.enabled && e.token && e.chat)
+        );
       keys.forEach((key) => {
         const tmpl = templates[key];
         if (!tmpl) return;
@@ -2902,8 +2993,23 @@
       openSettings();
     };
 
+    const versionLabel = document.createElement("span");
+    versionLabel.className = "grok-menu-version-label";
+    const scriptVersion = (typeof GM_info !== "undefined" && GM_info.script && GM_info.script.version) || "";
+    versionLabel.textContent = scriptVersion ? `v${scriptVersion}` : "";
+    versionLabel.title = t("menu_gf_link_tooltip");
+    versionLabel.onclick = (e) => {
+      e.stopPropagation();
+      GM_openInTab("https://greasyfork.org/scripts/569964", { active: true, insert: true });
+    };
+
+    const footerRightGroup = document.createElement("div");
+    footerRightGroup.className = "grok-menu-footer-right-group";
+    footerRightGroup.appendChild(versionLabel);
+    footerRightGroup.appendChild(settingsBtn);
+
     footer.appendChild(langBtn);
-    footer.appendChild(settingsBtn);
+    footer.appendChild(footerRightGroup);
     menu.appendChild(footer);
 
     document.body.appendChild(menu);
@@ -3355,6 +3461,4 @@
   watchGlobalDrawerCollapse();
 
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
-
-  console.log("[Commander] Grok Commander v1.3.0.1 loaded.");
 })();
