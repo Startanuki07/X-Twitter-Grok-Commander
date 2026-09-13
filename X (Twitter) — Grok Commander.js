@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      1.3.0.0
+// @version      2.0.0.0
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -55,13 +55,13 @@
         btn_save: "儲存設定",
         confirm_reset: "確定要恢復預設值？這將覆蓋您的自定義模版。",
         alert_saved: "設定已儲存！",
-        private_tooltip: "私人模式（抽屜內啟用私人聊天）",
+        private_tooltip: "私人模式（開啟後以私人聊天執行指令）",
         btn_confirm: "確定",
         privacy_auto_synced: "已自動同步私人模式狀態",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok 指揮官",
         commander_btn_title: "AI 指揮官（已啟用）",
-        need_reopen: "請先點擊右下角的 Grok 按鈕開啟側邊欄，再使用指令選單",
+        need_reopen: "找不到右下角的 Grok 按鈕，請先手動點擊開啟側邊欄再使用指令選單；若瀏覽器視窗較窄，該按鈕可能被隱藏，請嘗試拉寬視窗",
         push_section_label: "📨 推送設定 (Push Notifications)",
         push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
         tmpl_section_label: "✏️ 提示詞模板 (Prompt Templates)",
@@ -93,6 +93,16 @@
         push_result_fail: "❌ 推送失敗",
         push_url_converter: "推送網址格式",
         push_url_converter_hint: "推送前將 x.com/twitter.com 轉換為指定網域",
+        unsaved_title: "有未儲存的變更",
+        unsaved_save_close: "💾 儲存並關閉",
+        unsaved_discard: "不儲存，直接關閉",
+        unsaved_footer_hint: "有未儲存的變更",
+        tab_options: "選項",
+        privacy_mode_badge_tooltip: "切換私人模式操作方式",
+        privacy_mode_switched_per_item: "已切換：每個模板各自一顆私人模式按鈕",
+        privacy_mode_switched_toggle: "已切換：單一全域私人模式開關",
+        tab_template: "模板",
+        tab_push: "推送",
       },
       "zh-CN": {
         settings_title: "⚙️ 指挥官设置 (Grok Commander)",
@@ -110,13 +120,13 @@
         btn_save: "保存设置",
         confirm_reset: "确定要恢复默认值？这将覆盖您的自定义模板。",
         alert_saved: "设置已保存！",
-        private_tooltip: "私密模式（抽屜内启用私人聊天）",
+        private_tooltip: "私密模式（开启后以私密聊天执行指令）",
         btn_confirm: "确定",
         privacy_auto_synced: "已自动同步私密模式状态",
         settings_tooltip: "设置 (Settings)",
         commander_btn_label: "Grok 指挥官",
         commander_btn_title: "AI 指挥官（已启用）",
-        need_reopen: "请先点击右下角的 Grok 按钮打开侧边栏，再使用指令菜单",
+        need_reopen: "找不到右下角的 Grok 按钮，请先手动点击打开侧边栏再使用指令菜单；若浏览器窗口较窄，该按钮可能被隐藏，请尝试拉宽窗口",
         push_section_label: "📨 推送设置 (Push Notifications)",
         push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
         tmpl_section_label: "✏️ 提示词模板 (Prompt Templates)",
@@ -148,6 +158,16 @@
         push_result_fail: "❌ 推送失败",
         push_url_converter: "推送网址格式",
         push_url_converter_hint: "推送前将 x.com/twitter.com 转换为指定域名",
+        unsaved_title: "有未保存的更改",
+        unsaved_save_close: "💾 保存并关闭",
+        unsaved_discard: "不保存，直接关闭",
+        unsaved_footer_hint: "有未保存的更改",
+        tab_options: "选项",
+        privacy_mode_badge_tooltip: "切换私密模式操作方式",
+        privacy_mode_switched_per_item: "已切换：每个模板各自一颗私密模式按钮",
+        privacy_mode_switched_toggle: "已切换：单一全局私密模式开关",
+        tab_template: "模板",
+        tab_push: "推送",
       },
       en: {
         settings_title: "⚙️ Commander Settings (Grok Commander)",
@@ -167,13 +187,13 @@
         confirm_reset:
           "Reset to defaults? This will overwrite your custom templates.",
         alert_saved: "Settings saved!",
-        private_tooltip: "Private Mode (enable private chat in drawer)",
+        private_tooltip: "Private Mode (runs command in private chat when enabled)",
         btn_confirm: "Confirm",
         privacy_auto_synced: "Private mode auto-synced",
         settings_tooltip: "Settings",
         commander_btn_label: "Grok Commander",
         commander_btn_title: "AI Commander (Active)",
-        need_reopen: "Please click the Grok button (bottom-right) to open the sidebar first, then use the command menu",
+        need_reopen: "Couldn't find the Grok button (bottom-right). Please open the sidebar manually first, then use the command menu; if your browser window is narrow, the button may be hidden — try widening it",
         push_section_label: "📨 Push Notifications",
         push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
         tmpl_section_label: "✏️ Prompt Templates",
@@ -205,6 +225,16 @@
         push_result_fail: "❌ Push failed",
         push_url_converter: "URL Format",
         push_url_converter_hint: "Convert x.com/twitter.com to the selected domain before pushing",
+        unsaved_title: "You have unsaved changes",
+        unsaved_save_close: "💾 Save & Close",
+        unsaved_discard: "Discard & Close",
+        unsaved_footer_hint: "You have unsaved changes",
+        tab_options: "Options",
+        privacy_mode_badge_tooltip: "Switch private mode UI style",
+        privacy_mode_switched_per_item: "Switched: per-template private mode button",
+        privacy_mode_switched_toggle: "Switched: single global private mode toggle",
+        tab_template: "Templates",
+        tab_push: "Push",
       },
       ja: {
         settings_title: "⚙️ コマンダー設定 (Grok Commander)",
@@ -224,13 +254,13 @@
         confirm_reset:
           "デフォルトに戻しますか？カスタムテンプレートが上書きされます。",
         alert_saved: "設定を保存しました！",
-        private_tooltip: "プライベートモード（ドロワー内でプライベートチャットを有効化）",
+        private_tooltip: "プライベートモード（有効時はプライベートチャットでコマンドを実行）",
         btn_confirm: "確定",
         privacy_auto_synced: "プライベートモードを自動同期しました",
         settings_tooltip: "設定 (Settings)",
         commander_btn_label: "Grok コマンダー",
         commander_btn_title: "AI コマンダー（有効）",
-        need_reopen: "右下のGrokボタンをクリックしてサイドバーを開いてから、コマンドメニューをご利用ください",
+        need_reopen: "右下のGrokボタンが見つかりません。手動でサイドバーを開いてからコマンドメニューをご利用ください。ブラウザの幅が狭いとボタンが隠れることがあるので、幅を広げてお試しください",
         push_section_label: "📨 プッシュ通知設定",
         push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
         tmpl_section_label: "✏️ プロンプトテンプレート",
@@ -262,6 +292,16 @@
         push_result_fail: "❌ 送信失敗",
         push_url_converter: "URL フォーマット",
         push_url_converter_hint: "送信前に x.com/twitter.com を指定ドメインに変換します",
+        unsaved_title: "保存されていない変更があります",
+        unsaved_save_close: "💾 保存して閉じる",
+        unsaved_discard: "保存せずに閉じる",
+        unsaved_footer_hint: "保存されていない変更があります",
+        tab_options: "オプション",
+        privacy_mode_badge_tooltip: "プライベートモードの操作方式を切替",
+        privacy_mode_switched_per_item: "切替：テンプレートごとの個別ボタン方式",
+        privacy_mode_switched_toggle: "切替：単一のグローバルトグル方式",
+        tab_template: "テンプレート",
+        tab_push: "プッシュ",
       },
       ko: {
         settings_title: "⚙️ 커맨더 설정 (Grok Commander)",
@@ -281,13 +321,13 @@
         confirm_reset:
           "기본값으로 재설정하시겠습니까? 커스텀 템플릿이 덮어쓰여집니다.",
         alert_saved: "설정이 저장되었습니다！",
-        private_tooltip: "비공개 모드（드로어 내 비공개 채팅 활성화）",
+        private_tooltip: "비공개 모드（활성화 시 비공개 채팅으로 명령 실행）",
         btn_confirm: "확인",
         privacy_auto_synced: "비공개 모드가 자동으로 동기화되었습니다",
         settings_tooltip: "설정 (Settings)",
         commander_btn_label: "Grok 커맨더",
         commander_btn_title: "AI 커맨더（활성화）",
-        need_reopen: "오른쪽 하단의 Grok 버튼을 클릭하여 사이드바를 먼저 열고 명령 메뉴를 사용하세요",
+        need_reopen: "오른쪽 하단의 Grok 버튼을 찾을 수 없습니다. 먼저 수동으로 사이드바를 연 후 명령 메뉴를 사용하세요. 브라우저 창이 좁으면 버튼이 가려질 수 있으니 창을 넓혀 보세요",
         push_section_label: "📨 푸시 알림 설정",
         push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
         tmpl_section_label: "✏️ 프롬프트 템플릿",
@@ -319,6 +359,16 @@
         push_result_fail: "❌ 전송 실패",
         push_url_converter: "URL 형식",
         push_url_converter_hint: "전송 전에 x.com/twitter.com을 지정 도메인으로 변환합니다",
+        unsaved_title: "저장되지 않은 변경 사항이 있습니다",
+        unsaved_save_close: "💾 저장 후 닫기",
+        unsaved_discard: "저장 안 하고 닫기",
+        unsaved_footer_hint: "저장되지 않은 변경 사항이 있습니다",
+        tab_options: "옵션",
+        privacy_mode_badge_tooltip: "비공개 모드 조작 방식 전환",
+        privacy_mode_switched_per_item: "전환됨: 템플릿별 개별 버튼 방식",
+        privacy_mode_switched_toggle: "전환됨: 단일 전역 토글 방식",
+        tab_template: "템플릿",
+        tab_push: "푸시",
       },
       es: {
         settings_title: "⚙️ Configuración del Comandante (Grok Commander)",
@@ -336,13 +386,13 @@
         btn_save: "Guardar configuración",
         confirm_reset: "¿Restablecer valores predeterminados? Esto sobrescribirá sus plantillas personalizadas.",
         alert_saved: "¡Configuración guardada!",
-        private_tooltip: "Modo privado (activar chat privado en el panel)",
+        private_tooltip: "Modo privado (ejecuta el comando en chat privado cuando está activado)",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automáticamente",
         settings_tooltip: "Configuración",
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Activo)",
-        need_reopen: "Haz clic en el botón de Grok (abajo a la derecha) para abrir el panel lateral primero y luego usa el menú de comandos",
+        need_reopen: "No se encontró el botón de Grok (abajo a la derecha). Ábrelo manualmente primero y luego usa el menú de comandos; si la ventana del navegador es estrecha, el botón puede estar oculto — intenta ensancharla",
         push_section_label: "📨 Notificaciones push",
         push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
         tmpl_section_label: "✏️ Plantillas de prompts",
@@ -374,6 +424,16 @@
         push_result_fail: "❌ Envío fallido",
         push_url_converter: "Formato de URL",
         push_url_converter_hint: "Convierte x.com/twitter.com al dominio seleccionado antes de enviar",
+        unsaved_title: "Hay cambios sin guardar",
+        unsaved_save_close: "💾 Guardar y cerrar",
+        unsaved_discard: "Cerrar sin guardar",
+        unsaved_footer_hint: "Hay cambios sin guardar",
+        tab_options: "Opciones",
+        privacy_mode_badge_tooltip: "Cambiar estilo del modo privado",
+        privacy_mode_switched_per_item: "Cambiado: botón individual por plantilla",
+        privacy_mode_switched_toggle: "Cambiado: interruptor global único",
+        tab_template: "Plantillas",
+        tab_push: "Envío",
       },
       "pt-BR": {
         settings_title: "⚙️ Configurações do Comandante (Grok Commander)",
@@ -391,13 +451,13 @@
         btn_save: "Salvar configurações",
         confirm_reset: "Restaurar padrões? Isso sobrescreverá seus modelos personalizados.",
         alert_saved: "Configurações salvas!",
-        private_tooltip: "Modo privado (ativar chat privado no painel)",
+        private_tooltip: "Modo privado (executa o comando em chat privado quando ativado)",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automaticamente",
         settings_tooltip: "Configurações",
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Ativo)",
-        need_reopen: "Clique no botão do Grok (canto inferior direito) para abrir o painel lateral primeiro e depois use o menu de comandos",
+        need_reopen: "Não foi possível encontrar o botão do Grok (canto inferior direito). Abra o painel manualmente primeiro e depois use o menu de comandos; se a janela do navegador estiver estreita, o botão pode estar oculto — tente alargá-la",
         push_section_label: "📨 Notificações push",
         push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
         tmpl_section_label: "✏️ Templates de prompts",
@@ -429,6 +489,16 @@
         push_result_fail: "❌ Falha no envio",
         push_url_converter: "Formato de URL",
         push_url_converter_hint: "Converte x.com/twitter.com para o domínio selecionado antes de enviar",
+        unsaved_title: "Há alterações não salvas",
+        unsaved_save_close: "💾 Salvar e fechar",
+        unsaved_discard: "Fechar sem salvar",
+        unsaved_footer_hint: "Há alterações não salvas",
+        tab_options: "Opções",
+        privacy_mode_badge_tooltip: "Alternar estilo do modo privado",
+        privacy_mode_switched_per_item: "Alterado: botão individual por modelo",
+        privacy_mode_switched_toggle: "Alterado: alternador global único",
+        tab_template: "Modelos",
+        tab_push: "Envio",
       },
       fr: {
         settings_title: "⚙️ Paramètres du Commandant (Grok Commander)",
@@ -446,13 +516,13 @@
         btn_save: "Enregistrer les paramètres",
         confirm_reset: "Rétablir les valeurs par défaut ? Cela écrasera vos modèles personnalisés.",
         alert_saved: "Paramètres enregistrés !",
-        private_tooltip: "Mode privé (activer le chat privé dans le panneau)",
+        private_tooltip: "Mode privé (exécute la commande en chat privé une fois activé)",
         btn_confirm: "Confirmer",
         privacy_auto_synced: "Mode privé synchronisé automatiquement",
         settings_tooltip: "Paramètres",
         commander_btn_label: "Grok Commandant",
         commander_btn_title: "Commandant IA (Actif)",
-        need_reopen: "Cliquez sur le bouton Grok (en bas à droite) pour ouvrir le panneau latéral d'abord, puis utilisez le menu de commandes",
+        need_reopen: "Bouton Grok introuvable (en bas à droite). Ouvrez d'abord le panneau manuellement, puis utilisez le menu de commandes ; si la fenêtre du navigateur est étroite, le bouton peut être masqué — essayez de l'élargir",
         push_section_label: "📨 Notifications push",
         push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
         tmpl_section_label: "✏️ Modèles de prompts",
@@ -484,6 +554,16 @@
         push_result_fail: "❌ Échec de l'envoi",
         push_url_converter: "Format d'URL",
         push_url_converter_hint: "Convertit x.com/twitter.com vers le domaine sélectionné avant l'envoi",
+        unsaved_title: "Des modifications non enregistrées existent",
+        unsaved_save_close: "💾 Enregistrer et fermer",
+        unsaved_discard: "Fermer sans enregistrer",
+        unsaved_footer_hint: "Des modifications non enregistrées existent",
+        tab_options: "Options",
+        privacy_mode_badge_tooltip: "Changer le style du mode privé",
+        privacy_mode_switched_per_item: "Changé : bouton individuel par modèle",
+        privacy_mode_switched_toggle: "Changé : interrupteur global unique",
+        tab_template: "Modèles",
+        tab_push: "Envoi",
       },
     },
     templates: {
@@ -837,19 +917,102 @@
         #grok-commander-menu {
             position: fixed; z-index: 99990;
             background-color: #000000; border: 1px solid #333639;
-            border-radius: 12px; box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            
+            box-shadow:
+                0 8px 16px rgba(255, 255, 255, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+                inset 0 1px 12px rgba(255, 255, 255, 0.03);
             padding: 8px; display: flex; flex-direction: column; gap: 4px;
             min-width: 170px; font-family: sans-serif;
-            animation: fadeIn 0.15s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.97) translateY(4px); }
+            to   { opacity: 1; transform: scale(1)    translateY(0); }
+        }
+        #grok-commander-menu.grok-menu-expand-left {
+            transform-origin: top right;
+            animation: fadeInFromRight 0.15s ease-out;
+        }
+        #grok-commander-menu.grok-menu-expand-right {
+            transform-origin: top left;
+            animation: fadeInFromLeft 0.15s ease-out;
+        }
+        @keyframes fadeInFromRight {
+            from { opacity: 0; transform: scale(0.97) translateX(6px); }
+            to   { opacity: 1; transform: scale(1)    translateX(0); }
+        }
+        @keyframes fadeInFromLeft {
+            from { opacity: 0; transform: scale(0.97) translateX(-6px); }
+            to   { opacity: 1; transform: scale(1)    translateX(0); }
         }
         .grok-menu-item {
             display: flex; align-items: center; gap: 12px;
             padding: 10px 12px; color: #E7E9EA; font-size: 14px;
             border-radius: 8px; cursor: pointer; user-select: none;
-            transition: background 0.1s;
+            transition: background 0.1s, transform 0.1s;
         }
-        .grok-menu-item:hover { background-color: #1D9BF0; color: #fff; }
+        .grok-menu-item:hover { background-color: #1D9BF0; color: #fff; transform: translateX(1px); }
         .grok-menu-item-label { flex: 1; }
+        
+        .grok-menu-item-icon {
+            display: flex; align-items: center; justify-content: center;
+            width: 20px; height: 20px; flex-shrink: 0; color: inherit;
+        }
+        .grok-menu-item-icon svg { display: block; }
+        
+        .grok-menu-titlebar {
+            display: flex; justify-content: flex-end; align-items: center;
+            padding: 2px 2px 6px;
+        }
+        .grok-menu-footer {
+            margin-top: 4px; border-top: 1px solid #333; padding-top: 4px;
+            display: flex; justify-content: space-between; align-items: center; gap: 6px;
+        }
+        
+        .grok-privacy-btn-wrapper { position: relative; display: inline-flex; }
+        
+        .grok-privacy-toggle-btn {
+            padding: 3px; font-size: 0; cursor: pointer; line-height: 1;
+            color: #71767B; border-radius: 6px; border: 1px solid #333;
+            background: transparent;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+            opacity: 0.55;
+        }
+        .grok-privacy-toggle-btn:hover { background: rgba(139,92,246,0.12); border-color: #a78bfa; opacity: 0.85; }
+        .grok-privacy-toggle-btn.active {
+            color: #a78bfa; border-color: #8b5cf6;
+            background: rgba(139,92,246,0.15);
+            opacity: 1;
+        }
+        
+        .grok-privacy-toggle-btn.disabled-mode {
+            cursor: default; opacity: 0.35; filter: grayscale(1);
+        }
+        .grok-privacy-toggle-btn.disabled-mode:hover { background: transparent; border-color: #333; opacity: 0.35; }
+        
+        .grok-privacy-mode-badge {
+            position: absolute; top: -5px; right: -5px;
+            width: 14px; height: 14px; padding: 0; font-size: 0;
+            border-radius: 50%; border: 1px solid #000;
+            background: rgba(113,118,123,0.7); color: #E7E9EA;
+            cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.15s, background 0.15s;
+        }
+        .grok-privacy-btn-wrapper:hover .grok-privacy-mode-badge {
+            opacity: 0.7; pointer-events: auto;
+        }
+        .grok-privacy-mode-badge:hover { opacity: 1; }
+        .grok-privacy-mode-badge.per-item-active {
+            background: rgba(139,92,246,0.85); color: #fff;
+        }
+        .grok-privacy-btn-wrapper:hover .grok-privacy-mode-badge.per-item-active {
+            opacity: 0.9;
+        }
+        
         .grok-private-btn {
             font-size: 13px; padding: 4px 8px; border-radius: 6px;
             color: #1d9bf0; cursor: pointer; flex-shrink: 0;
@@ -860,10 +1023,6 @@
             display: inline-flex; align-items: center; justify-content: center;
         }
         .grok-private-btn:hover { background: rgba(139,92,246,0.2); color: #a78bfa; border-color: #a78bfa; }
-        .grok-menu-footer {
-            margin-top: 4px; border-top: 1px solid #333; padding-top: 4px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
         .grok-settings-btn {
             padding: 4px 8px; font-size: 18px; cursor: pointer;
             color: #71767B; border-radius: 4px;
@@ -946,6 +1105,20 @@
             color: #fff !important;
             background: #0d1117 !important;
         }
+        
+        .gcm-header-title { display: flex; align-items: center; gap: 8px; }
+        .gcm-header-icon { display: flex; align-items: center; color: #1d9bf0; }
+        .gcm-header-close {
+            display: flex; align-items: center; cursor: pointer;
+            color: #536471; transition: color 0.15s;
+        }
+        .gcm-header-close:hover { color: #E7E9EA; }
+        
+        .gcm-header-icon-sm {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 12px; height: 12px; color: inherit; margin-right: 2px;
+        }
+        .gcm-header-icon-sm svg { display: block; }
         .grok-modal-body {
             padding: 16px 20px !important;
             overflow-y: auto !important;
@@ -955,30 +1128,91 @@
             min-height: 0 !important;
             background: #080b10 !important;
         }
+
+        .gcm-tab-bar {
+            display: flex; gap: 4px; flex-shrink: 0;
+            padding: 10px 20px 0; border-bottom: 1px solid #1e2532;
+            background: #0d1117;
+        }
+        .gcm-tab-btn {
+            flex: 1; background: transparent; border: none; color: #536471;
+            padding: 9px 8px 11px; font-size: 12px; font-weight: 700; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s;
+        }
+        .gcm-tab-btn span.gcm-tab-icon {
+            display: flex; align-items: center; justify-content: center;
+            width: 14px; height: 14px; color: inherit;
+        }
+        .gcm-tab-btn span.gcm-tab-icon svg { display: block; }
+        .gcm-tab-btn:hover { color: #E7E9EA; }
+        .gcm-tab-btn.active { color: #1d9bf0; border-bottom-color: #1d9bf0; }
+
+        .gcm-tab-pane { display: none; flex-direction: column; gap: 12px; }
+        .gcm-tab-pane.active {
+            display: flex;
+            animation: gcm-pane-fade-in 0.2s ease-out;
+        }
+        @keyframes gcm-pane-fade-in {
+            from { opacity: 0; transform: translateY(6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
         .grok-modal-footer {
             padding: 12px 20px !important;
             border-top: 1px solid #1e2532 !important;
             display: flex !important;
             justify-content: flex-end !important;
+            align-items: center !important;
             gap: 10px !important;
             flex-shrink: 0 !important;
             box-sizing: border-box !important;
             background: #0d1117 !important;
         }
 
+        .grok-unsaved-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #f0b429; margin-right: auto;
+            opacity: 0; transform: scale(0.5);
+            transition: opacity 0.15s ease, transform 0.15s ease;
+            flex-shrink: 0;
+        }
+        .grok-unsaved-dot.visible { opacity: 1; transform: scale(1); }
+
+        #grok-unsaved-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.65); z-index: 2147483645;
+            display: flex; justify-content: center; align-items: center;
+        }
+        #grok-unsaved-box {
+            background: #16181C; border: 1px solid #2f3336; border-radius: 14px;
+            padding: 18px 20px; width: min(320px, 88vw);
+            font-family: sans-serif; color: #E7E9EA;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        #grok-unsaved-box p { margin: 0 0 4px; font-size: 13px; line-height: 1.6; font-weight: 600; }
+        .grok-unsaved-btn {
+            padding: 9px 12px; border-radius: 10px; border: none;
+            cursor: pointer; font-weight: 700; font-size: 13px;
+            transition: opacity 0.15s, background 0.15s; text-align: center; width: 100%;
+        }
+        .grok-unsaved-btn:hover { opacity: 0.85; }
+        .grok-unsaved-btn.primary { background: #1D9BF0; color: #fff; }
+        .grok-unsaved-btn.danger  { background: transparent; color: #F4212E; border: 1px solid #F4212E; }
+        .grok-unsaved-btn.ghost   { background: transparent; color: #8899A6; border: 1px solid #536471; }
+
         .grok-section-card {
-            border: 1px solid #1e2532;
             border-radius: 12px;
             margin-bottom: 14px;
             overflow: hidden;
-            background: #0d1117;
+            background: #12161f;
         }
         .grok-section-header {
             padding: 9px 16px;
-            background: #111827;
+            background: #171b26;
             font-size: 10px; font-weight: 700; color: #4a90d9;
             letter-spacing: 1px; text-transform: uppercase;
-            border-bottom: 1px solid #1e2532;
             display: flex; align-items: center; gap: 6px;
             border-left: 3px solid #1d9bf0;
         }
@@ -1003,18 +1237,18 @@
         .grok-form-label { font-size: 12px; font-weight: 600; color: #8899A6; }
         .grok-form-hint  { font-size: 11px; color: #3d4a55; margin-top: 2px; line-height: 1.5; }
         .grok-input-select {
-            width: 100%; background: #16181C; border: 1px solid #2f3336;
+            width: 100%; background: #0d1117; border: 1px solid #2f3336;
             color: #E7E9EA; padding: 8px 10px; border-radius: 8px; font-size: 13px;
             outline: none; transition: border-color 0.15s;
         }
         .grok-input-select:focus { border-color: #1d9bf0; }
         .grok-input-text {
-            width: 100%; background: #16181C; border: 1px solid #2f3336;
+            width: 100%; background: #0d1117; border: 1px solid #2f3336;
             color: #E7E9EA; padding: 7px 10px; border-radius: 8px; font-size: 12px;
             box-sizing: border-box; font-family: monospace; outline: none;
         }
         .grok-input-textarea {
-            width: 100%; height: 80px; background: #16181C; border: 1px solid #2f3336;
+            width: 100%; height: 80px; background: #0d1117; border: 1px solid #2f3336;
             color: #E7E9EA; padding: 7px 10px; border-radius: 8px; font-size: 12px;
             resize: vertical; font-family: monospace; box-sizing: border-box; outline: none;
             transition: border-color 0.15s;
@@ -1036,10 +1270,15 @@
         .grok-push-fields { display: flex; flex-direction: column; gap: 6px; padding-left: 22px; }
         .grok-push-section { display: flex; flex-direction: column; gap: 6px; }
 
-        .grok-push-entry { display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; background: #0d1117; border: 1px solid #2f3336; border-radius: 8px; position: relative; }
+        .grok-push-entry { display: flex; flex-direction: column; gap: 4px; padding: 8px 10px; background: #171b26; border-radius: 8px; position: relative; }
         .grok-push-entry-header { display: flex; align-items: center; gap: 6px; }
-        .grok-push-entry-label { flex: 1; background: #16181C; border: 1px solid #2f3336; color: #E7E9EA; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
-        .grok-push-remove-btn { background: transparent; border: none; color: #536471; font-size: 16px; cursor: pointer; padding: 0 4px; line-height: 1; flex-shrink: 0; }
+        .grok-push-entry-label { flex: 1; background: #0d1117; border: 1px solid #2f3336; color: #E7E9EA; padding: 4px 8px; border-radius: 6px; font-size: 12px; }
+        .grok-push-remove-btn {
+            display: flex; align-items: center; justify-content: center;
+            width: 20px; height: 20px; background: transparent; border: none;
+            color: #536471; cursor: pointer; padding: 0; flex-shrink: 0;
+            transition: color 0.15s;
+        }
         .grok-push-remove-btn:hover { color: #F4212E; }
         .grok-push-add-btn { align-self: flex-start; padding: 4px 12px; border-radius: 12px; border: 1px dashed #536471; background: transparent; color: #536471; font-size: 12px; cursor: pointer; transition: all 0.15s; margin-top: 2px; }
         .grok-push-add-btn:hover { border-color: #1D9BF0; color: #1D9BF0; }
@@ -1064,14 +1303,17 @@
         .grok-test-btn:hover:not(:disabled) { border-color: #1D9BF0; color: #1D9BF0; background: rgba(29,155,240,0.1); }
         .grok-test-btn:disabled { opacity: 0.5; cursor: default; }
 
-        .grok-tmpl-item { border: 1px solid #2f3336; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
+        .grok-tmpl-item { background: #171b26; border-radius: 8px; padding: 10px 12px; display: flex; flex-direction: column; gap: 6px; }
         .grok-tmpl-title { font-size: 12px; font-weight: bold; color: #8899A6; margin-bottom: 2px; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+        .grok-tmpl-title-main { display: flex; align-items: center; gap: 6px; }
+        .grok-tmpl-icon { display: flex; align-items: center; justify-content: center; width: 14px; height: 14px; color: inherit; flex-shrink: 0; }
+        .grok-tmpl-icon svg { display: block; }
         .grok-tmpl-reset-btn {
-            border: 1px solid #2f3336; border-radius: 6px; background: transparent;
-            color: #8899A6; font-size: 12px; line-height: 1; cursor: pointer;
-            padding: 2px 6px; transition: all 0.15s; flex-shrink: 0; font-weight: normal;
+            display: flex; align-items: center; justify-content: center;
+            width: 22px; height: 22px; border-radius: 6px; background: transparent;
+            color: #8899A6; cursor: pointer; padding: 0; transition: all 0.15s; flex-shrink: 0;
         }
-        .grok-tmpl-reset-btn:hover { border-color: #1D9BF0; color: #1D9BF0; background: rgba(29,155,240,0.1); }
+        .grok-tmpl-reset-btn:hover { color: #1D9BF0; background: rgba(29,155,240,0.1); }
         .grok-tmpl-row   { display: flex; gap: 8px; align-items: center; }
         .grok-tmpl-row span { font-size: 11px; color: #536471; white-space: nowrap; }
 
@@ -1231,6 +1473,8 @@
   }
 
   function openSettings() {
+    var _unsavedGuardReady = false;
+
     document.getElementById("grok-commander-menu")?.remove();
     const config = loadConfig();
     const currentLang = config.lang;
@@ -1243,77 +1487,102 @@
     let html = `
       <div id="grok-settings-modal">
         <div class="grok-modal-header">
-          <span>${t("settings_title")}</span>
-          <span style="cursor:pointer;color:#536471;font-size:18px" id="grok-settings-close">✕</span>
+          <span class="gcm-header-title">
+            <span class="gcm-header-icon">${SETTINGS_ICON_SVG.gear}</span>
+            <span>${t("settings_title").replace(/^\u2699\ufe0f?\s*/, "")}</span>
+          </span>
+          <span class="gcm-header-close" id="grok-settings-close">${SETTINGS_ICON_SVG.close}</span>
         </div>
+        <div class="gcm-tab-bar">
+          <button type="button" class="gcm-tab-btn active" data-tab="template">
+            <span class="gcm-tab-icon">${SETTINGS_ICON_SVG.template}</span><span>${t("tab_template")}</span>
+          </button>
+          <button type="button" class="gcm-tab-btn" data-tab="lang_send">
+            <span class="gcm-tab-icon">${SETTINGS_ICON_SVG.options}</span><span>${t("tab_options")}</span>
+          </button>
+          <button type="button" class="gcm-tab-btn" data-tab="push">
+            <span class="gcm-tab-icon">${SETTINGS_ICON_SVG.push}</span><span>${t("tab_push")}</span>
+          </button>
+        </div>
+
         <div class="grok-modal-body">
 
-          <div class="grok-section-card">
-            <div class="grok-section-header">⚙️ ${t("send_mode_label")} &amp; ${t("lang_label")}</div>
-            <div class="grok-section-body">
-              <div class="grok-form-row">
-                <label class="grok-form-label">${t("lang_label")}</label>
-                <select id="grok-lang-select" class="grok-input-select">
-                  <option value="auto"   ${currentLang==="auto"   ?"selected":""}>${t("lang_auto")}</option>
-                  <option value="zh-TW"  ${currentLang==="zh-TW"  ?"selected":""}>繁體中文</option>
-                  <option value="zh-CN"  ${currentLang==="zh-CN"  ?"selected":""}>简体中文</option>
-                  <option value="en"     ${currentLang==="en"     ?"selected":""}>English</option>
-                  <option value="ja"     ${currentLang==="ja"     ?"selected":""}>日本語</option>
-                  <option value="ko"     ${currentLang==="ko"     ?"selected":""}>한국어</option>
-                  <option value="es"     ${currentLang==="es"     ?"selected":""}>Español</option>
-                  <option value="pt-BR"  ${currentLang==="pt-BR"  ?"selected":""}>Português (BR)</option>
-                  <option value="fr"     ${currentLang==="fr"     ?"selected":""}>Français</option>
-                  <option value="custom" ${currentLang==="custom" ?"selected":""}>✏️ Custom Language</option>
-                </select>
-                <div class="grok-form-hint">${t("lang_hint")}</div>
-                <div id="grok-custom-lang-inline" style="display:${currentLang==="custom"?"flex":"none"};align-items:center;gap:8px;padding:6px 0 2px;">
-                  
+          <div class="gcm-tab-pane active" data-pane="template">
+            
+            <div class="grok-section-card">
+              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.template}</span>${t("tmpl_section_label").replace(/^\u270f\ufe0f?\s*/, "")}</div>
+              <div class="grok-section-body">
+                <div class="grok-section-desc">${t("tmpl_section_hint")}</div>
+                <div id="grok-template-editors"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gcm-tab-pane" data-pane="lang_send">
+            
+            <div class="grok-section-card">
+              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.options}</span>${t("send_mode_label")} &amp; ${t("lang_label")}</div>
+              <div class="grok-section-body">
+                <div class="grok-form-row">
+                  <label class="grok-form-label">${t("send_mode_label")}</label>
+                  <select id="grok-autosend-select" class="grok-input-select">
+                    <option value="manual" ${!config.autoSend?"selected":""}>${t("send_manual")}</option>
+                    <option value="auto"   ${ config.autoSend?"selected":""}>${t("send_auto")}</option>
+                  </select>
+                  <div class="grok-form-hint">${t("send_mode_hint")}</div>
+                </div>
+                <div class="grok-form-row">
+                  <label class="grok-form-label">${t("lang_label")}</label>
+                  <select id="grok-lang-select" class="grok-input-select">
+                    <option value="auto"   ${currentLang==="auto"   ?"selected":""}>${t("lang_auto")}</option>
+                    <option value="zh-TW"  ${currentLang==="zh-TW"  ?"selected":""}>繁體中文</option>
+                    <option value="zh-CN"  ${currentLang==="zh-CN"  ?"selected":""}>简体中文</option>
+                    <option value="en"     ${currentLang==="en"     ?"selected":""}>English</option>
+                    <option value="ja"     ${currentLang==="ja"     ?"selected":""}>日本語</option>
+                    <option value="ko"     ${currentLang==="ko"     ?"selected":""}>한국어</option>
+                    <option value="es"     ${currentLang==="es"     ?"selected":""}>Español</option>
+                    <option value="pt-BR"  ${currentLang==="pt-BR"  ?"selected":""}>Português (BR)</option>
+                    <option value="fr"     ${currentLang==="fr"     ?"selected":""}>Français</option>
+                    <option value="custom" ${currentLang==="custom" ?"selected":""}>Custom Language</option>
+                  </select>
+                  <div class="grok-form-hint">${t("lang_hint")}</div>
+                  <div id="grok-custom-lang-inline" style="display:${currentLang==="custom"?"flex":"none"};align-items:center;gap:8px;padding:6px 0 2px;">
+                    
+                  </div>
                 </div>
               </div>
-              <div class="grok-form-row">
-                <label class="grok-form-label">${t("send_mode_label")}</label>
-                <select id="grok-autosend-select" class="grok-input-select">
-                  <option value="manual" ${!config.autoSend?"selected":""}>${t("send_manual")}</option>
-                  <option value="auto"   ${ config.autoSend?"selected":""}>${t("send_auto")}</option>
-                </select>
-                <div class="grok-form-hint">${t("send_mode_hint")}</div>
-              </div>
             </div>
           </div>
 
-          <div class="grok-section-card">
-            <div class="grok-section-header">${t("tmpl_section_label")}</div>
-            <div class="grok-section-body">
-              <div class="grok-section-desc">${t("tmpl_section_hint")}</div>
-              <div id="grok-template-editors"></div>
-            </div>
-          </div>
-
-          <div class="grok-section-card">
-            <div class="grok-section-header">📨 ${t("push_section_label").replace(/^📨\s*/,"")}</div>
-            <div class="grok-section-body">
-              <div class="grok-section-desc">${t("push_section_desc")}</div>
-              <div class="grok-form-row">
-                <label class="grok-form-label">${t("push_url_converter")}</label>
-                <select id="grok-url-converter-select" class="grok-input-select">
-                  <option value="x.com"         ${(!pc.urlConverter||pc.urlConverter==="x.com")?"selected":""}>x.com（不轉換）</option>
-                  <option value="fixupx.com"    ${pc.urlConverter==="fixupx.com"   ?"selected":""}>fixupx.com</option>
-                  <option value="fxtwitter.com" ${pc.urlConverter==="fxtwitter.com"?"selected":""}>fxtwitter.com</option>
-                  <option value="vxtwitter.com" ${pc.urlConverter==="vxtwitter.com"?"selected":""}>vxtwitter.com</option>
-                  <option value="cunnyx.com"    ${pc.urlConverter==="cunnyx.com"   ?"selected":""}>cunnyx.com</option>
-                  <option value="fixvx.com"     ${pc.urlConverter==="fixvx.com"    ?"selected":""}>fixvx.com</option>
-                  <option value="twitter.com"   ${pc.urlConverter==="twitter.com"  ?"selected":""}>twitter.com</option>
-                </select>
-                <div class="grok-form-hint">${t("push_url_converter_hint")}</div>
+          <div class="gcm-tab-pane" data-pane="push">
+            
+            <div class="grok-section-card">
+              <div class="grok-section-header"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.push}</span>${t("push_section_label").replace(/^\ud83d\udce8\s*/,"")}</div>
+              <div class="grok-section-body">
+                <div class="grok-section-desc">${t("push_section_desc")}</div>
+                <div class="grok-form-row">
+                  <label class="grok-form-label">${t("push_url_converter")}</label>
+                  <select id="grok-url-converter-select" class="grok-input-select">
+                    <option value="x.com"         ${(!pc.urlConverter||pc.urlConverter==="x.com")?"selected":""}>x.com（不轉換）</option>
+                    <option value="fixupx.com"    ${pc.urlConverter==="fixupx.com"   ?"selected":""}>fixupx.com</option>
+                    <option value="fxtwitter.com" ${pc.urlConverter==="fxtwitter.com"?"selected":""}>fxtwitter.com</option>
+                    <option value="vxtwitter.com" ${pc.urlConverter==="vxtwitter.com"?"selected":""}>vxtwitter.com</option>
+                    <option value="cunnyx.com"    ${pc.urlConverter==="cunnyx.com"   ?"selected":""}>cunnyx.com</option>
+                    <option value="fixvx.com"     ${pc.urlConverter==="fixvx.com"    ?"selected":""}>fixvx.com</option>
+                    <option value="twitter.com"   ${pc.urlConverter==="twitter.com"  ?"selected":""}>twitter.com</option>
+                  </select>
+                  <div class="grok-form-hint">${t("push_url_converter_hint")}</div>
+                </div>
+                <div id="grok-push-discord-list"></div>
+                <div id="grok-push-tg-list"></div>
               </div>
-              <div id="grok-push-discord-list"></div>
-              <div id="grok-push-tg-list"></div>
             </div>
           </div>
 
         </div>
         <div class="grok-modal-footer">
           <button id="grok-settings-reset"  class="grok-btn grok-btn-danger">${t("btn_reset")}</button>
+          <div id="grok-unsaved-dot" class="grok-unsaved-dot" title="${escapeHtml(t("unsaved_footer_hint"))}"></div>
           <button id="grok-settings-cancel" class="grok-btn grok-btn-secondary">${t("btn_cancel")}</button>
           <button id="grok-settings-save"   class="grok-btn grok-btn-primary">${t("btn_save")}</button>
         </div>
@@ -1358,6 +1627,16 @@
       borderTop: "1px solid #2f3336", background: "#000",
     });
 
+    const tabBtns = overlay.querySelectorAll(".gcm-tab-btn");
+    const tabPanes = overlay.querySelectorAll(".gcm-tab-pane");
+    function switchTab(key) {
+      tabBtns.forEach((b) => b.classList.toggle("active", b.getAttribute("data-tab") === key));
+      tabPanes.forEach((p) => p.classList.toggle("active", p.getAttribute("data-pane") === key));
+    }
+    tabBtns.forEach((btn) => {
+      btn.onclick = () => switchTab(btn.getAttribute("data-tab"));
+    });
+
     const editorContainer = document.getElementById("grok-template-editors");
 
     function setUndoableValue(el, value) {
@@ -1387,10 +1666,11 @@
         if (!tmpl) return;
         const div = document.createElement("div");
         div.className = "grok-tmpl-item";
+        const tmplIconHtml = TEMPLATE_ICON_SVG[key] || `<span style="font-size:14px">${tmpl.icon}</span>`;
         div.innerHTML = `
           <div class="grok-tmpl-title">
-            <span>${escapeHtml(tmpl.icon)} ${escapeHtml(tmpl.label)}</span>
-            <button type="button" class="grok-tmpl-reset-btn" data-reset-key="${key}" title="${escapeHtml(t("tmpl_reset_one_tooltip"))}">↺</button>
+            <span class="grok-tmpl-title-main"><span class="grok-tmpl-icon">${tmplIconHtml}</span>${escapeHtml(tmpl.label)}</span>
+            <button type="button" class="grok-tmpl-reset-btn" data-reset-key="${key}" title="${escapeHtml(t("tmpl_reset_one_tooltip"))}">${SETTINGS_ICON_SVG.reset}</button>
           </div>
           <div class="grok-tmpl-row">
             <span>${t("label_label")}</span>
@@ -1418,6 +1698,7 @@
           });
         };
       });
+      if (_unsavedGuardReady) refreshUnsavedDot();
     }
     renderEditors(templatesToEdit);
 
@@ -1477,7 +1758,7 @@
 
         const removeBtn = document.createElement("button");
         removeBtn.className = "grok-push-remove-btn";
-        removeBtn.textContent = "✕";
+        removeBtn.innerHTML = SETTINGS_ICON_SVG.closeSmall;
         removeBtn.onclick = () => {
           entries.splice(idx, 1);
           renderPushEntries(containerId, type, entries);
@@ -1569,6 +1850,7 @@
 
         container.appendChild(div);
       });
+      if (_unsavedGuardReady) refreshUnsavedDot();
     }
 
     const draftDiscord  = (pc.discord  || []).map(e => ({ ...e }));
@@ -1576,13 +1858,84 @@
     renderPushEntries("grok-push-discord-list", "discord",  draftDiscord);
     renderPushEntries("grok-push-tg-list",      "telegram", draftTelegram);
 
-    document.getElementById("grok-settings-close").onclick = closeSettings;
-    document.getElementById("grok-settings-cancel").onclick = closeSettings;
+    function snapshotTemplateEditors() {
+      const result = {};
+      editorContainer.querySelectorAll("textarea[data-key]").forEach((ta) => {
+        const key = ta.getAttribute("data-key");
+        const labelInput = editorContainer.querySelector(`input[data-label-key="${key}"]`);
+        result[key] = { label: labelInput ? labelInput.value : "", prompt: ta.value };
+      });
+      return JSON.stringify(result);
+    }
+
+    const initialSnapshot = {
+      lang: document.getElementById("grok-lang-select").value,
+      autoSend: document.getElementById("grok-autosend-select").value,
+      templates: snapshotTemplateEditors(),
+      urlConverter: document.getElementById("grok-url-converter-select").value,
+      discord: JSON.stringify(draftDiscord),
+      telegram: JSON.stringify(draftTelegram),
+    };
+    _unsavedGuardReady = true;
+
+    function hasUnsavedChanges() {
+      return (
+        document.getElementById("grok-lang-select").value !== initialSnapshot.lang ||
+        document.getElementById("grok-autosend-select").value !== initialSnapshot.autoSend ||
+        snapshotTemplateEditors() !== initialSnapshot.templates ||
+        document.getElementById("grok-url-converter-select").value !== initialSnapshot.urlConverter ||
+        JSON.stringify(draftDiscord)  !== initialSnapshot.discord ||
+        JSON.stringify(draftTelegram) !== initialSnapshot.telegram
+      );
+    }
+
+    function refreshUnsavedDot() {
+      const dotEl = document.getElementById("grok-unsaved-dot");
+      if (dotEl) dotEl.classList.toggle("visible", hasUnsavedChanges());
+    }
+    modalEl.addEventListener("input",  refreshUnsavedDot);
+    modalEl.addEventListener("change", refreshUnsavedDot);
+
+    function attemptClose() {
+      if (hasUnsavedChanges()) {
+        showUnsavedCloseDialog();
+      } else {
+        closeSettings();
+      }
+    }
+
+    function showUnsavedCloseDialog() {
+      document.getElementById("grok-unsaved-overlay")?.remove();
+      const dlgOverlay = document.createElement("div");
+      dlgOverlay.id = "grok-unsaved-overlay";
+      dlgOverlay.innerHTML = `
+        <div id="grok-unsaved-box">
+          <p>${t("unsaved_title")}</p>
+          <button id="grok-unsaved-save-close" class="grok-unsaved-btn primary">${t("unsaved_save_close")}</button>
+          <button id="grok-unsaved-discard" class="grok-unsaved-btn danger">${t("unsaved_discard")}</button>
+          <button id="grok-unsaved-cancel" class="grok-unsaved-btn ghost">${t("btn_cancel")}</button>
+        </div>
+      `;
+      document.body.appendChild(dlgOverlay);
+      dlgOverlay.querySelector("#grok-unsaved-save-close").onclick = () => {
+        dlgOverlay.remove();
+        document.getElementById("grok-settings-save")?.click();
+      };
+      dlgOverlay.querySelector("#grok-unsaved-discard").onclick = () => {
+        dlgOverlay.remove();
+        closeSettings();
+      };
+      dlgOverlay.querySelector("#grok-unsaved-cancel").onclick = () => dlgOverlay.remove();
+      dlgOverlay.onclick = (e) => { if (e.target === dlgOverlay) dlgOverlay.remove(); };
+    }
+
+    document.getElementById("grok-settings-close").onclick = attemptClose;
+    document.getElementById("grok-settings-cancel").onclick = attemptClose;
 
     const settingsOverlayEl = document.getElementById("grok-settings-overlay");
     if (settingsOverlayEl) {
       settingsOverlayEl.addEventListener("click", (e) => {
-        if (e.target === settingsOverlayEl) closeSettings();
+        if (e.target === settingsOverlayEl) attemptClose();
       });
     }
 
@@ -1824,6 +2177,7 @@
       } else {
         renderEditors(DEFAULT_CONFIG.templates[targetLang] || DEFAULT_CONFIG.templates["en"]);
       }
+      switchTab("template");
     };
 
     document.getElementById("grok-settings-reset").onclick = () => {
@@ -2114,6 +2468,29 @@
 
   const TEMPLATE_KEYS = ["factcheck", "analysis", "tree", "solution", "translate"];
 
+  const TEMPLATE_ICON_SVG = {
+    factcheck:
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+    analysis:
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>',
+    tree:
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14l-1.5-1.5c-.5-.5-.8-1.2-.8-2V9a4.7 4.7 0 0 0-9.4 0v4.5c0 .8-.3 1.5-.8 2z"/></svg>',
+    solution:
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><line x1="5" y1="7" x2="19" y2="7"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/></svg>',
+    translate:
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+  };
+
+  const SETTINGS_ICON_SVG = {
+    gear: '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
+    close: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
+    template: TEMPLATE_ICON_SVG.translate.replace('width="16" height="16"', 'width="14" height="14"'),
+    push: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>',
+    reset: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>',
+  };
+  SETTINGS_ICON_SVG.options = SETTINGS_ICON_SVG.gear.replace('width="15" height="15"', 'width="14" height="14"');
+  SETTINGS_ICON_SVG.closeSmall = SETTINGS_ICON_SVG.close.replace('width="16" height="16"', 'width="12" height="12"');
+
   const BLACKLIST_LABELS = [
     "image",
     "picture",
@@ -2133,6 +2510,8 @@
   ];
 
   const MAX_INJECTION_ATTEMPTS = 80;
+
+  const HEADER_POLL_MAX_ATTEMPTS = 10;
 
   let activeInterval = null;
   let pendingTask = null;
@@ -2167,7 +2546,6 @@
       if (!document.contains(ta)) {
         clearInterval(_drawerObserver);
         _drawerObserver = null;
-        GM_setValue("grok_drawer_opened", false);
         hijackOperations();
       }
     }, 500);
@@ -2175,12 +2553,10 @@
 
   let _waitTimer = null;
   let _headerPollTimer = null;
-  let _reopenTimer = null;
 
   function clearInjectionTimers() {
     if (_waitTimer) { clearInterval(_waitTimer); _waitTimer = null; }
     if (_headerPollTimer) { clearInterval(_headerPollTimer); _headerPollTimer = null; }
-    if (_reopenTimer) { clearInterval(_reopenTimer); _reopenTimer = null; }
   }
 
   function resetGlobalState() {
@@ -2297,81 +2673,167 @@
     };
     document.body.appendChild(overlay);
 
-    const currentTemplates = getCurrentTemplates();
     const menu = document.createElement("div");
     menu.id = "grok-commander-menu";
 
+    let isPrivateModeOn = GM_getValue("grok_private_mode_default", false);
+
+    let privacyUiMode = GM_getValue("grok_privacy_ui_mode", "toggle");
+
     const rectWidth = 180;
     const rectHeight = 250;
-    let finalX = x;
+    const expandLeft = x - rectWidth >= 0;
     let finalY = y;
-    if (x + rectWidth > window.innerWidth)
-      finalX = window.innerWidth - rectWidth - 20;
     if (y + rectHeight > window.innerHeight) finalY = y - rectHeight;
-    menu.style.left = `${finalX}px`;
+    if (expandLeft) {
+      menu.style.right = `${window.innerWidth - x}px`;
+      menu.style.left = "";
+    } else {
+      menu.style.left = `${x}px`;
+      menu.style.right = "";
+    }
     menu.style.top = `${finalY}px`;
+    menu.classList.add(expandLeft ? "grok-menu-expand-left" : "grok-menu-expand-right");
 
-    const keys = TEMPLATE_KEYS;
-    const pushCfg = loadPushConfig();
-    const hasAnyTarget =
-      (pushCfg.discord  || []).some(e => e.enabled && e.url) ||
-      (pushCfg.telegram || []).some(e => e.enabled && e.token && e.chat);
-    keys.forEach((key) => {
-      const tmpl = currentTemplates[key];
-      if (!tmpl) return;
-      const item = document.createElement("div");
-      item.className = "grok-menu-item";
+    const titleBar = document.createElement("div");
+    titleBar.className = "grok-menu-titlebar";
 
-      const mainPart = document.createElement("span");
-      mainPart.style.cssText =
-        "display:flex;align-items:center;gap:10px;flex:1;";
-      mainPart.innerHTML = `<span style="font-size:16px">${tmpl.icon}</span><span class="grok-menu-item-label">${tmpl.label}</span>`;
-      mainPart.onclick = (e) => {
+    const privacyBtnWrapper = document.createElement("div");
+    privacyBtnWrapper.className = "grok-privacy-btn-wrapper";
+
+    const privacyToggleBtn = document.createElement("button");
+    privacyToggleBtn.className = "grok-privacy-toggle-btn";
+    privacyToggleBtn.title = t("private_tooltip");
+    privacyToggleBtn.innerHTML = `<svg viewBox="0 0 20 20" width="19" height="19" aria-hidden="true"><g><mask id="gc-priv-a" fill="currentColor"><ellipse cx="8.334" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="8.334" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M9.375 8.541H8.042c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806H9.375zM8.334 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H5.959c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zM7.292 8.54h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.074-.06.009.013.056.1.056.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.991-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-a)"/><mask id="gc-priv-b" fill="currentColor"><ellipse cx="11.667" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="11.667" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M12.708 8.541h-1.333c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806h-1.333zM11.667 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H9.292c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zm-1.042-1.46h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.075-.06.01.013.057.1.057.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.992-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-b)"/><path d="M10 3.333c-6.667 0-3.27 5.601-7.5 7.5 0 1.374 1.17 1.25 1.608 2.308.367.886-.545 2.658-.775 3.525h3.334L10 17.5l3.333-.834h3.334c-.315-1.066-.993-2.38-.771-3.521.227-1.172 1.604-.86 1.604-2.312-4.23-1.899-.833-7.5-7.5-7.5z" fill="none" stroke="currentColor" stroke-width="1.333"/></g></svg>`;
+    function renderPrivacyToggle() {
+      privacyToggleBtn.classList.toggle("active", isPrivateModeOn);
+      privacyToggleBtn.classList.toggle("disabled-mode", privacyUiMode === "per-item");
+    }
+    renderPrivacyToggle();
+    privacyToggleBtn.onclick = (e) => {
+      e.stopPropagation();
+      if (privacyUiMode === "per-item") return;
+      isPrivateModeOn = !isPrivateModeOn;
+      GM_setValue("grok_private_mode_default", isPrivateModeOn);
+      renderPrivacyToggle();
+      if (findVisibleTextarea()) {
+        ensureDrawerPrivacyState(isPrivateModeOn);
+      }
+    };
+    privacyBtnWrapper.appendChild(privacyToggleBtn);
+
+    const privacyModeBadge = document.createElement("button");
+    privacyModeBadge.className = "grok-privacy-mode-badge";
+    privacyModeBadge.innerHTML = `<svg viewBox="0 0 20 20" width="9" height="9" aria-hidden="true"><path fill="currentColor" d="M17.166 10.788c.03-.259.051-.52.051-.788s-.02-.529-.051-.788l1.68-1.316a.4.4 0 0 0 .096-.51l-1.591-2.755a.4.4 0 0 0-.484-.174l-1.981.796a5.85 5.85 0 0 0-1.36-.788l-.3-2.108A.39.39 0 0 0 12.84 2H9.66a.39.39 0 0 0-.386.336l-.3 2.108c-.489.203-.94.474-1.36.788l-1.98-.796a.4.4 0 0 0-.485.174L3.558 7.365a.4.4 0 0 0 .096.51l1.68 1.316c-.03.26-.051.52-.051.788s.02.529.051.788l-1.68 1.316a.4.4 0 0 0-.096.51l1.591 2.755a.4.4 0 0 0 .484.174l1.981-.796c.42.314.871.585 1.36.788l.3 2.108a.39.39 0 0 0 .386.336h3.18a.39.39 0 0 0 .386-.336l.3-2.108a5.85 5.85 0 0 0 1.36-.788l1.981.796a.4.4 0 0 0 .484-.174l1.591-2.755a.4.4 0 0 0-.096-.51l-1.68-1.316zM11.25 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>`;
+    privacyModeBadge.title = t("privacy_mode_badge_tooltip");
+    function renderPrivacyModeBadge() {
+      privacyModeBadge.classList.toggle("per-item-active", privacyUiMode === "per-item");
+    }
+    renderPrivacyModeBadge();
+    privacyModeBadge.onclick = (e) => {
+      e.stopPropagation();
+      privacyUiMode = privacyUiMode === "per-item" ? "toggle" : "per-item";
+      GM_setValue("grok_privacy_ui_mode", privacyUiMode);
+      renderPrivacyModeBadge();
+      renderPrivacyToggle();
+      showToast(privacyUiMode === "per-item" ? t("privacy_mode_switched_per_item") : t("privacy_mode_switched_toggle"));
+      menuItemRefs.forEach((ref) => {
+        if (privacyUiMode === "per-item") {
+          if (!ref.perItemBtnEl) {
+            const btn = buildPerItemPrivateBtn(ref.key, ref.tmpl);
+            const pushBtnEl = ref.item.querySelector(".grok-push-btn");
+            if (pushBtnEl) ref.item.insertBefore(btn, pushBtnEl);
+            else ref.item.appendChild(btn);
+            ref.perItemBtnEl = btn;
+          }
+        } else if (ref.perItemBtnEl) {
+          ref.perItemBtnEl.remove();
+          ref.perItemBtnEl = null;
+        }
+      });
+    };
+    privacyBtnWrapper.appendChild(privacyModeBadge);
+
+    titleBar.appendChild(privacyBtnWrapper);
+    menu.appendChild(titleBar);
+
+    function buildPerItemPrivateBtn(key, tmpl) {
+      const perItemPrivateBtn = document.createElement("button");
+      perItemPrivateBtn.className = "grok-private-btn";
+      perItemPrivateBtn.innerHTML = `<svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" style="color:#1d9bf0"><g><mask id="gc-priv-item-a-${key}" fill="currentColor"><ellipse cx="8.334" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="8.334" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M9.375 8.541H8.042c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806H9.375zM8.334 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H5.959c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zM7.292 8.54h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.074-.06.009.013.056.1.056.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.991-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-item-a-${key})"/><mask id="gc-priv-item-b-${key}" fill="currentColor"><ellipse cx="11.667" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="11.667" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M12.708 8.541h-1.333c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806h-1.333zM11.667 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H9.292c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zm-1.042-1.46h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.075-.06.01.013.057.1.057.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.992-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-item-b-${key})"/><path d="M10 3.333c-6.667 0-3.27 5.601-7.5 7.5 0 1.374 1.17 1.25 1.608 2.308.367.886-.545 2.658-.775 3.525h3.334L10 17.5l3.333-.834h3.334c-.315-1.066-.993-2.38-.771-3.521.227-1.172 1.604-.86 1.604-2.312-4.23-1.899-.833-7.5-7.5-7.5z" fill="none" stroke="currentColor" stroke-width="1.333"/></g></svg>`;
+      perItemPrivateBtn.title = t("private_tooltip");
+      perItemPrivateBtn.onclick = (e) => {
         e.stopPropagation();
-        overlay.remove();
-        menu.remove();
-        resetGlobalState();
-        executeCommand(tmpl.prompt, tweetData);
-      };
-
-      const privateBtn = document.createElement("button");
-      privateBtn.className = "grok-private-btn";
-      privateBtn.innerHTML = `<svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" style="color:#1d9bf0"><g><mask id="gc-priv-a" fill="currentColor"><ellipse cx="8.334" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="8.334" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M9.375 8.541H8.042c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806H9.375zM8.334 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H5.959c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zM7.292 8.54h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.074-.06.009.013.056.1.056.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.991-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-a)"/><mask id="gc-priv-b" fill="currentColor"><ellipse cx="11.667" cy="8.541" rx="1.042" ry="1.458"/></mask><ellipse cx="11.667" cy="8.541" fill="currentColor" rx="1.042" ry="1.458"/><path d="M12.708 8.541h-1.333c0 .157-.047.244-.056.257-.003.004.016-.026.074-.06.062-.037.157-.071.274-.071v2.666c.83 0 1.455-.473 1.82-.986.369-.514.554-1.157.554-1.806h-1.333zM11.667 10V8.667c.116 0 .211.034.273.071.058.034.078.064.075.06-.01-.013-.057-.1-.057-.257H9.292c0 .649.186 1.292.553 1.806.366.513.992.986 1.822.986V10zm-1.042-1.46h1.333c0-.157.047-.243.057-.256.003-.004-.017.026-.075.06-.062.036-.157.071-.273.071V5.75c-.83 0-1.456.473-1.822.985-.367.515-.553 1.158-.553 1.806h1.333zm1.042-1.458v1.333c-.117 0-.212-.035-.274-.071-.058-.034-.077-.064-.075-.06.01.013.057.1.057.256h2.666c0-.648-.185-1.29-.553-1.806-.366-.512-.992-.985-1.821-.985v1.333z" fill="currentColor" mask="url(#gc-priv-b)"/><path d="M10 3.333c-6.667 0-3.27 5.601-7.5 7.5 0 1.374 1.17 1.25 1.608 2.308.367.886-.545 2.658-.775 3.525h3.334L10 17.5l3.333-.834h3.334c-.315-1.066-.993-2.38-.771-3.521.227-1.172 1.604-.86 1.604-2.312-4.23-1.899-.833-7.5-7.5-7.5z" fill="none" stroke="currentColor" stroke-width="1.333"/></g></svg>`;
-      privateBtn.title = t("private_tooltip");
-      privateBtn.onclick = (e) => {
-        e.stopPropagation();
-        overlay.remove();
-        menu.remove();
         resetGlobalState();
         executeCommand(tmpl.prompt, tweetData, true);
       };
+      return perItemPrivateBtn;
+    }
 
-      item.appendChild(mainPart);
-      item.appendChild(privateBtn);
+    const menuItemRefs = [];
 
-      if (hasAnyTarget) {
-        const pushBtn = document.createElement("button");
-        pushBtn.className = "grok-push-btn";
-        pushBtn.title = t("push_btn_tooltip");
-        pushBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>`;
-        pushBtn.onclick = (e) => {
+    const menuItemsAnchor = document.createComment("grok-menu-items-anchor");
+    menu.appendChild(menuItemsAnchor);
+
+    function renderMenuItems() {
+      menuItemRefs.forEach((ref) => ref.item.remove());
+      menuItemRefs.length = 0;
+
+      const templates = getCurrentTemplates();
+      const keys = TEMPLATE_KEYS;
+      const pushCfg = loadPushConfig();
+      const hasAnyTarget =
+        (pushCfg.discord  || []).some(e => e.enabled && e.url) ||
+        (pushCfg.telegram || []).some(e => e.enabled && e.token && e.chat);
+      keys.forEach((key) => {
+        const tmpl = templates[key];
+        if (!tmpl) return;
+        const item = document.createElement("div");
+        item.className = "grok-menu-item";
+
+        const mainPart = document.createElement("span");
+        mainPart.style.cssText =
+          "display:flex;align-items:center;gap:10px;flex:1;";
+        const iconHtml = TEMPLATE_ICON_SVG[key] || `<span style="font-size:16px">${tmpl.icon}</span>`;
+        mainPart.innerHTML = `<span class="grok-menu-item-icon">${iconHtml}</span><span class="grok-menu-item-label">${escapeHtml(tmpl.label)}</span>`;
+        mainPart.onclick = (e) => {
           e.stopPropagation();
-          overlay.remove();
-          menu.remove();
-          showPushConfirm(tweetData.url, (targets) => doPushTargets(tweetData.url, targets));
+          resetGlobalState();
+          executeCommand(tmpl.prompt, tweetData, privacyUiMode === "per-item" ? false : isPrivateModeOn);
         };
-        item.appendChild(pushBtn);
-      }
 
-      menu.appendChild(item);
-    });
+        item.appendChild(mainPart);
+
+        let perItemBtnEl = null;
+        if (privacyUiMode === "per-item") {
+          perItemBtnEl = buildPerItemPrivateBtn(key, tmpl);
+          item.appendChild(perItemBtnEl);
+        }
+        menuItemRefs.push({ item, key, tmpl, get perItemBtnEl() { return perItemBtnEl; }, set perItemBtnEl(v) { perItemBtnEl = v; } });
+
+        if (hasAnyTarget) {
+          const pushBtn = document.createElement("button");
+          pushBtn.className = "grok-push-btn";
+          pushBtn.title = t("push_btn_tooltip");
+          pushBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>`;
+          pushBtn.onclick = (e) => {
+            e.stopPropagation();
+            showPushConfirm(tweetData.url, (targets) => doPushTargets(tweetData.url, targets));
+          };
+          item.appendChild(pushBtn);
+        }
+
+        menu.insertBefore(item, menuItemsAnchor);
+      });
+    }
+    renderMenuItems();
 
     const footer = document.createElement("div");
     footer.className = "grok-menu-footer";
 
     const langBtn = document.createElement("button");
     langBtn.className = "grok-lang-quick-btn";
-    const currentLangCode = resolveLang(loadConfig().lang || "auto");
+    let currentLangCode = resolveLang(loadConfig().lang || "auto");
     const _customPack = loadCustomLangPack();
     const _customLabel = (_customPack && _customPack.langName) ? _customPack.langName : "Custom";
     const LANG_FLAGS = { "zh-TW": "🇹🇼", "zh-CN": "🇨🇳", en: "🇺🇸", ja: "🇯🇵", ko: "🇰🇷", es: "🇪🇸", "pt-BR": "🇧🇷", fr: "🇫🇷", custom: "✏️" };
@@ -2407,8 +2869,14 @@
             const config = loadConfig();
             config.lang = code;
             saveConfig(config);
-            overlay.remove();
-            menu.remove();
+            submenuVisible = false;
+            currentLangCode = code;
+            document.getElementById("grok-lang-submenu")?.remove();
+            langBtn.textContent = `${LANG_FLAGS[code] ?? "🌐"} ${LANG_NAMES[code] ?? code}`;
+            renderMenuItems();
+            langBtn.title = t("lang_label");
+            privacyToggleBtn.title = t("private_tooltip");
+            privacyModeBadge.title = t("privacy_mode_badge_tooltip");
             showToast(`${LANG_FLAGS[code] ?? "🌐"} ${LANG_NAMES[code] ?? code}`);
           };
           submenu.appendChild(item);
@@ -2606,7 +3074,6 @@
 
     const drawerToggle = getDrawerToggleButton();
     if (drawerToggle) {
-      GM_setValue("grok_drawer_opened", true);
       triggerClick(drawerToggle);
       let waitAttempts = 0;
       _waitTimer = setInterval(() => {
@@ -2627,12 +3094,10 @@
       return;
     }
 
-    const hasOpenedBefore = GM_getValue("grok_drawer_opened", false);
-    const headerMaxAttempts = hasOpenedBefore ? 10 : MAX_INJECTION_ATTEMPTS;
+    const headerMaxAttempts = HEADER_POLL_MAX_ATTEMPTS;
     let headerPollAttempts = 0;
 
     function reopenViaButton(btn, source) {
-      GM_setValue("grok_drawer_opened", true);
       triggerClick(btn);
       let waitAttempts = 0;
       _waitTimer = setInterval(() => {
@@ -2724,7 +3189,6 @@
       const stillVisible = targetInput && document.contains(targetInput) && targetInput.offsetParent !== null;
       if (textareaEverSeen && !stillVisible) {
         resetGlobalState();
-        GM_setValue("grok_drawer_opened", false);
         return;
       }
 
@@ -2799,7 +3263,6 @@
 
       if (textareaEverSeen && !textarea) {
         resetGlobalState();
-        GM_setValue("grok_drawer_opened", false);
         return;
       }
 
@@ -2891,9 +3354,7 @@
   setTimeout(hijackOperations, 1000);
   watchGlobalDrawerCollapse();
 
-  GM_setValue("grok_drawer_opened", false);
-
   GM_registerMenuCommand("⚙️ Grok Commander 設定", () => openSettings());
 
-  console.log("[Commander] Grok Commander v1.3.0.0 loaded.");
+  console.log("[Commander] Grok Commander v1.3.0.1 loaded.");
 })();
