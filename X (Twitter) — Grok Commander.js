@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.0.0.1
+// @version      2.0.0.5
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -24,14 +24,14 @@
 // @connect      discord.com
 // @connect      api.telegram.org
 // @run-at       document-end
-// @description      Replaces the Grok button on every tweet with an AI command menu offering 3 built-in modes (Fact Check, Deep Analysis, Translate) and 2 fully customizable slots. Each mode can be sent to Grok's sidebar drawer or privately via x.com/i/grok. Supports manual or auto-send, multi-language auto-detection, and per-language customizable prompt templates. Ideal for casual users who want quick AI-powered context on trending topics without diving deep.
-// @description:zh-TW 將每則推文旁的 Grok 按鈕替換為 AI 指令選單，提供 3 種內建模式（事實查核、深度分析、重點摘要）與 2 個完全可自訂的備用槽位（反駁視角、翻譯/自訂）。每種模式可發送至側邊欄，或透過 🔒 私人模式跳轉至 x.com/i/grok 保護隱私。支援手動或自動送出、多語言自動偵測與各語言獨立模板自訂。適合偶爾想快速理解時事話題脈絡的一般用戶。
-// @description:zh-CN 将每条推文旁的 Grok 按钮替换为 AI 指令菜单，提供 3 种内置模式（事实核查、深度分析、重点摘要）与 2 个完全可自定义的备用槽位（反驳视角、翻译/自定义）。每种模式可发送至侧边栏，或通过 🔒 私密模式跳转至 x.com/i/grok 保护隐私。支持手动或自动发送、多语言自动检测与各语言独立模板自定义。适合偶尔想快速了解热点话题背景的普通用户。
-// @description:ja    各ツイートのGrokボタンをAIコマンドメニューに置き換え、3つの内蔵モード（ファクトチェック・詳細分析・要点まとめ）と2つのカスタムスロット（反論視点・翻訳/カスタム）を提供。サイドバーへの送信、または 🔒 プライベートモードで x.com/i/grok へ転送することもできます。手動・自動送信、多言語自動検出、言語別テンプレートカスタマイズに対応。トレンドの話題を気軽に把握したいカジュアルユーザーに最適。
-// @description:ko    모든 트윗의 Grok 버튼을 AI 명령 메뉴로 교체하여 3가지 내장 모드（팩트 체크・심층 분석・핵심 요약）와 2개의 커스텀 슬롯（반론 시각・번역/커스텀）을 제공합니다. 사이드바로 전송하거나 🔒 비공개 모드로 x.com/i/grok 에서 처리할 수 있습니다. 수동/자동 전송, 다국어 자동 감지, 언어별 템플릿 커스터마이즈 지원. 트렌드 주제를 가볍게 파악하고 싶은 일반 사용자에게 적합합니다.
-// @description:es    Reemplaza el botón de Grok en cada tweet con un menú de comandos de IA que ofrece 3 modos integrados (Verificación de datos, Análisis profundo, Traducción) y 2 espacios completamente personalizables. Cada modo puede enviarse al panel lateral de Grok o de forma privada mediante x.com/i/grok. Soporta envío manual o automático, detección automática de idioma y plantillas personalizables por idioma.
-// @description:pt-BR Substitui o botão do Grok em cada tweet por um menu de comandos de IA com 3 modos integrados (Verificação de fatos, Análise profunda, Tradução) e 2 slots totalmente personalizáveis. Cada modo pode ser enviado ao painel lateral do Grok ou de forma privada via x.com/i/grok. Suporta envio manual ou automático, detecção automática de idioma e modelos personalizáveis por idioma.
-// @description:fr    Remplace le bouton Grok sur chaque tweet par un menu de commandes IA proposant 3 modes intégrés (Vérification des faits, Analyse approfondie, Traduction) et 2 emplacements entièrement personnalisables. Chaque mode peut être envoyé au panneau latéral Grok ou en mode privé via x.com/i/grok. Prise en charge de l'envoi manuel ou automatique, de la détection automatique de la langue et de modèles personnalisables par langue.
+// @description      Turns the Grok button on every tweet into an AI command menu: fact-check, deep analysis, and summary built in, plus 2 customizable slots, with an optional private mode. Handy for quickly getting the gist of a trending topic.
+// @description:zh-TW 將每則推文的 Grok 按鈕變成 AI 指令選單：內建事實查核、深度分析、重點摘要，另有 2 個可自訂槽位，並支援私人模式。適合偶爾想快速理解時事話題脈絡的一般用戶。
+// @description:zh-CN 将每条推文的 Grok 按钮变成 AI 指令菜单：内置事实核查、深度分析、重点摘要，另有 2 个可自定义槽位，并支持私密模式。适合偶尔想快速了解热点话题背景的普通用户。
+// @description:ja    各ツイートのGrokボタンをAIコマンドメニューに変換：ファクトチェック・詳細分析・要点まとめを内蔵し、カスタム可能な2枠とプライベートモードにも対応。トレンドの話題をさっと把握したい方に。
+// @description:ko    모든 트윗의 Grok 버튼을 AI 명령 메뉴로 전환합니다: 팩트 체크・심층 분석・핵심 요약을 기본 제공하며, 커스터마이즈 가능한 2개 슬롯과 비공개 모드도 지원합니다. 트렌드 주제를 가볍게 파악하고 싶을 때 유용합니다.
+// @description:es    Convierte el botón de Grok de cada tweet en un menú de comandos de IA: incluye verificación de datos, análisis profundo y resumen, además de 2 espacios personalizables y modo privado. Ideal para entender rápidamente un tema de tendencia.
+// @description:pt-BR Transforma o botão do Grok de cada tweet em um menu de comandos de IA: inclui verificação de fatos, análise profunda e resumo, além de 2 espaços personalizáveis e modo privado. Ideal para entender rapidamente um tema em alta.
+// @description:fr    Transforme le bouton Grok de chaque tweet en menu de commandes IA : vérification des faits, analyse approfondie et résumé inclus, avec 2 emplacements personnalisables et un mode privé. Pratique pour saisir rapidement un sujet tendance.
 // ==/UserScript==
 
 (function () {
@@ -65,6 +65,9 @@
         commander_btn_label: "Grok 指揮官",
         commander_btn_title: "AI 指揮官（已啟用）",
         need_reopen: "找不到右下角的 Grok 按鈕，請先手動點擊開啟側邊欄再使用指令選單；若瀏覽器視窗較窄，該按鈕可能被隱藏，請嘗試拉寬視窗",
+        drawer_opening: "Grok 載入中，首次開啟較慢，請稍候",
+        drawer_open_timeout: "等待 Grok 側邊欄展開逾時（超過 30 秒），請檢查網路後重新點選指令",
+        need_manual_open: "請先手動點擊右下角的 Grok 按鈕展開側邊欄，再使用指令選單",
         push_section_label: "📨 推送設定 (Push Notifications)",
         push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
         push_master_toggle: "啟用推送",
@@ -133,6 +136,9 @@
         commander_btn_label: "Grok 指挥官",
         commander_btn_title: "AI 指挥官（已启用）",
         need_reopen: "找不到右下角的 Grok 按钮，请先手动点击打开侧边栏再使用指令菜单；若浏览器窗口较窄，该按钮可能被隐藏，请尝试拉宽窗口",
+        drawer_opening: "Grok 加载中，首次打开较慢，请稍候",
+        drawer_open_timeout: "等待 Grok 侧边栏展开超时（超过 30 秒），请检查网络后重新点击指令",
+        need_manual_open: "请先手动点击右下角的 Grok 按钮展开侧边栏，再使用指令菜单",
         push_section_label: "📨 推送设置 (Push Notifications)",
         push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
         push_master_toggle: "启用推送",
@@ -203,6 +209,9 @@
         commander_btn_label: "Grok Commander",
         commander_btn_title: "AI Commander (Active)",
         need_reopen: "Couldn't find the Grok button (bottom-right). Please open the sidebar manually first, then use the command menu; if your browser window is narrow, the button may be hidden — try widening it",
+        drawer_opening: "Loading Grok, the first open is slow, please wait",
+        drawer_open_timeout: "Timed out waiting for the Grok sidebar to open (over 30s). Check your connection and try the command again",
+        need_manual_open: "Please click the Grok button (bottom-right) manually to open the sidebar first, then use the command menu",
         push_section_label: "📨 Push Notifications",
         push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
         push_master_toggle: "Enable Push",
@@ -273,6 +282,9 @@
         commander_btn_label: "Grok コマンダー",
         commander_btn_title: "AI コマンダー（有効）",
         need_reopen: "右下のGrokボタンが見つかりません。手動でサイドバーを開いてからコマンドメニューをご利用ください。ブラウザの幅が狭いとボタンが隠れることがあるので、幅を広げてお試しください",
+        drawer_opening: "Grokを読み込み中（初回は時間がかかります）",
+        drawer_open_timeout: "Grokサイドバーの展開待ちがタイムアウトしました（30秒超）。接続を確認してもう一度お試しください",
+        need_manual_open: "先に右下のGrokボタンを手動でクリックしてサイドバーを開いてから、コマンドメニューをご利用ください",
         push_section_label: "📨 プッシュ通知設定",
         push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
         push_master_toggle: "プッシュを有効化",
@@ -343,6 +355,9 @@
         commander_btn_label: "Grok 커맨더",
         commander_btn_title: "AI 커맨더（활성화）",
         need_reopen: "오른쪽 하단의 Grok 버튼을 찾을 수 없습니다. 먼저 수동으로 사이드바를 연 후 명령 메뉴를 사용하세요. 브라우저 창이 좁으면 버튼이 가려질 수 있으니 창을 넓혀 보세요",
+        drawer_opening: "Grok 로딩 중 (처음 열 때는 시간이 걸립니다)",
+        drawer_open_timeout: "Grok 사이드바가 열리기를 기다리다 시간이 초과되었습니다(30초 초과). 연결을 확인하고 다시 시도하세요",
+        need_manual_open: "먼저 오른쪽 하단의 Grok 버튼을 수동으로 클릭해 사이드바를 연 후 명령 메뉴를 사용하세요",
         push_section_label: "📨 푸시 알림 설정",
         push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
         push_master_toggle: "푸시 활성화",
@@ -411,6 +426,9 @@
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Activo)",
         need_reopen: "No se encontró el botón de Grok (abajo a la derecha). Ábrelo manualmente primero y luego usa el menú de comandos; si la ventana del navegador es estrecha, el botón puede estar oculto — intenta ensancharla",
+        drawer_opening: "Cargando Grok, la primera apertura es lenta, espera un momento",
+        drawer_open_timeout: "Se agotó el tiempo de espera del panel de Grok (más de 30 s). Revisa tu conexión e inténtalo de nuevo",
+        need_manual_open: "Primero haz clic manualmente en el botón de Grok (abajo a la derecha) para abrir el panel y luego usa el menú de comandos",
         push_section_label: "📨 Notificaciones push",
         push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
         push_master_toggle: "Activar envío",
@@ -479,6 +497,9 @@
         commander_btn_label: "Grok Comandante",
         commander_btn_title: "Comandante IA (Ativo)",
         need_reopen: "Não foi possível encontrar o botão do Grok (canto inferior direito). Abra o painel manualmente primeiro e depois use o menu de comandos; se a janela do navegador estiver estreita, o botão pode estar oculto — tente alargá-la",
+        drawer_opening: "Carregando o Grok, a primeira abertura é lenta, aguarde",
+        drawer_open_timeout: "Tempo esgotado ao esperar o painel do Grok (mais de 30 s). Verifique sua conexão e tente novamente",
+        need_manual_open: "Primeiro clique manualmente no botão do Grok (canto inferior direito) para abrir o painel e depois use o menu de comandos",
         push_section_label: "📨 Notificações push",
         push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
         push_master_toggle: "Ativar envio",
@@ -547,6 +568,9 @@
         commander_btn_label: "Grok Commandant",
         commander_btn_title: "Commandant IA (Actif)",
         need_reopen: "Bouton Grok introuvable (en bas à droite). Ouvrez d'abord le panneau manuellement, puis utilisez le menu de commandes ; si la fenêtre du navigateur est étroite, le bouton peut être masqué — essayez de l'élargir",
+        drawer_opening: "Chargement de Grok, la première ouverture est lente, patientez",
+        drawer_open_timeout: "Délai dépassé en attendant le panneau Grok (plus de 30 s). Vérifiez votre connexion et réessayez",
+        need_manual_open: "Cliquez d'abord manuellement sur le bouton Grok (en bas à droite) pour ouvrir le panneau, puis utilisez le menu de commandes",
         push_section_label: "📨 Notifications push",
         push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
         push_master_toggle: "Activer l'envoi",
@@ -1407,6 +1431,26 @@
             to   { opacity: 1; transform: translateY(0); }
         }
         .grok-toast-warn.fade-out { opacity: 0; transition: opacity 0.3s ease-out; }
+
+        .grok-toast-loading {
+            position: fixed; bottom: 20px; right: 88px;
+            display: flex; align-items: center; gap: 10px;
+            background: rgba(15,20,28,0.97); border: 1.5px solid #1d9bf0;
+            color: #ffffff; font-size: 13px; font-family: sans-serif;
+            padding: 12px 14px; border-radius: 12px; z-index: 2147483647;
+            box-shadow: 0 4px 24px rgba(29,155,240,0.25), 0 2px 8px rgba(0,0,0,0.6);
+            max-width: 240px; line-height: 1.5; pointer-events: none;
+            animation: grok-toast-warn-in 0.25s ease-out;
+        }
+        .grok-toast-loading::before {
+            content: ""; flex: 0 0 auto; width: 14px; height: 14px; box-sizing: border-box;
+            border: 2px solid rgba(255,255,255,0.25); border-top-color: #1d9bf0;
+            border-radius: 50%; animation: grok-spin 0.8s linear infinite;
+        }
+        @keyframes grok-spin { to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) {
+            .grok-toast-loading::before { animation-duration: 2.4s; }
+        }
 
         #grok-confirm-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -2593,28 +2637,24 @@
 
   const HEADER_POLL_MAX_ATTEMPTS = 10;
 
+  const DRAWER_OPEN_WAIT_MAX_ATTEMPTS = 150;
+  const DRAWER_OPEN_WAIT_INTERVAL_MS = 200;
+
+  const DRAWER_OPEN_HINT_DELAY_MS = 700;
+
   let activeInterval = null;
   let pendingTask = null;
 
   let _drawerObserver = null;
 
-  const SESSION_KEY_EVER_OPENED = "grok_ever_opened_this_page";
+  let _drawerEverOpenedThisPage = false;
 
   function markDrawerEverOpened() {
-    try {
-      if (sessionStorage.getItem(SESSION_KEY_EVER_OPENED) !== "1") {
-        sessionStorage.setItem(SESSION_KEY_EVER_OPENED, "1");
-      }
-    } catch (_) {
-    }
+    _drawerEverOpenedThisPage = true;
   }
 
   function hasDrawerEverOpened() {
-    try {
-      return sessionStorage.getItem(SESSION_KEY_EVER_OPENED) === "1";
-    } catch (_) {
-      return false;
-    }
+    return _drawerEverOpenedThisPage;
   }
 
   function watchDrawerClose(ta) {
@@ -2634,9 +2674,33 @@
   let _waitTimer = null;
   let _headerPollTimer = null;
 
+  let _openHintEl = null;
+
+  function isDrawerOpenWaitActive() {
+    return _waitTimer !== null;
+  }
+
+  function updateOpenWaitHint(elapsedMs) {
+    if (elapsedMs < DRAWER_OPEN_HINT_DELAY_MS) return;
+    if (!_openHintEl || !_openHintEl.isConnected) {
+      _openHintEl = document.createElement("div");
+      _openHintEl.className = "grok-toast-loading";
+      _openHintEl.setAttribute("role", "status");
+      _openHintEl.setAttribute("aria-live", "polite");
+      document.body.appendChild(_openHintEl);
+    }
+    const text = `${t("drawer_opening")} ${Math.floor(elapsedMs / 1000)}s`;
+    if (_openHintEl.textContent !== text) _openHintEl.textContent = text;
+  }
+
+  function clearOpenWaitHint() {
+    if (_openHintEl) { _openHintEl.remove(); _openHintEl = null; }
+  }
+
   function clearInjectionTimers() {
     if (_waitTimer) { clearInterval(_waitTimer); _waitTimer = null; }
     if (_headerPollTimer) { clearInterval(_headerPollTimer); _headerPollTimer = null; }
+    clearOpenWaitHint();
   }
 
   function resetGlobalState() {
@@ -2853,7 +2917,6 @@
       perItemPrivateBtn.title = t("private_tooltip");
       perItemPrivateBtn.onclick = (e) => {
         e.stopPropagation();
-        resetGlobalState();
         executeCommand(tmpl.prompt, tweetData, true);
       };
       return perItemPrivateBtn;
@@ -2887,9 +2950,8 @@
           "display:flex;align-items:center;gap:10px;flex:1;";
         const iconHtml = TEMPLATE_ICON_SVG[key] || `<span style="font-size:16px">${tmpl.icon}</span>`;
         mainPart.innerHTML = `<span class="grok-menu-item-icon">${iconHtml}</span><span class="grok-menu-item-label">${escapeHtml(tmpl.label)}</span>`;
-        mainPart.onclick = (e) => {
+        item.onclick = (e) => {
           e.stopPropagation();
-          resetGlobalState();
           executeCommand(tmpl.prompt, tweetData, privacyUiMode === "per-item" ? false : isPrivateModeOn);
         };
 
@@ -3157,11 +3219,48 @@
     return null;
   }
 
-  function executeCommand(prompt, tweetData, withPrivacy = false) {
-    resetGlobalState();
+  function waitForDrawerThenInject(source) {
+    const startedAt = Date.now();
+    let waitAttempts = 0;
+    _waitTimer = setInterval(() => {
+      waitAttempts++;
+      if (!pendingTask) {
+        clearInjectionTimers();
+        return;
+      }
+      if (waitAttempts > DRAWER_OPEN_WAIT_MAX_ATTEMPTS) {
+        console.warn(`[Commander] ${source}: timed out waiting for textarea (${DRAWER_OPEN_WAIT_MAX_ATTEMPTS} x ${DRAWER_OPEN_WAIT_INTERVAL_MS}ms), giving up`);
+        resetGlobalState();
+        showWarnToast(t("drawer_open_timeout"));
+        return;
+      }
+      const ta = findVisibleTextarea();
+      if (!ta) {
+        updateOpenWaitHint(Date.now() - startedAt);
+        return;
+      }
+      clearInterval(_waitTimer);
+      _waitTimer = null;
+      clearOpenWaitHint();
+      watchDrawerClose(ta);
+      startInjection(pendingTask.withPrivacy);
+    }, DRAWER_OPEN_WAIT_INTERVAL_MS);
+  }
 
+  function executeCommand(prompt, tweetData, withPrivacy = false) {
     const fullContent = `${prompt}\n\n[Tweet URL]: ${tweetData.url}\n[Tweet Content]: ${tweetData.text}`;
     const autoSend = loadConfig().autoSend === true;
+
+    if (isDrawerOpenWaitActive() && pendingTask) {
+      pendingTask.content = fullContent;
+      pendingTask.autoSend = autoSend;
+      pendingTask.withPrivacy = withPrivacy;
+      pendingTask.textFilled = false;
+      return;
+    }
+
+    resetGlobalState();
+
     pendingTask = {
       content: fullContent,
       autoSend,
@@ -3181,22 +3280,7 @@
     const drawerToggle = getDrawerToggleButton();
     if (drawerToggle) {
       triggerClick(drawerToggle);
-      let waitAttempts = 0;
-      _waitTimer = setInterval(() => {
-        waitAttempts++;
-        if (waitAttempts > 40) {
-          console.warn("[Commander] Fallback path A: timed out waiting for textarea (40 x 200ms = 8s), giving up");
-          clearInterval(_waitTimer); _waitTimer = null;
-          return;
-        }
-        const ta = findVisibleTextarea();
-        if (ta) {
-          clearInterval(_waitTimer);
-          _waitTimer = null;
-          watchDrawerClose(ta);
-          startInjection(withPrivacy);
-        }
-      }, 200);
+      waitForDrawerThenInject("Fallback path A");
       return;
     }
 
@@ -3205,22 +3289,7 @@
 
     function reopenViaButton(btn, source) {
       triggerClick(btn);
-      let waitAttempts = 0;
-      _waitTimer = setInterval(() => {
-        waitAttempts++;
-        if (waitAttempts > 40) {
-          console.warn(`[Commander] Fallback path B(${source}): timed out waiting for textarea (40 x 200ms = 8s), giving up`);
-          clearInterval(_waitTimer); _waitTimer = null;
-          return;
-        }
-        const ta = findVisibleTextarea();
-        if (ta) {
-          clearInterval(_waitTimer);
-          _waitTimer = null;
-          watchDrawerClose(ta);
-          startInjection(withPrivacy);
-        }
-      }, 200);
+      waitForDrawerThenInject(`Fallback path B(${source})`);
     }
 
     _headerPollTimer = setInterval(() => {
@@ -3251,7 +3320,7 @@
           clearInterval(_headerPollTimer);
           _headerPollTimer = null;
           console.warn("[Commander] This page has not truly opened Grok yet, synthetic click on the floating button is known to be ineffective, prompting manual click");
-          showWarnToast(t("need_reopen"));
+          showWarnToast(t("need_manual_open"));
         }
         return;
       }
