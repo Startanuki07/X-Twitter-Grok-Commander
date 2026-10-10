@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.0.0.5
+// @version      2.1.0.0
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -58,6 +58,8 @@
         alert_saved: "設定已儲存！",
         private_tooltip: "私人模式（開啟後以私人聊天執行指令）",
         menu_privacy_row_label: "隱私模式",
+        drawer_toggle_tooltip_open: "展開 Grok 抽屜",
+        drawer_toggle_tooltip_close: "收合 Grok 抽屜",
         menu_gf_link_tooltip: "在 Greasy Fork 上查看此腳本",
         btn_confirm: "確定",
         privacy_auto_synced: "已自動同步私人模式狀態",
@@ -129,6 +131,8 @@
         alert_saved: "设置已保存！",
         private_tooltip: "私密模式（开启后以私密聊天执行指令）",
         menu_privacy_row_label: "隐私模式",
+        drawer_toggle_tooltip_open: "展开 Grok 抽屉",
+        drawer_toggle_tooltip_close: "收起 Grok 抽屉",
         menu_gf_link_tooltip: "在 Greasy Fork 上查看此脚本",
         btn_confirm: "确定",
         privacy_auto_synced: "已自动同步私密模式状态",
@@ -202,6 +206,8 @@
         alert_saved: "Settings saved!",
         private_tooltip: "Private Mode (runs command in private chat when enabled)",
         menu_privacy_row_label: "Privacy",
+        drawer_toggle_tooltip_open: "Open Grok drawer",
+        drawer_toggle_tooltip_close: "Close Grok drawer",
         menu_gf_link_tooltip: "View this script on Greasy Fork",
         btn_confirm: "Confirm",
         privacy_auto_synced: "Private mode auto-synced",
@@ -275,6 +281,8 @@
         alert_saved: "設定を保存しました！",
         private_tooltip: "プライベートモード（有効時はプライベートチャットでコマンドを実行）",
         menu_privacy_row_label: "プライバシー",
+        drawer_toggle_tooltip_open: "Grokドロワーを開く",
+        drawer_toggle_tooltip_close: "Grokドロワーを閉じる",
         menu_gf_link_tooltip: "Greasy Fork でこのスクリプトを見る",
         btn_confirm: "確定",
         privacy_auto_synced: "プライベートモードを自動同期しました",
@@ -348,6 +356,8 @@
         alert_saved: "설정이 저장되었습니다！",
         private_tooltip: "비공개 모드（활성화 시 비공개 채팅으로 명령 실행）",
         menu_privacy_row_label: "개인정보",
+        drawer_toggle_tooltip_open: "Grok 서랍 열기",
+        drawer_toggle_tooltip_close: "Grok 서랍 닫기",
         menu_gf_link_tooltip: "Greasy Fork에서 이 스크립트 보기",
         btn_confirm: "확인",
         privacy_auto_synced: "비공개 모드가 자동으로 동기화되었습니다",
@@ -419,6 +429,8 @@
         alert_saved: "¡Configuración guardada!",
         private_tooltip: "Modo privado (ejecuta el comando en chat privado cuando está activado)",
         menu_privacy_row_label: "Privacidad",
+        drawer_toggle_tooltip_open: "Abrir el panel de Grok",
+        drawer_toggle_tooltip_close: "Cerrar el panel de Grok",
         menu_gf_link_tooltip: "Ver este script en Greasy Fork",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automáticamente",
@@ -490,6 +502,8 @@
         alert_saved: "Configurações salvas!",
         private_tooltip: "Modo privado (executa o comando em chat privado quando ativado)",
         menu_privacy_row_label: "Privacidade",
+        drawer_toggle_tooltip_open: "Abrir o painel do Grok",
+        drawer_toggle_tooltip_close: "Fechar o painel do Grok",
         menu_gf_link_tooltip: "Ver este script no Greasy Fork",
         btn_confirm: "Confirmar",
         privacy_auto_synced: "Modo privado sincronizado automaticamente",
@@ -561,6 +575,8 @@
         alert_saved: "Paramètres enregistrés !",
         private_tooltip: "Mode privé (exécute la commande en chat privé une fois activé)",
         menu_privacy_row_label: "Confidentialité",
+        drawer_toggle_tooltip_open: "Ouvrir le panneau Grok",
+        drawer_toggle_tooltip_close: "Fermer le panneau Grok",
         menu_gf_link_tooltip: "Voir ce script sur Greasy Fork",
         btn_confirm: "Confirmer",
         privacy_auto_synced: "Mode privé synchronisé automatiquement",
@@ -1019,6 +1035,27 @@
             font-size: 10px; font-weight: 600; color: #6b7280;
             letter-spacing: 0.5px; text-transform: uppercase;
             user-select: none;
+        }
+        
+        .grok-menu-titlebar-right-group {
+            display: flex; align-items: center; gap: 6px;
+        }
+        
+        .grok-drawer-toggle-btn {
+            padding: 4px; font-size: 0; cursor: pointer; line-height: 1;
+            color: #71767B; border: none; background: transparent;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: color 0.15s, opacity 0.15s;
+            opacity: 0.7;
+        }
+        .grok-drawer-toggle-btn:hover { color: #E7E9EA; opacity: 1; }
+        .grok-drawer-toggle-btn.active { color: #E7E9EA; opacity: 1; }
+        
+        .grok-drawer-toggle-btn svg {
+            transition: transform 0.2s ease;
+        }
+        .grok-drawer-toggle-btn.active svg {
+            transform: rotate(180deg);
         }
         
         .grok-menu-titlebar-divider {
@@ -2673,6 +2710,7 @@
 
   let _waitTimer = null;
   let _headerPollTimer = null;
+  let _drawerToggleTimer = null;
 
   let _openHintEl = null;
 
@@ -2847,6 +2885,25 @@
     titleBarLabel.textContent = t("menu_privacy_row_label");
     titleBar.appendChild(titleBarLabel);
 
+    const titleBarRightGroup = document.createElement("div");
+    titleBarRightGroup.className = "grok-menu-titlebar-right-group";
+
+    const drawerToggleBtn = document.createElement("button");
+    drawerToggleBtn.className = "grok-drawer-toggle-btn";
+    drawerToggleBtn.innerHTML =
+      '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16.53 6.97a.75.75 0 0 1 0 1.06l-5.657 5.657a1.25 1.25 0 0 1-1.767 0L3.45 8.03a.75.75 0 0 1 1.06-1.06l5.47 5.47 5.47-5.47a.75.75 0 0 1 1.06 0z"/></svg>';
+    function renderDrawerToggleBtn() {
+      const open = isDrawerVisuallyOpen();
+      drawerToggleBtn.title = open ? t("drawer_toggle_tooltip_close") : t("drawer_toggle_tooltip_open");
+      drawerToggleBtn.classList.toggle("active", open);
+    }
+    renderDrawerToggleBtn();
+    drawerToggleBtn.onclick = (e) => {
+      e.stopPropagation();
+      toggleGrokDrawer(renderDrawerToggleBtn);
+    };
+    titleBarRightGroup.appendChild(drawerToggleBtn);
+
     const privacyBtnWrapper = document.createElement("div");
     privacyBtnWrapper.className = "grok-privacy-btn-wrapper";
 
@@ -2903,7 +2960,8 @@
     };
     privacyBtnWrapper.appendChild(privacyModeBadge);
 
-    titleBar.appendChild(privacyBtnWrapper);
+    titleBarRightGroup.appendChild(privacyBtnWrapper);
+    titleBar.appendChild(titleBarRightGroup);
     menu.appendChild(titleBar);
 
     const titleBarDivider = document.createElement("div");
@@ -3191,6 +3249,91 @@
     const el = document.querySelector('[data-testid="GrokDrawerHeader"]');
     if (!el) return null;
     return el.tagName === "BUTTON" ? el : el.querySelector("button");
+  }
+
+  function isDrawerVisuallyOpen() {
+    return !!findVisibleTextarea();
+  }
+
+  function findDrawerCollapseButton() {
+    const labels = [
+      "收合",
+      "折叠", "折疊",
+      "Collapse",
+      "折りたたむ",
+      "접기",
+      "Contraer",
+      "Recolher",
+      "Réduire",
+    ];
+    for (const label of labels) {
+      const btn = document.querySelector(
+        `button[aria-label="${label}"], [role="button"][aria-label="${label}"]`
+      );
+      if (btn && btn.offsetParent !== null) return btn;
+    }
+    return null;
+  }
+
+  const DRAWER_TOGGLE_WAIT_MAX_ATTEMPTS = 150;
+  const DRAWER_TOGGLE_WAIT_INTERVAL_MS = 200;
+  function syncDrawerAfterToggle(target, onSettled) {
+    if (_drawerToggleTimer) {
+      clearInterval(_drawerToggleTimer);
+      _drawerToggleTimer = null;
+    }
+    let attempts = 0;
+    _drawerToggleTimer = setInterval(() => {
+      attempts++;
+      const ta = findVisibleTextarea();
+      const reached = target === "open" ? !!ta : !ta;
+      if (reached) {
+        clearInterval(_drawerToggleTimer);
+        _drawerToggleTimer = null;
+        if (target === "open" && ta && ta.value) setReactValue(ta, "");
+        onSettled(true);
+        return;
+      }
+      if (attempts > DRAWER_TOGGLE_WAIT_MAX_ATTEMPTS) {
+        clearInterval(_drawerToggleTimer);
+        _drawerToggleTimer = null;
+        onSettled(false);
+      }
+    }, DRAWER_TOGGLE_WAIT_INTERVAL_MS);
+  }
+
+  function toggleGrokDrawer(onSettled) {
+    const settle = typeof onSettled === "function" ? onSettled : () => {};
+    if (isDrawerVisuallyOpen()) {
+      const collapseBtn = findDrawerCollapseButton();
+      if (collapseBtn) {
+        triggerClick(collapseBtn);
+        syncDrawerAfterToggle("closed", settle);
+        return;
+      }
+      showWarnToast(t("need_reopen"));
+      settle(false);
+      return;
+    }
+    const headerBtn = getDrawerToggleButton();
+    if (headerBtn) {
+      triggerClick(headerBtn);
+      syncDrawerAfterToggle("open", settle);
+      return;
+    }
+    const globalBtn = findGlobalGrokButton();
+    if (globalBtn) {
+      if (hasDrawerEverOpened()) {
+        triggerClick(globalBtn);
+        syncDrawerAfterToggle("open", settle);
+      } else {
+        showWarnToast(t("need_manual_open"));
+        settle(false);
+      }
+      return;
+    }
+    showWarnToast(t("need_reopen"));
+    settle(false);
   }
 
   let _globalDrawerHeaderSeen = false;
