@@ -1,7 +1,5 @@
 # ✨ Turn Every Tweet's Grok Button Into a Custom AI Command Menu
 
-📍 **Author:** [GitHub](https://github.com/Startanuki07?tab=repositories) | **Script:** [Repository](https://github.com/Startanuki07/X-Twitter-Grok-Commander)
-
 **Replaces the Grok button on every tweet with a five-mode AI command menu, complete with notification forwarding and per-language prompt customization.**
 
 ---
@@ -32,7 +30,7 @@ After installation, you'll see a modified Grok button on each tweet. Clicking it
 ## 🚀 Core Features
 
 ### 🔍 Fact Check Mode
-
+### This script is a deeper companion to [Grok Fact Checker](https://greasyfork.org/zh-TW/scripts/569963-grok-fact-checker).
 Submits the tweet to Grok with a pre-built fact-checking prompt.
 
 - The language of the prompt auto-detects based on your browser or X interface language.
@@ -43,7 +41,7 @@ Submits the tweet to Grok with a pre-built fact-checking prompt.
 
 ## Why Grok?
 
-Why Grok? Because it is natively connected to X's real-time data stream, Grok has immediate context on trending topics, public figures, and platform-specific events that other AI tools would need to retrieve indirectly. For social media content in particular, that native awareness makes a practical difference.
+Because it is natively connected to X's real-time data stream, Grok has immediate context on trending topics, public figures, and platform-specific events that other AI tools would need to retrieve indirectly. For social media content in particular, that native awareness makes a practical difference.
 
 This script is intended for casual users who occasionally encounter an unfamiliar post and want a quick, structured way to get context — without opening a new tab, pasting text manually, or writing a prompt from scratch.
 
@@ -121,6 +119,12 @@ This script connects to external services only when you explicitly use the Push 
 - **Push Notification capacity:** Up to 10 destinations (Discord + Telegram combined). Attempting to add more will show a warning and block the addition.
 - **Sidebar requirement:** Modes that send to the sidebar require the Grok sidebar to already be open. If it is not open, a prompt will ask you to open it first before using the command menu.
 - **Private Mode and sidebar:** Private Mode in sidebar context enables private chat within the drawer, not a new tab. Selecting Private Mode from outside the sidebar redirects to a separate x.com/i/grok session instead.
+
+<a> **Notice: Grok Account Login Compatibility**
+If your X (Twitter) account is directly linked to Grok, some script features may not work properly (e.g., the Grok button in the bottom-right corner may fail to open).
+To ensure the script works correctly, please visit `https://grok.com/` and change your login method. If you are currently using **Continue with X**, unlink this login method and switch to signing in with your **X account username and password** instead.
+Once you have updated your login settings, refresh the X (Twitter) page for the changes to take effect.
+**Important:** If this notice is still displayed, it means this compatibility issue has not yet been resolved. </a>
 
 ---
 
