@@ -120,12 +120,6 @@ This script connects to external services only when you explicitly use the Push 
 - **Sidebar requirement:** Modes that send to the sidebar require the Grok sidebar to already be open. If it is not open, a prompt will ask you to open it first before using the command menu.
 - **Private Mode and sidebar:** Private Mode in sidebar context enables private chat within the drawer, not a new tab. Selecting Private Mode from outside the sidebar redirects to a separate x.com/i/grok session instead.
 
-<a> **Notice: Grok Account Login Compatibility**
-If your X (Twitter) account is directly linked to Grok, some script features may not work properly (e.g., the Grok button in the bottom-right corner may fail to open).
-To ensure the script works correctly, please visit `https://grok.com/` and change your login method. If you are currently using **Continue with X**, unlink this login method and switch to signing in with your **X account username and password** instead.
-Once you have updated your login settings, refresh the X (Twitter) page for the changes to take effect.
-**Important:** If this notice is still displayed, it means this compatibility issue has not yet been resolved. </a>
-
 ---
 
 ## 🔐 Security & Privacy Notice
