@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.1.0.0
+// @version      2.1.1.0
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -983,7 +983,6 @@
             position: fixed; z-index: 99990;
             background-color: #000000; border: 1px solid #333639;
             border-radius: 12px;
-            
             box-shadow:
                 0 8px 16px rgba(255, 255, 255, 0.1),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.04),
@@ -991,7 +990,6 @@
             padding: 8px; display: flex; flex-direction: column; gap: 4px;
             min-width: 170px; font-family: sans-serif;
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: scale(0.97) translateY(4px); }
             to   { opacity: 1; transform: scale(1)    translateY(0); }
@@ -1020,13 +1018,11 @@
         }
         .grok-menu-item:hover { background-color: #1D9BF0; color: #fff; transform: translateX(1px); }
         .grok-menu-item-label { flex: 1; }
-        
         .grok-menu-item-icon {
             display: flex; align-items: center; justify-content: center;
             width: 20px; height: 20px; flex-shrink: 0; color: inherit;
         }
         .grok-menu-item-icon svg { display: block; }
-        
         .grok-menu-titlebar {
             display: flex; justify-content: space-between; align-items: center;
             padding: 4px 4px 8px;
@@ -1036,11 +1032,9 @@
             letter-spacing: 0.5px; text-transform: uppercase;
             user-select: none;
         }
-        
         .grok-menu-titlebar-right-group {
             display: flex; align-items: center; gap: 6px;
         }
-        
         .grok-drawer-toggle-btn {
             padding: 4px; font-size: 0; cursor: pointer; line-height: 1;
             color: #71767B; border: none; background: transparent;
@@ -1050,14 +1044,12 @@
         }
         .grok-drawer-toggle-btn:hover { color: #E7E9EA; opacity: 1; }
         .grok-drawer-toggle-btn.active { color: #E7E9EA; opacity: 1; }
-        
         .grok-drawer-toggle-btn svg {
             transition: transform 0.2s ease;
         }
         .grok-drawer-toggle-btn.active svg {
             transform: rotate(180deg);
         }
-        
         .grok-menu-titlebar-divider {
             height: 1px; margin: 0 -8px;
             background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5) 50%, transparent);
@@ -1067,22 +1059,18 @@
             display: flex; justify-content: space-between; align-items: center; gap: 6px;
             position: relative;
         }
-        
         .grok-menu-footer::before {
             content: ""; position: absolute; top: 0; left: -8px; right: -8px;
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(139,92,246,0.5) 50%, transparent);
         }
-        
         .grok-menu-version-label {
             font-size: 10px; color: #4b5563; letter-spacing: 0.2px;
             cursor: pointer; transition: color 0.15s; user-select: none;
         }
         .grok-menu-version-label:hover { color: #8b5cf6; }
         .grok-menu-footer-right-group { display: flex; align-items: center; gap: 4px; }
-        
         .grok-privacy-btn-wrapper { position: relative; display: inline-flex; }
-        
         .grok-privacy-toggle-btn {
             padding: 4px; font-size: 0; cursor: pointer; line-height: 1;
             color: #71767B; border-radius: 6px; border: 1px solid #333;
@@ -1097,12 +1085,10 @@
             background: rgba(139,92,246,0.15);
             opacity: 1;
         }
-        
         .grok-privacy-toggle-btn.disabled-mode {
             cursor: default; opacity: 0.35; filter: grayscale(1);
         }
         .grok-privacy-toggle-btn.disabled-mode:hover { background: transparent; border-color: #333; opacity: 0.35; }
-        
         .grok-privacy-mode-badge {
             position: absolute; top: -5px; right: -5px;
             width: 14px; height: 14px; padding: 0; font-size: 0;
@@ -1122,7 +1108,6 @@
         .grok-privacy-btn-wrapper:hover .grok-privacy-mode-badge.per-item-active {
             opacity: 0.9;
         }
-        
         .grok-private-btn {
             font-size: 13px; padding: 4px 8px; border-radius: 6px;
             color: #1d9bf0; cursor: pointer; flex-shrink: 0;
@@ -1215,7 +1200,6 @@
             color: #fff !important;
             background: #0d1117 !important;
         }
-        
         .gcm-header-title { display: flex; align-items: center; gap: 8px; }
         .gcm-header-icon { display: flex; align-items: center; color: #1d9bf0; }
         .gcm-header-close {
@@ -1223,7 +1207,6 @@
             color: #536471; transition: color 0.15s;
         }
         .gcm-header-close:hover { color: #E7E9EA; }
-        
         .gcm-header-icon-sm {
             display: inline-flex; align-items: center; justify-content: center;
             width: 12px; height: 12px; color: inherit; margin-right: 2px;
@@ -1327,14 +1310,12 @@
             border-left: 3px solid #1d9bf0;
         }
         .grok-section-header-title { display: flex; align-items: center; gap: 6px; }
-        
         .grok-section-header-toggle {
             display: flex; align-items: center; gap: 5px;
             font-size: 10px; font-weight: 500; color: #8899A6;
             text-transform: none; letter-spacing: normal; cursor: pointer;
         }
         .grok-section-header-toggle input { cursor: pointer; width: 13px; height: 13px; flex-shrink: 0; }
-        
         #grok-push-section-body.grok-section-body-disabled {
             opacity: 0.4; pointer-events: none; user-select: none;
         }
@@ -1650,7 +1631,6 @@
         <div class="grok-modal-body">
 
           <div class="gcm-tab-pane active" data-pane="template">
-            
             <div class="grok-section-card">
               <div class="grok-section-header"><span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.template}</span>${t("tmpl_section_label").replace(/^\u270f\ufe0f?\s*/, "")}</span></div>
               <div class="grok-section-body">
@@ -1661,7 +1641,6 @@
           </div>
 
           <div class="gcm-tab-pane" data-pane="lang_send">
-            
             <div class="grok-section-card">
               <div class="grok-section-header"><span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.options}</span>${t("send_mode_label")} &amp; ${t("lang_label")}</span></div>
               <div class="grok-section-body">
@@ -1689,7 +1668,6 @@
                   </select>
                   <div class="grok-form-hint">${t("lang_hint")}</div>
                   <div id="grok-custom-lang-inline" style="display:${currentLang==="custom"?"flex":"none"};align-items:center;gap:8px;padding:6px 0 2px;">
-                    
                   </div>
                 </div>
               </div>
@@ -1697,7 +1675,6 @@
           </div>
 
           <div class="gcm-tab-pane" data-pane="push">
-            
             <div class="grok-section-card">
               <div class="grok-section-header">
                 <span class="grok-section-header-title"><span class="gcm-header-icon-sm">${SETTINGS_ICON_SVG.push}</span>${t("push_section_label").replace(/^\ud83d\udce8\s*/,"")}</span>
@@ -2791,6 +2768,55 @@
     element.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
+  function setLexicalValue(element, value) {
+    const editor = element && element.__lexicalEditor;
+    if (!editor) return false;
+    const textNode = (text) => ({
+      detail: 0,
+      format: 0,
+      mode: "normal",
+      style: "",
+      text,
+      type: "text",
+      version: 1,
+    });
+    const paragraphNode = (children) => ({
+      children,
+      direction: null,
+      format: "",
+      indent: 0,
+      textFormat: 0,
+      textStyle: "",
+      type: "paragraph",
+      version: 1,
+    });
+    const paragraphs = String(value)
+      .split(/\r\n|\r|\n/)
+      .map((line) => paragraphNode(line.length === 0 ? [] : [textNode(line)]));
+    const stateJSON = {
+      root: {
+        children: paragraphs,
+        direction: null,
+        format: "",
+        indent: 0,
+        type: "root",
+        version: 1,
+      },
+    };
+    try {
+      editor.setEditorState(editor.parseEditorState(JSON.stringify(stateJSON)));
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function setInputValue(element, value) {
+    if (isLexicalEditable(element)) return setLexicalValue(element, value);
+    setReactValue(element, value);
+    return true;
+  }
+
   const _hijackedBtns = new WeakSet();
 
   function hijackOperations() {
@@ -3246,9 +3272,8 @@
   }
 
   function getDrawerToggleButton() {
-    const el = document.querySelector('[data-testid="GrokDrawerHeader"]');
-    if (!el) return null;
-    return el.tagName === "BUTTON" ? el : el.querySelector("button");
+    const header = document.querySelector('[data-testid="GrokDrawerHeader"]');
+    return header && header.tagName === "BUTTON" ? header : null;
   }
 
   function isDrawerVisuallyOpen() {
@@ -3260,17 +3285,22 @@
       "收合",
       "折叠", "折疊",
       "Collapse",
+      "閉じる",
       "折りたたむ",
       "접기",
       "Contraer",
       "Recolher",
       "Réduire",
     ];
-    for (const label of labels) {
-      const btn = document.querySelector(
-        `button[aria-label="${label}"], [role="button"][aria-label="${label}"]`
-      );
-      if (btn && btn.offsetParent !== null) return btn;
+    const header = document.querySelector('[data-testid="GrokDrawerHeader"]');
+    const roots = header && header.tagName !== "BUTTON" ? [header, document] : [document];
+    for (const root of roots) {
+      for (const label of labels) {
+        const btn = root.querySelector(
+          `button[aria-label="${label}"], [role="button"][aria-label="${label}"]`
+        );
+        if (btn && btn.offsetParent !== null) return btn;
+      }
     }
     return null;
   }
@@ -3290,7 +3320,10 @@
       if (reached) {
         clearInterval(_drawerToggleTimer);
         _drawerToggleTimer = null;
-        if (target === "open" && ta && ta.value) setReactValue(ta, "");
+        if (target === "open" && ta) {
+          const hasLeftover = isLexicalEditable(ta) ? !!ta.textContent : !!ta.value;
+          if (hasLeftover) setInputValue(ta, "");
+        }
         onSettled(true);
         return;
       }
@@ -3321,6 +3354,10 @@
       syncDrawerAfterToggle("open", settle);
       return;
     }
+    if (document.querySelector('[data-testid="GrokDrawerHeader"]')) {
+      syncDrawerAfterToggle("open", settle);
+      return;
+    }
     const globalBtn = findGlobalGrokButton();
     if (globalBtn) {
       if (hasDrawerEverOpened()) {
@@ -3347,10 +3384,15 @@
     }, 500);
   }
 
+  function isLexicalEditable(el) {
+    return !!el && el.getAttribute && el.getAttribute("contenteditable") === "true";
+  }
   function findVisibleTextarea() {
     const drawer = document.querySelector('[data-testid="GrokDrawer"]');
-    const searchRoot = drawer || document;
-    for (const ta of searchRoot.querySelectorAll("textarea")) {
+    const candidates = drawer
+      ? drawer.querySelectorAll('textarea, [contenteditable="true"][role="textbox"]')
+      : document.querySelectorAll("textarea");
+    for (const ta of candidates) {
       if (ta.offsetParent === null || !document.contains(ta)) continue;
       const rect = ta.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) continue;
@@ -3424,6 +3466,10 @@
     if (drawerToggle) {
       triggerClick(drawerToggle);
       waitForDrawerThenInject("Fallback path A");
+      return;
+    }
+    if (document.querySelector('[data-testid="GrokDrawerHeader"]')) {
+      waitForDrawerThenInject("Fallback path A (drawer expanded, awaiting input)");
       return;
     }
 
@@ -3524,11 +3570,11 @@
 
       if (!pendingTask.textFilled) {
         if (!clearedInput) {
-          setReactValue(targetInput, "");
+          setInputValue(targetInput, "");
           clearedInput = true;
           return;
         }
-        setReactValue(targetInput, pendingTask.content);
+        if (!setInputValue(targetInput, pendingTask.content)) return;
         targetInput.focus();
         pendingTask.textFilled = true;
         pendingTask.targetInput = targetInput;
@@ -3541,7 +3587,7 @@
         if (targetBtn && !targetBtn.disabled && targetBtn.getAttribute("aria-disabled") !== "true") {
           triggerClick(targetBtn);
           setTimeout(() => {
-            if (pendingTask && pendingTask.targetInput) setReactValue(pendingTask.targetInput, "");
+            if (pendingTask && pendingTask.targetInput) setInputValue(pendingTask.targetInput, "");
             resetGlobalState();
           }, 500);
         }
@@ -3617,11 +3663,11 @@
 
       if (targetInput && privateModeClicked && !pendingTask.textFilled) {
         if (!clearedInput) {
-          setReactValue(targetInput, "");
+          setInputValue(targetInput, "");
           clearedInput = true;
           return;
         }
-        setReactValue(targetInput, pendingTask.content);
+        if (!setInputValue(targetInput, pendingTask.content)) return;
         targetInput.focus();
         pendingTask.textFilled = true;
         pendingTask.targetInput = targetInput;
@@ -3644,7 +3690,7 @@
 
           setTimeout(() => {
             if (pendingTask && pendingTask.targetInput) {
-              setReactValue(pendingTask.targetInput, "");
+              setInputValue(pendingTask.targetInput, "");
             }
             resetGlobalState();
           }, 500);
