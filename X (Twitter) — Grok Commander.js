@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.1.1.0
+// @version      2.1.2.0
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -68,7 +68,6 @@
         commander_btn_title: "AI 指揮官（已啟用）",
         need_reopen: "找不到右下角的 Grok 按鈕，請先手動點擊開啟側邊欄再使用指令選單；若瀏覽器視窗較窄，該按鈕可能被隱藏，請嘗試拉寬視窗",
         drawer_opening: "Grok 載入中，首次開啟較慢，請稍候",
-        drawer_open_timeout: "等待 Grok 側邊欄展開逾時（超過 30 秒），請檢查網路後重新點選指令",
         need_manual_open: "請先手動點擊右下角的 Grok 按鈕展開側邊欄，再使用指令選單",
         push_section_label: "📨 推送設定 (Push Notifications)",
         push_section_desc: "將貼文連結自動推送到 Discord 頻道或 Telegram 群組／頻道。",
@@ -141,7 +140,6 @@
         commander_btn_title: "AI 指挥官（已启用）",
         need_reopen: "找不到右下角的 Grok 按钮，请先手动点击打开侧边栏再使用指令菜单；若浏览器窗口较窄，该按钮可能被隐藏，请尝试拉宽窗口",
         drawer_opening: "Grok 加载中，首次打开较慢，请稍候",
-        drawer_open_timeout: "等待 Grok 侧边栏展开超时（超过 30 秒），请检查网络后重新点击指令",
         need_manual_open: "请先手动点击右下角的 Grok 按钮展开侧边栏，再使用指令菜单",
         push_section_label: "📨 推送设置 (Push Notifications)",
         push_section_desc: "将贴文链接自动推送到 Discord 频道或 Telegram 群组／频道。",
@@ -216,7 +214,6 @@
         commander_btn_title: "AI Commander (Active)",
         need_reopen: "Couldn't find the Grok button (bottom-right). Please open the sidebar manually first, then use the command menu; if your browser window is narrow, the button may be hidden — try widening it",
         drawer_opening: "Loading Grok, the first open is slow, please wait",
-        drawer_open_timeout: "Timed out waiting for the Grok sidebar to open (over 30s). Check your connection and try the command again",
         need_manual_open: "Please click the Grok button (bottom-right) manually to open the sidebar first, then use the command menu",
         push_section_label: "📨 Push Notifications",
         push_section_desc: "Automatically push post links to a Discord channel or Telegram group/channel.",
@@ -291,7 +288,6 @@
         commander_btn_title: "AI コマンダー（有効）",
         need_reopen: "右下のGrokボタンが見つかりません。手動でサイドバーを開いてからコマンドメニューをご利用ください。ブラウザの幅が狭いとボタンが隠れることがあるので、幅を広げてお試しください",
         drawer_opening: "Grokを読み込み中（初回は時間がかかります）",
-        drawer_open_timeout: "Grokサイドバーの展開待ちがタイムアウトしました（30秒超）。接続を確認してもう一度お試しください",
         need_manual_open: "先に右下のGrokボタンを手動でクリックしてサイドバーを開いてから、コマンドメニューをご利用ください",
         push_section_label: "📨 プッシュ通知設定",
         push_section_desc: "投稿リンクを Discord チャンネルまたは Telegram グループ／チャンネルに自動送信します。",
@@ -366,7 +362,6 @@
         commander_btn_title: "AI 커맨더（활성화）",
         need_reopen: "오른쪽 하단의 Grok 버튼을 찾을 수 없습니다. 먼저 수동으로 사이드바를 연 후 명령 메뉴를 사용하세요. 브라우저 창이 좁으면 버튼이 가려질 수 있으니 창을 넓혀 보세요",
         drawer_opening: "Grok 로딩 중 (처음 열 때는 시간이 걸립니다)",
-        drawer_open_timeout: "Grok 사이드바가 열리기를 기다리다 시간이 초과되었습니다(30초 초과). 연결을 확인하고 다시 시도하세요",
         need_manual_open: "먼저 오른쪽 하단의 Grok 버튼을 수동으로 클릭해 사이드바를 연 후 명령 메뉴를 사용하세요",
         push_section_label: "📨 푸시 알림 설정",
         push_section_desc: "게시물 링크를 Discord 채널 또는 Telegram 그룹/채널로 자동 전송합니다.",
@@ -439,7 +434,6 @@
         commander_btn_title: "Comandante IA (Activo)",
         need_reopen: "No se encontró el botón de Grok (abajo a la derecha). Ábrelo manualmente primero y luego usa el menú de comandos; si la ventana del navegador es estrecha, el botón puede estar oculto — intenta ensancharla",
         drawer_opening: "Cargando Grok, la primera apertura es lenta, espera un momento",
-        drawer_open_timeout: "Se agotó el tiempo de espera del panel de Grok (más de 30 s). Revisa tu conexión e inténtalo de nuevo",
         need_manual_open: "Primero haz clic manualmente en el botón de Grok (abajo a la derecha) para abrir el panel y luego usa el menú de comandos",
         push_section_label: "📨 Notificaciones push",
         push_section_desc: "Envía automáticamente el enlace del post a un canal de Discord o grupo/canal de Telegram.",
@@ -512,7 +506,6 @@
         commander_btn_title: "Comandante IA (Ativo)",
         need_reopen: "Não foi possível encontrar o botão do Grok (canto inferior direito). Abra o painel manualmente primeiro e depois use o menu de comandos; se a janela do navegador estiver estreita, o botão pode estar oculto — tente alargá-la",
         drawer_opening: "Carregando o Grok, a primeira abertura é lenta, aguarde",
-        drawer_open_timeout: "Tempo esgotado ao esperar o painel do Grok (mais de 30 s). Verifique sua conexão e tente novamente",
         need_manual_open: "Primeiro clique manualmente no botão do Grok (canto inferior direito) para abrir o painel e depois use o menu de comandos",
         push_section_label: "📨 Notificações push",
         push_section_desc: "Envia automaticamente o link do post para um canal do Discord ou grupo/canal do Telegram.",
@@ -585,7 +578,6 @@
         commander_btn_title: "Commandant IA (Actif)",
         need_reopen: "Bouton Grok introuvable (en bas à droite). Ouvrez d'abord le panneau manuellement, puis utilisez le menu de commandes ; si la fenêtre du navigateur est étroite, le bouton peut être masqué — essayez de l'élargir",
         drawer_opening: "Chargement de Grok, la première ouverture est lente, patientez",
-        drawer_open_timeout: "Délai dépassé en attendant le panneau Grok (plus de 30 s). Vérifiez votre connexion et réessayez",
         need_manual_open: "Cliquez d'abord manuellement sur le bouton Grok (en bas à droite) pour ouvrir le panneau, puis utilisez le menu de commandes",
         push_section_label: "📨 Notifications push",
         push_section_desc: "Envoie automatiquement le lien du post vers un canal Discord ou un groupe/canal Telegram.",
@@ -2654,7 +2646,7 @@
   const DRAWER_OPEN_WAIT_MAX_ATTEMPTS = 150;
   const DRAWER_OPEN_WAIT_INTERVAL_MS = 200;
 
-  const DRAWER_OPEN_HINT_DELAY_MS = 700;
+  const DRAWER_OPEN_HINT_DELAY_MS = 1200;
 
   let activeInterval = null;
   let pendingTask = null;
@@ -3271,9 +3263,27 @@
     }
   }
 
-  function getDrawerToggleButton() {
+  const DRAWER_EXPANDED_HEIGHT_THRESHOLD = 200;
+  const COLLAPSE_HEIGHT_NEAR_ZERO = 20;
+  const COLLAPSE_STRIKE_LIMIT_NORMAL = 2;
+  const COLLAPSE_STRIKE_LIMIT_INIT = 6;
+  function getGrokDrawerHeaderState() {
     const header = document.querySelector('[data-testid="GrokDrawerHeader"]');
-    return header && header.tagName === "BUTTON" ? header : null;
+    const drawer = document.querySelector('[data-testid="GrokDrawer"]');
+    if (!header || !drawer) {
+      return { phase: "collapsed", header: null, drawer: null };
+    }
+    const height = drawer.getBoundingClientRect().height;
+    const phase = height >= DRAWER_EXPANDED_HEIGHT_THRESHOLD ? "expanded" : "collapsed-like";
+    return { phase, header, drawer };
+  }
+
+  function getDrawerToggleButton() {
+    const state = getGrokDrawerHeaderState();
+    if (state.phase !== "collapsed-like") return null;
+    const { header } = state;
+    if (header.tagName === "BUTTON") return header;
+    return header.querySelector("button, [role=\"button\"]");
   }
 
   function isDrawerVisuallyOpen() {
@@ -3292,8 +3302,8 @@
       "Recolher",
       "Réduire",
     ];
-    const header = document.querySelector('[data-testid="GrokDrawerHeader"]');
-    const roots = header && header.tagName !== "BUTTON" ? [header, document] : [document];
+    const state = getGrokDrawerHeaderState();
+    const roots = state.phase === "expanded" ? [state.header, document] : [document];
     for (const root of roots) {
       for (const label of labels) {
         const btn = root.querySelector(
@@ -3321,6 +3331,7 @@
         clearInterval(_drawerToggleTimer);
         _drawerToggleTimer = null;
         if (target === "open" && ta) {
+          markDrawerEverOpened();
           const hasLeftover = isLexicalEditable(ta) ? !!ta.textContent : !!ta.value;
           if (hasLeftover) setInputValue(ta, "");
         }
@@ -3381,6 +3392,7 @@
         hijackOperations();
       }
       _globalDrawerHeaderSeen = headerExists;
+      if (isDrawerVisuallyOpen()) markDrawerEverOpened();
     }, 500);
   }
 
@@ -3407,21 +3419,39 @@
   function waitForDrawerThenInject(source) {
     const startedAt = Date.now();
     let waitAttempts = 0;
+    let collapseStrikes = 0;
+    let noTextareaStrikes = 0;
     _waitTimer = setInterval(() => {
       waitAttempts++;
       if (!pendingTask) {
         clearInjectionTimers();
         return;
       }
+      const headerState = getGrokDrawerHeaderState();
+      if (headerState.phase !== "expanded") {
+        collapseStrikes++;
+        const heightNow = headerState.drawer ? headerState.drawer.getBoundingClientRect().height : 0;
+        const isInitializingHeight = heightNow < COLLAPSE_HEIGHT_NEAR_ZERO;
+        const strikeLimit = isInitializingHeight ? COLLAPSE_STRIKE_LIMIT_INIT : COLLAPSE_STRIKE_LIMIT_NORMAL;
+        if (collapseStrikes >= strikeLimit) {
+          console.warn(`[Commander] ${source}: drawer was collapsed while waiting, giving up early`);
+          resetGlobalState();
+          return;
+        }
+        return;
+      }
+      collapseStrikes = 0;
       if (waitAttempts > DRAWER_OPEN_WAIT_MAX_ATTEMPTS) {
         console.warn(`[Commander] ${source}: timed out waiting for textarea (${DRAWER_OPEN_WAIT_MAX_ATTEMPTS} x ${DRAWER_OPEN_WAIT_INTERVAL_MS}ms), giving up`);
         resetGlobalState();
-        showWarnToast(t("drawer_open_timeout"));
         return;
       }
       const ta = findVisibleTextarea();
       if (!ta) {
-        updateOpenWaitHint(Date.now() - startedAt);
+        noTextareaStrikes++;
+        if (noTextareaStrikes >= 2) {
+          updateOpenWaitHint(Date.now() - startedAt);
+        }
         return;
       }
       clearInterval(_waitTimer);
@@ -3534,12 +3564,13 @@
     return null;
   }
 
-  function startInjectionDirect(targetInput, withPrivacy = false) {
+  function startInjectionDirect(initialTargetInput, withPrivacy = false) {
     if (activeInterval) { clearInterval(activeInterval); activeInterval = null; }
     let attempts = 0;
     let clearedInput = false;
     let privateHandled = false;
-    let textareaEverSeen = !!targetInput;
+    let textareaEverSeen = !!initialTargetInput;
+    let targetInput = initialTargetInput;
 
     activeInterval = setInterval(() => {
       attempts++;
@@ -3550,10 +3581,18 @@
         return;
       }
 
-      const stillVisible = targetInput && document.contains(targetInput) && targetInput.offsetParent !== null;
+      let stillVisible = targetInput && document.contains(targetInput) && targetInput.offsetParent !== null;
       if (textareaEverSeen && !stillVisible) {
-        resetGlobalState();
-        return;
+        const refreshed = findVisibleTextarea();
+        if (refreshed) {
+          targetInput = refreshed;
+          stillVisible = true;
+          clearedInput = false;
+          if (pendingTask) pendingTask.textFilled = false;
+        } else {
+          resetGlobalState();
+          return;
+        }
       }
 
       if (!privateHandled) {
@@ -3601,6 +3640,8 @@
     let privateModeClicked = false;
     let clearedInput = false;
     let textareaEverSeen = false;
+    let missingStreak = 0;
+    const COLLAPSE_CONFIRM_STREAK = 5;
 
     activeInterval = setInterval(() => {
       attempts++;
@@ -3623,10 +3664,18 @@
 
       const textarea = findVisibleTextarea();
 
-      if (textarea) textareaEverSeen = true;
+      if (textarea) {
+        textareaEverSeen = true;
+        missingStreak = 0;
+      } else if (textareaEverSeen) {
+        missingStreak++;
+      }
 
-      if (textareaEverSeen && !textarea) {
+      if (textareaEverSeen && missingStreak >= COLLAPSE_CONFIRM_STREAK) {
         resetGlobalState();
+        return;
+      }
+      if (textareaEverSeen && !textarea) {
         return;
       }
 
