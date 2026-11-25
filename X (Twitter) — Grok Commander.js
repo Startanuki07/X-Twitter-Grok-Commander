@@ -9,7 +9,7 @@
 // @name:fr      X (Twitter) — Grok Commandant
 // @namespace    https://greasyfork.org/en/users/1575945-star-tanuki07
 // @homepageURL  https://github.com/Startanuki07
-// @version      2.1.2.0
+// @version      2.1.2.5
 // @license      MIT
 // @author       Star_tanuki07
 // @icon         https://abs.twimg.com/favicons/twitter.3.ico
@@ -1350,6 +1350,7 @@
         }
         .grok-input-textarea:focus { border-color: #1d9bf060; }
 
+
         .grok-btn {
             padding: 8px 16px; border-radius: 20px; border: none;
             cursor: pointer; font-weight: 700; font-size: 13px;
@@ -2560,7 +2561,7 @@
     overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
   }
 
-  const GROK_PATTERNS = ["M12.745 20.54", "M2.5 12C2.5 6.75", "M12 2C6.48 2"];
+  const GROK_PATTERNS = ["M12.745 20.54", "M2.5 12C2.5 6.75", "M12 2C6.48 2", "m9.27 15.28 7.98-5.92"];
 
   const SEND_SVG_FINGERPRINT =
     "M12 3.59l7.457 7.45-1.414 1.42L13 7.41V21h-2V7.41l-5.043 5.05-1.414-1.42L12 3.59z";
@@ -2721,6 +2722,8 @@
 
   function isGrokIcon(element) {
     if (!element || element.tagName !== "path") return false;
+    const svg = element.closest("svg");
+    if (svg && svg.getAttribute("data-icon") === "icon-logo-grok") return true;
     const d = element.getAttribute("d");
     if (!d) return false;
     return GROK_PATTERNS.some((p) => d.startsWith(p));
@@ -2811,6 +2814,23 @@
 
   const _hijackedBtns = new WeakSet();
 
+  function findTweetTextEl(article) {
+    const candidates = article.querySelectorAll('div[dir="auto"]');
+    for (const el of candidates) {
+      if (el.closest("a")) continue;
+      if (el.classList.contains("whitespace-pre-wrap")) return el;
+    }
+    return null;
+  }
+
+  function findStatusLink(article) {
+    const links = article.querySelectorAll('a[href*="/status/"]');
+    for (const a of links) {
+      if (/\/status\/\d+$/.test(a.href)) return a;
+    }
+    return links[0] || null;
+  }
+
   function hijackOperations() {
     const paths = document.querySelectorAll("path");
     paths.forEach((path) => {
@@ -2822,7 +2842,7 @@
           !originalBtn.classList.contains("my-commander-btn") &&
           !_hijackedBtns.has(originalBtn)
         ) {
-          if (!originalBtn.closest("article").querySelector('[data-testid="tweetText"]')) return;
+          if (!findStatusLink(originalBtn.closest("article"))) return;
           const newBtn = originalBtn.cloneNode(true);
           newBtn.classList.add("my-commander-btn", "my-commander-btn-active");
           newBtn.style.color = "#FF1493";
@@ -2834,8 +2854,8 @@
             e.stopPropagation();
             const article = newBtn.closest("article");
             if (!article) return;
-            const textEl = article.querySelector('[data-testid="tweetText"]');
-            const urlEl = article.querySelector("time")?.closest("a");
+            const textEl = findTweetTextEl(article);
+            const urlEl = findStatusLink(article);
             const tweetData = {
               text: textEl ? textEl.innerText : "",
               url: urlEl ? urlEl.href : window.location.href,
@@ -3215,16 +3235,24 @@
   }
 
   function findDrawerPrivacyButton() {
+    const iconMatch = document.querySelector(
+      'svg[data-icon="icon-ghost"], svg[data-icon="icon-ghost-fill"]'
+    );
+    if (iconMatch) {
+      const btn = iconMatch.closest("button");
+      if (btn && btn.offsetParent !== null) return btn;
+    }
     const labels = [
+      "私人",
       "私人聊天",
       "非公開",
-      "Private chat", "Private Chat",
-      "私密聊天",
-      "비공개 채팅",
-      "プライベートチャット",
-      "Chat privado",
+      "Private", "Private chat", "Private Chat",
+      "私密", "私密聊天",
+      "비공개", "비공개 채팅",
+      "プライベート", "プライベートチャット",
+      "Privado", "Chat privado",
       "Bate-papo privado",
-      "Discussion privée", "Chat privé",
+      "Privé", "Discussion privée", "Chat privé",
     ];
     for (const label of labels) {
       const btn = document.querySelector(
@@ -3237,12 +3265,12 @@
 
   function isDrawerPrivacyOn(btn) {
     if (!btn) return false;
-    if (btn.getAttribute("aria-label") !== "私人聊天") {
-      console.warn("[Commander] isDrawerPrivacyOn: unexpected aria-label on button, treated as not found", btn.getAttribute("aria-label"));
+    const svgIcon = btn.querySelector("svg")?.getAttribute("data-icon");
+    if (svgIcon !== "icon-ghost" && svgIcon !== "icon-ghost-fill") {
+      console.warn("[Commander] isDrawerPrivacyOn: unexpected icon on button, treated as not found", svgIcon);
       return false;
     }
-    const svg = btn.querySelector("svg");
-    return svg ? svg.classList.contains("r-1cvl2hr") : false;
+    return btn.getAttribute("aria-pressed") === "true";
   }
 
   function ensureDrawerPrivacyState(withPrivacy) {
@@ -3263,27 +3291,22 @@
     }
   }
 
-  const DRAWER_EXPANDED_HEIGHT_THRESHOLD = 200;
-  const COLLAPSE_HEIGHT_NEAR_ZERO = 20;
-  const COLLAPSE_STRIKE_LIMIT_NORMAL = 2;
-  const COLLAPSE_STRIKE_LIMIT_INIT = 6;
   function getGrokDrawerHeaderState() {
-    const header = document.querySelector('[data-testid="GrokDrawerHeader"]');
-    const drawer = document.querySelector('[data-testid="GrokDrawer"]');
-    if (!header || !drawer) {
-      return { phase: "collapsed", header: null, drawer: null };
+    const dockWindow = document.querySelector('[data-slot="xds-dock-window"]');
+    if (!dockWindow) {
+      return { phase: "collapsed", launcher: null, panel: null, window: null };
     }
-    const height = drawer.getBoundingClientRect().height;
-    const phase = height >= DRAWER_EXPANDED_HEIGHT_THRESHOLD ? "expanded" : "collapsed-like";
-    return { phase, header, drawer };
+    const isOpen = dockWindow.hasAttribute("data-open");
+    const launcher = dockWindow.querySelector('[data-slot="xds-dock-launcher"]');
+    const panel = dockWindow.querySelector('[data-slot="xds-dock-panel"]');
+    return { phase: isOpen ? "expanded" : "collapsed-like", launcher, panel, window: dockWindow };
   }
+  const COLLAPSE_STRIKE_LIMIT_NORMAL = 2;
 
   function getDrawerToggleButton() {
     const state = getGrokDrawerHeaderState();
     if (state.phase !== "collapsed-like") return null;
-    const { header } = state;
-    if (header.tagName === "BUTTON") return header;
-    return header.querySelector("button, [role=\"button\"]");
+    return state.launcher;
   }
 
   function isDrawerVisuallyOpen() {
@@ -3303,7 +3326,11 @@
       "Réduire",
     ];
     const state = getGrokDrawerHeaderState();
-    const roots = state.phase === "expanded" ? [state.header, document] : [document];
+    const roots = state.phase === "expanded" && state.panel ? [state.panel, document] : [document];
+    for (const root of roots) {
+      const scoped = root.querySelector("[data-panel-open]");
+      if (scoped && scoped.offsetParent !== null) return scoped;
+    }
     for (const root of roots) {
       for (const label of labels) {
         const btn = root.querySelector(
@@ -3365,7 +3392,7 @@
       syncDrawerAfterToggle("open", settle);
       return;
     }
-    if (document.querySelector('[data-testid="GrokDrawerHeader"]')) {
+    if (getGrokDrawerHeaderState().phase === "expanded") {
       syncDrawerAfterToggle("open", settle);
       return;
     }
@@ -3387,7 +3414,7 @@
   let _globalDrawerHeaderSeen = false;
   function watchGlobalDrawerCollapse() {
     setInterval(() => {
-      const headerExists = !!document.querySelector('[data-testid="GrokDrawerHeader"]');
+      const headerExists = getGrokDrawerHeaderState().phase === "expanded";
       if (_globalDrawerHeaderSeen && !headerExists) {
         hijackOperations();
       }
@@ -3400,7 +3427,7 @@
     return !!el && el.getAttribute && el.getAttribute("contenteditable") === "true";
   }
   function findVisibleTextarea() {
-    const drawer = document.querySelector('[data-testid="GrokDrawer"]');
+    const drawer = document.querySelector('[data-slot="xds-dock-panel"]');
     const candidates = drawer
       ? drawer.querySelectorAll('textarea, [contenteditable="true"][role="textbox"]')
       : document.querySelectorAll("textarea");
@@ -3430,10 +3457,7 @@
       const headerState = getGrokDrawerHeaderState();
       if (headerState.phase !== "expanded") {
         collapseStrikes++;
-        const heightNow = headerState.drawer ? headerState.drawer.getBoundingClientRect().height : 0;
-        const isInitializingHeight = heightNow < COLLAPSE_HEIGHT_NEAR_ZERO;
-        const strikeLimit = isInitializingHeight ? COLLAPSE_STRIKE_LIMIT_INIT : COLLAPSE_STRIKE_LIMIT_NORMAL;
-        if (collapseStrikes >= strikeLimit) {
+        if (collapseStrikes >= COLLAPSE_STRIKE_LIMIT_NORMAL) {
           console.warn(`[Commander] ${source}: drawer was collapsed while waiting, giving up early`);
           resetGlobalState();
           return;
@@ -3498,7 +3522,7 @@
       waitForDrawerThenInject("Fallback path A");
       return;
     }
-    if (document.querySelector('[data-testid="GrokDrawerHeader"]')) {
+    if (getGrokDrawerHeaderState().phase === "expanded") {
       waitForDrawerThenInject("Fallback path A (drawer expanded, awaiting input)");
       return;
     }
